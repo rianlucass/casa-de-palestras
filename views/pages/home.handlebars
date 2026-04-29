@@ -1,0 +1,365 @@
+<!-- ═══════════════════════════════════════════════════════════
+     HERO STORYTELLING — Scroll-Driven, Awwwards-Inspired
+     ═══════════════════════════════════════════════════════════ -->
+
+<!-- TELA 1: Abertura Cinematográfica -->
+<section class="hero-panel relative h-screen flex flex-col items-center justify-center overflow-hidden bg-white" data-panel="intro">
+  <!-- Noise Grain Texture -->
+  <div class="absolute inset-0 opacity-[0.03] pointer-events-none z-10" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22/%3E%3C/svg%3E');"></div>
+
+  <div class="absolute inset-0 z-0">
+    <div class="absolute top-[-10%] left-[-5%] w-[500px] h-[500px] bg-primary/15 rounded-full blur-[160px] hero-orb" data-speed="0.02"></div>
+    <div class="absolute bottom-[-10%] right-[-5%] w-[450px] h-[450px] bg-secondary/12 rounded-full blur-[160px] hero-orb" data-speed="-0.015"></div>
+  </div>
+
+  <div class="relative z-20 max-w-6xl mx-auto px-6 text-center">
+    <!-- Linha decorativa que cresce -->
+    <div class="hero-line mx-auto w-0 h-[2px] bg-gradient-to-r from-primary to-secondary mb-10 transition-all duration-[1.5s] ease-out"></div>
+
+    <h1 class="font-title font-bold text-text-primary leading-[0.95] mb-6">
+      <span class="hero-word block text-[clamp(2.5rem,8vw,7rem)] translate-y-[100%] opacity-0">Duas casas,</span>
+      <span class="hero-word block text-[clamp(2.5rem,8vw,7rem)] text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary-dark to-secondary translate-y-[100%] opacity-0 py-10">um único propósito.</span>
+    </h1>
+
+    <p class="hero-fade font-body text-text-muted text-lg md:text-xl max-w-2xl mx-auto leading-relaxed opacity-0 translate-y-8 mb-12">
+      Autoridade no palco. Estratégia no digital.<br>
+      Integramos curadoria de palestrantes e construção de conteúdo em um único ecossistema.
+    </p>
+
+    <!-- Scroll indicator -->
+    <div class="hero-fade opacity-0 translate-y-8 flex flex-col items-center gap-3 mt-4">
+      <span class="font-body text-xs text-text-muted uppercase tracking-[0.3em]">Descubra</span>
+      <div class="w-[1px] h-12 relative overflow-hidden">
+        <div class="absolute inset-0 w-full bg-gradient-to-b from-primary to-secondary scroll-line-anim"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TELA 2: Casa de Palestras — Full Immersive -->
+<section class="hero-panel relative min-h-screen flex items-center overflow-hidden" data-panel="palestras">
+  <!-- BG: Sólido escuro (mobile) / Split diagonal (desktop) -->
+  <div class="absolute inset-0 bg-text-primary z-0"></div>
+  <!-- Imagem só aparece em diagonal no desktop -->
+  <div class="absolute inset-0 z-0 hidden lg:block" style="clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);">
+    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="" class="w-full h-full object-cover opacity-40">
+    <div class="absolute inset-0 bg-gradient-to-l from-transparent to-text-primary/90"></div>
+  </div>
+  <!-- Mobile: imagem sutil ao fundo com overlay forte -->
+  <div class="absolute inset-0 z-0 lg:hidden">
+    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="" class="w-full h-full object-cover opacity-15">
+  </div>
+  <!-- Accent line left -->
+  <div class="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-primary via-primary/50 to-transparent z-10"></div>
+
+  <div class="relative z-20 max-w-7xl mx-auto px-6 md:px-12 w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center py-16 md:py-24">
+    
+    <!-- Esquerda: Texto -->
+    <div class="max-w-xl">
+      <div class="scroll-reveal">
+        <span class="inline-block font-body text-primary text-xs font-bold uppercase tracking-[0.3em] mb-4 md:mb-6 border-b border-primary/30 pb-2">01 — Palco</span>
+      </div>
+
+      <div class="scroll-reveal" style="--delay: 0.1s">
+        <div class="mb-4 md:mb-6">
+          <img src="/img/logo/logo.png" alt="Casa de Palestras" class="h-8 md:h-12 object-contain brightness-0 invert opacity-90">
+        </div>
+      </div>
+
+      <div class="overflow-hidden">
+        <h2 class="scroll-reveal font-title font-bold text-3xl md:text-5xl lg:text-6xl text-white leading-[1.05] mb-4 md:mb-6" style="--delay: 0.2s">
+          Curadoria estratégica<br>de <span class="text-primary">palestrantes.</span>
+        </h2>
+      </div>
+      
+      <div class="scroll-reveal" style="--delay: 0.3s">
+        <p class="font-body text-gray-400 text-sm md:text-lg leading-relaxed mb-8 md:mb-10 max-w-md">
+          Conectamos empresas aos especialistas certos. Os nomes mais relevantes do mercado, no palco que a sua marca precisa.
+        </p>
+      </div>
+
+      <div class="scroll-reveal" style="--delay: 0.4s">
+        <a href="/curadoria" class="group inline-flex items-center gap-3 md:gap-4">
+          <span class="inline-flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary text-white group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+          </span>
+          <span class="font-body text-white font-bold text-sm uppercase tracking-wider group-hover:text-primary transition-colors duration-300">Ver palestrantes</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Direita: Stats flutuantes -->
+    <div class="hidden lg:flex flex-col items-end gap-8">
+      <div class="scroll-reveal text-right" style="--delay: 0.3s">
+        <span class="font-title font-bold text-7xl text-white/70 block leading-none">5000+</span>
+        <span class="font-body text-xs text-white/80 uppercase tracking-widest">eventos realizados</span>
+      </div>
+      <div class="scroll-reveal text-right" style="--delay: 0.5s">
+        <span class="font-title font-bold text-7xl text-primary block leading-none">1000+</span>
+        <span class="font-body text-xs text-white/80 uppercase tracking-widest">especialistas no portfólio</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Transição Strip -->
+<div class="relative h-32 md:h-30 bg-text-primary overflow-hidden flex items-center justify-center">
+  <div class="marquee-track flex whitespace-nowrap">
+    <span class="marquee-content font-title text-[3rem] md:text-[5rem] font-bold text-white/[0.05] uppercase tracking-widest mx-8">Palestras · Conteúdo · Estratégia · Autoridade · Palestras · Conteúdo · Estratégia · Autoridade&nbsp;</span>
+    <span class="marquee-content font-title text-[3rem] md:text-[5rem] font-bold text-white/[0.05] uppercase tracking-widest mx-8">Palestras · Conteúdo · Estratégia · Autoridade · Palestras · Conteúdo · Estratégia · Autoridade&nbsp;</span>
+  </div>
+</div>
+
+<!-- TELA 3: Casa de Conteúdo — Full Immersive -->
+<section class="hero-panel relative min-h-screen flex items-center overflow-hidden" data-panel="conteudo">
+  <!-- BG: Sólido claro (fallback) -->
+  <div class="absolute inset-0 bg-white z-0"></div>
+  <!-- Imagem diagonal só no desktop -->
+  <div class="absolute inset-0 z-0 hidden lg:block" style="clip-path: polygon(0 0, 55% 0, 35% 100%, 0 100%);">
+    <img src="/img/banners/19.png" alt="" class="w-full h-full object-cover ">
+    <div class="absolute inset-0 bg-gradient-to-r from-transparent to-black/95"></div>
+  </div>
+  <!-- Mobile: imagem sutil ao fundo com overlay -->
+  <div class="absolute inset-0 z-0 lg:hidden">
+    <img src="/img/banners/19.png" alt="conteudo" class="w-full h-full object-cover opacity-10">
+  </div>
+  <!-- Accent line right -->
+  <div class="absolute top-0 right-0 w-1 h-full bg-gradient-to-b from-secondary via-secondary/50 to-transparent z-10"></div>
+
+  <div class="relative z-20 max-w-7xl mx-auto px-6 md:px-12 w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center py-16 md:py-24">
+    
+    <!-- Esquerda: Visual decorativo (stats) -->
+    <div class="hidden lg:flex flex-col items-start gap-8">
+      <div class="scroll-reveal" style="--delay: 0.3s">
+        <span class="font-title font-bold text-7xl text-secondary-light/80 block leading-none">IA</span>
+        <span class="font-body text-xs text-white uppercase tracking-widest">inteligência aplicada</span>
+      </div>
+      <div class="scroll-reveal" style="--delay: 0.5s">
+        <span class="font-title font-bold text-7xl text-secondary-light/80 block leading-none">360°</span>
+        <span class="font-body text-xs text-white uppercase tracking-widest">estratégia completa</span>
+      </div>
+    </div>
+
+    <!-- Direita: Texto -->
+    <div class="max-w-xl lg:ml-auto">
+      <div class="scroll-reveal">
+        <span class="inline-block font-body text-secondary text-xs font-bold uppercase tracking-[0.3em] mb-4 md:mb-6 border-b border-secondary/30 pb-2">02 — Digital</span>
+      </div>
+
+      <div class="scroll-reveal" style="--delay: 0.1s">
+        <div class="mb-4 md:mb-6">
+          <img src="/img/logo/logo-casadeconteudo (1).png" alt="Casa de Conteúdo" class="h-8 md:h-12 object-contain opacity-90">
+        </div>
+      </div>
+
+      <div class="overflow-hidden">
+        <h2 class="scroll-reveal font-title font-bold text-3xl md:text-5xl lg:text-6xl text-text-primary leading-[1.05] mb-4 md:mb-6" style="--delay: 0.2s">
+          Estratégia, conteúdo<br>e soluções com <span class="text-secondary">IA.</span>
+        </h2>
+      </div>
+      
+      <div class="scroll-reveal" style="--delay: 0.3s">
+        <p class="font-body text-text-muted text-sm md:text-lg leading-relaxed mb-8 md:mb-10 max-w-md">
+          Construção de autoridade no digital. Transformamos conhecimento profundo em influência consistente e escalável no seu nicho.
+        </p>
+      </div>
+
+      <div class="scroll-reveal" style="--delay: 0.4s">
+        <a href="#conteudo" class="group inline-flex items-center gap-3 md:gap-4">
+          <span class="inline-flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full bg-secondary text-white group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+          </span>
+          <span class="font-body text-text-primary font-bold text-sm uppercase tracking-wider group-hover:text-secondary transition-colors duration-300">Conhecer soluções</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Seção: Sobre Nós -->
+<section id="sobre" class="bg-gradient-to-b from-white to-surface py-24 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+    <!-- Coluna da Esquerda (Textos) -->
+    <div class="sobre-text-container">
+
+      <h2 class="font-title font-bold text-4xl md:text-5xl text-text-primary leading-tight mb-8 sobre-item">
+        O que já <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">realizamos.</span>
+      </h2>
+
+      <div class="space-y-6 mb-10 sobre-item">
+        <p class="text-xl md:text-2xl text-text-primary font-title font-medium leading-relaxed border-l-4 border-primary pl-6">
+          <span class="text-primary font-bold">Desde 2008</span>, integrando duas frentes: autoridade no palco e consistência no digital.
+        </p>
+        
+        <p class="text-lg text-text-muted font-body leading-relaxed">
+          Não trabalhamos com ações isoladas. Estruturamos autoridade com direção, consistência e intenção.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 sobre-item mt-10">
+        <!-- Métrica 1 -->
+        <div class="relative p-6 rounded-2xl bg-white border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] group hover:border-primary/30 transition-colors duration-300">
+          <div class="absolute -top-4 -right-4 w-12 h-12 bg-primary/10 rounded-full blur-xl group-hover:bg-primary/20 transition-colors"></div>
+          <p class="font-title font-bold text-4xl text-primary mb-2">5.000<span class="text-2xl">+</span></p>
+          <p class="font-body text-sm text-text-primary font-bold uppercase tracking-wider mb-2">Eventos Realizados</p>
+          <p class="font-body text-sm text-text-muted leading-relaxed">Conectando empresas a especialistas relevantes.</p>
+        </div>
+
+        <!-- Métrica 2 -->
+        <div class="relative p-6 rounded-2xl bg-white border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] group hover:border-secondary/30 transition-colors duration-300">
+          <div class="absolute -top-4 -right-4 w-12 h-12 bg-secondary/10 rounded-full blur-xl group-hover:bg-secondary/20 transition-colors"></div>
+          <p class="font-title font-bold text-4xl text-secondary mb-2">1.000<span class="text-2xl">+</span></p>
+          <p class="font-body text-sm text-text-primary font-bold uppercase tracking-wider mb-2">Especialistas</p>
+          <p class="font-body text-sm text-text-muted leading-relaxed">No portfólio, atuando em temas estratégicos do mercado.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Coluna da Direita (Visual Clean com Imagem Única Premium) -->
+    <div class="relative h-full min-h-[500px] w-full rounded-[2.5rem] overflow-hidden shadow-2xl sobre-visual-container group">
+      <!-- Imagem de Fundo Premium -->
+      <div class="absolute inset-0">
+        <img src="/img/banners/16.jpg" alt="Palco de Palestra" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000 ease-out">
+      </div>
+      
+      <!-- Overlay Gradient -->
+      <div class="absolute inset-0 bg-gradient-to-t from-[#020617] via-[#0f172a]/80 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-tr from-white/30 to-black/20 mix-blend-overlay"></div>
+
+      <!-- Conteúdo Interno Direita -->
+      <div class="absolute bottom-0 w-full p-10 md:p-12 flex flex-col justify-end h-full">
+        
+        <h3 class="text-3xl md:text-5xl font-title font-bold text-white mb-4 leading-tight drop-shadow-lg">
+          Transformando<br> eventos em <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">experiências memoráveis</span>
+        </h3>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Seção: CTA com Marquee Typography -->
+<section class="relative bg-primary py-40 overflow-hidden flex items-center justify-center">
+  <!-- Fundo Marquee Text (CSS puro) -->
+  <div
+    class="absolute top-1/2 left-0 -translate-y-1/2 w-max whitespace-nowrap flex opacity-20 pointer-events-none select-none overflow-hidden"
+    style="animation: scroll-marquee 40s linear infinite;">
+    <span class="text-[10rem] md:text-[16rem] font-title font-black uppercase text-white/50 px-8 leading-none">O PALCO É
+      SEU • COMECE AGORA • </span>
+    <span class="text-[10rem] md:text-[16rem] font-title font-black uppercase text-white/50 px-8 leading-none">O PALCO É
+      SEU • COMECE AGORA • </span>
+  </div>
+
+  <style>
+    @keyframes scroll-marquee {
+      0% {
+        transform: translateX(0%);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+
+  <!-- CTA Box Frente -->
+  <div class="relative z-10 max-w-4xl mx-auto px-6 w-full text-center cta-box">
+    <div
+      class="bg-white/10 backdrop-blur-xl border border-white/20 p-12 md:p-20 rounded-[3rem] shadow-2xl shadow-primary-dark/30">
+      <h2 class="text-4xl md:text-6xl font-title font-bold text-white mb-6">Vamos estruturar seu <br
+          class="hidden md:block">projeto?</h2>
+      <p class="text-white/90 font-body text-lg md:text-xl mb-10 max-w-2xl mx-auto">Do palco ao digital, estruturamos projetos que conectam presença, conteúdo e resultado, 
+      de forma estratégica e contínua.</p>
+
+      <a href="/curadoria"
+        class="inline-block bg-white text-primary font-title font-semibold text-lg px-12 py-5 rounded-full shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:shadow-[0_0_40px_rgba(255,255,255,0.6)] hover:scale-105 transition-all duration-300 tracking-widest">
+        Quero começar!
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Scripts e Estilos Locais -->
+<script src="/js/hero-bg.js"></script>
+
+<!-- GSAP e ScrollTrigger via CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Registrar o ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+
+    // --- ANIMAÇÃO DO HERO ---
+    const tlHero = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+    tlHero.from(".hero-title", { y: 40, opacity: 0, duration: 1, delay: 0.2, clearProps: "all" })
+      .from(".hero-subtitle", { y: 20, opacity: 0, duration: 0.8, clearProps: "all" }, "-=0.6")
+      .from(".hero-cta", { scale: 0.9, opacity: 0, duration: 0.6, ease: "back.out(1.5)", clearProps: "all" }, "-=0.4");
+
+    tlHero.from(".hero-card", {
+      x: 50,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.15,
+      clearProps: "all"
+    }, "-=0.8");
+
+    // --- ANIMAÇÃO SOBRE NÓS (Scroll) ---
+    // Textos da Esquerda
+    gsap.from(".sobre-item", {
+      scrollTrigger: {
+        trigger: "#sobre",
+        start: "top 75%", // Inicia quando o topo da seção chega a 75% da altura da tela
+      },
+      y: 40,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.2,
+      ease: "power3.out"
+    });
+
+    // Grid Visual (Bento Box) da Direita
+    gsap.from(".sobre-visual-item", {
+      scrollTrigger: {
+        trigger: "#sobre",
+        start: "top 70%",
+      },
+      scale: 0.9,
+      y: 30,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.2,
+      ease: "back.out(1.2)"
+    });
+
+    // Animação: O Método
+    gsap.from(".metodo-title", {
+      scrollTrigger: { trigger: "#metodo", start: "top 75%" },
+      x: -50, opacity: 0, duration: 0.8, ease: "power3.out"
+    });
+    gsap.from(".method-item", {
+      scrollTrigger: { trigger: "#metodo", start: "top 75%" },
+      y: 40, opacity: 0, duration: 0.8, stagger: 0.2, ease: "power3.out"
+    });
+
+    // Animação: Vozes / Flex Accordion
+    gsap.from(".vozes-title", {
+      scrollTrigger: { trigger: "#vozes", start: "top 80%" },
+      y: 30, opacity: 0, duration: 0.8, ease: "power3.out"
+    });
+    gsap.from(".vozes-container", {
+      scrollTrigger: { trigger: "#vozes", start: "top 75%" },
+      y: 50, opacity: 0, duration: 1, ease: "power3.out"
+    });
+
+    // Animação: CTA Master
+    gsap.from(".cta-box", {
+      scrollTrigger: { trigger: ".bg-primary", start: "top 80%" },
+      scale: 0.95, y: 50, opacity: 0, duration: 0.8, ease: "back.out(1.5)"
+    });
+
+  });
+</script>

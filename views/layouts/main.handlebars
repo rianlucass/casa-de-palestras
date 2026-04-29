@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casa de Palestras</title>
+
+  <!-- Favicon & Share Icon -->
+  <link rel="icon" type="image/png" href="/img/icons/icon-casadepalestras.png">
+  <link rel="apple-touch-icon" href="/img/icons/icon-casadepalestras.png">
+  <meta property="og:image" content="/img/icons/icon-casadepalestras.png">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Oswald (títulos) + Montserrat (corpo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind config personalizado -->
+  <script src="/js/tailwind-config.js"></script>
+
+  <style>
+    body { font-family: 'Montserrat', sans-serif; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Oswald', sans-serif; }
+
+    /* ═══ HERO SCROLL ANIMATIONS ═══ */
+
+    /* Word reveal — slides up into view */
+    .hero-word {
+      display: block;
+      transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .hero-word.visible {
+      transform: translateY(0) !important;
+      opacity: 1 !important;
+    }
+
+    /* Fade up generic */
+    .hero-fade {
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .hero-fade.visible {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+
+    /* Hero line grow */
+    .hero-line.visible {
+      width: 120px !important;
+    }
+
+    /* Scroll indicator bounce */
+    @keyframes scrollLineAnim {
+      0% { transform: translateY(-100%); }
+      50% { transform: translateY(0); }
+      100% { transform: translateY(100%); }
+    }
+    .scroll-line-anim {
+      animation: scrollLineAnim 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+
+    /* Scroll reveal — generic for panels 2 & 3 */
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      transition-delay: var(--delay, 0s);
+    }
+    .scroll-reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Marquee infinite scroll */
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .marquee-track {
+      animation: marquee 30s linear infinite;
+    }
+  </style>
+</head>
+<body class="bg-surface text-text-primary">
+
+  {{> header}}
+
+  {{{body}}}
+
+  {{> footer}}
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+{{!--
+  ╔══════════════════════════════════════════════════════════════╗
+  ║  SEÇÕES EM RESERVA — para uso em páginas internas           ║
+  ║  Origem: home.handlebars (removidas em Abril/2026)          ║
+  ╚══════════════════════════════════════════════════════════════╝
+
+  Como usar:
+  - Copie o bloco desejado para a página-destino
+  - As animações GSAP correspondentes estão no bloco <script> do home.handlebars
+    (classes: .metodo-title, .method-item, .vozes-title, .vozes-container)
+--}}
+
+<!-- ══════════════════════════════════════════════════════════
+     SEÇÃO: O Método (Asymmetrical Sticky Layout)
+     Deps: GSAP + ScrollTrigger, classes .metodo-title / .method-item
+     ══════════════════════════════════════════════════════════ -->
+<section id="metodo" class="bg-[#0F172A] text-white py-32 border-t border-white/5">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16">
+
+    <!-- Sticky Left (Textos Mestre) -->
+    <div class="lg:col-span-5 relative">
+      <div class="lg:sticky lg:top-36 metodo-title">
+        <div
+          class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/20 text-purple-400 text-xs font-bold uppercase tracking-wider mb-6">
+          <div class="w-1.5 h-1.5 rounded-full bg-purple-500 animate-pulse"></div>
+          Nosso Método
+        </div>
+        <h2 class="text-4xl md:text-5xl lg:text-5xl font-title font-bold leading-tight mb-6">
+          Elevamos mensagens à categoria de <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-500">legado.</span>
+        </h2>
+        <p class="text-lg text-gray-400 leading-relaxed font-body">
+          Não somos uma agência comum focada em vender datas na agenda. Nós arquitetamos o seu posicionamento do zero e
+          construímos a trilha perfeita até o palco principal.
+        </p>
+      </div>
+    </div>
+
+    <!-- Right Scrolling List -->
+    <div class="lg:col-span-7 space-y-16">
+      <!-- Item 1 -->
+      <div class="group border-t border-white/10 pt-10 method-item">
+        <span
+          class="text-6xl md:text-8xl font-title font-black text-white/5 group-hover:text-primary/20 transition-colors duration-500 block mb-4">01</span>
+        <h3 class="text-3xl font-title font-bold text-white mb-4">Imersão & Branding</h3>
+        <p class="text-gray-400 font-body text-base leading-relaxed">
+          Mergulhamos na sua vivência, dissecando seus diferenciais competitivos e construindo uma narrativa
+          irresistível que só você pode contar.
+        </p>
+      </div>
+      <!-- Item 2 -->
+      <div class="group border-t border-white/10 pt-10 method-item">
+        <span
+          class="text-6xl md:text-8xl font-title font-black text-white/5 group-hover:text-purple-500/20 transition-colors duration-500 block mb-4">02</span>
+        <h3 class="text-3xl font-title font-bold text-white mb-4">Mapeamento Tático</h3>
+        <p class="text-gray-400 font-body text-base leading-relaxed">
+          Definimos alvos cirúrgicos: os eventos, os conselhos, os podcasts e os formadores de opinião estratégicos para
+          alavancar rapidamente o seu nome.
+        </p>
+      </div>
+      <!-- Item 3 -->
+      <div class="group border-t border-white/10 pt-10 method-item">
+        <span
+          class="text-6xl md:text-8xl font-title font-black text-white/5 group-hover:text-secondary/20 transition-colors duration-500 block mb-4">03</span>
+        <h3 class="text-3xl font-title font-bold text-white mb-4">Booking & Escala</h3>
+        <p class="text-gray-400 font-body text-base leading-relaxed">
+          Com a autoridade blindada, abrimos portas impenetráveis. E o melhor: usamos cada palestra como alavanca de
+          conteúdo viral sustentado nas redes sociais.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SEÇÃO: Flex Accordion — Especialistas / Vozes
+     Deps: GSAP + ScrollTrigger, classes .vozes-title / .vozes-container
+     ══════════════════════════════════════════════════════════ -->
+<section id="vozes" class="bg-[#0b1121] py-32 overflow-hidden border-t border-white/5">
+  <div class="max-w-7xl mx-auto px-6 mb-16 text-center vozes-title">
+    <div
+      class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/20 text-secondary text-xs font-bold uppercase tracking-wider mb-6">
+      Resultados Reais
+    </div>
+    <h2 class="text-4xl md:text-5xl font-title font-bold text-white mb-4">Quem já está <span
+        class="text-secondary">liderando.</span></h2>
+    <p class="text-gray-400 font-body max-w-2xl mx-auto">Vozes únicas, transformações definitivas. Conheça alguns dos
+      especialistas que multiplicaram sua influência através da nossa inteligência.</p>
+  </div>
+
+  <div
+    class="max-w-[1200px] mx-auto px-4 w-full h-[650px] md:h-[700px] flex flex-col md:flex-row gap-4 md:gap-6 vozes-container">
+
+    <!-- Card 1 -->
+    <div
+      class="group relative flex-1 hover:flex-[2] md:hover:flex-[2] rounded-[2rem] overflow-hidden transition-all duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] cursor-pointer shadow-2xl">
+      <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1000&q=80" alt="Especialista"
+        class="absolute inset-0 w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700">
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-[#0b1121] via-[#0b1121]/50 to-transparent flex flex-col justify-end p-8 md:p-12">
+        <h3
+          class="text-white text-3xl md:text-5xl font-title font-bold md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-500 whitespace-nowrap">
+          Marcos Silva</h3>
+        <p
+          class="text-primary font-body font-bold text-base tracking-wide mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-[150ms] hidden md:block uppercase">
+          Especialista em Liderança</p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div
+      class="group relative flex-1 hover:flex-[2] md:hover:flex-[2] rounded-[2rem] overflow-hidden transition-all duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] cursor-pointer shadow-2xl">
+      <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1000&q=80" alt="Especialista"
+        class="absolute inset-0 w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700">
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-[#0b1121] via-[#0b1121]/50 to-transparent flex flex-col justify-end p-8 md:p-12">
+        <h3
+          class="text-white text-3xl md:text-5xl font-title font-bold md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-500 whitespace-nowrap">
+          Carolina Ramos</h3>
+        <p
+          class="text-purple-400 font-body font-bold text-base tracking-wide mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-[150ms] hidden md:block uppercase">
+          Autoridade em Cultura Ágil</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+{{!--
+  ── ANIMAÇÕES GSAP correspondentes (copie junto ao usar) ──────────
+
+  gsap.from(".metodo-title", {
+    scrollTrigger: { trigger: "#metodo", start: "top 75%" },
+    x: -50, opacity: 0, duration: 0.8, ease: "power3.out"
+  });
+  gsap.from(".method-item", {
+    scrollTrigger: { trigger: "#metodo", start: "top 75%" },
+    y: 40, opacity: 0, duration: 0.8, stagger: 0.2, ease: "power3.out"
+  });
+
+  gsap.from(".vozes-title", {
+    scrollTrigger: { trigger: "#vozes", start: "top 80%" },
+    y: 30, opacity: 0, duration: 0.8, ease: "power3.out"
+  });
+  gsap.from(".vozes-container", {
+    scrollTrigger: { trigger: "#vozes", start: "top 75%" },
+    y: 50, opacity: 0, duration: 1, ease: "power3.out"
+  });
+--}}

@@ -1,0 +1,511 @@
+﻿<!-- ═══════════════════════════════════════════════════════════
+     HERO — Curadoria de Palestrantes
+     Desktop: banner fotográfico escuro como fundo
+     Mobile:  gradiente sólido (sem imagem)
+     ═══════════════════════════════════════════════════════════ -->
+<section class="relative flex items-end pb-20 md:pb-28 overflow-hidden pt-20 md:pt-28" style="min-height: calc(100vh - 128px); margin-top: 128px;">
+<!-- margin-top: 128px (40px topbar + 88px nav) — section e imagem de fundo começam abaixo da header -->
+
+  <!-- ── FUNDO MOBILE: gradiente sólido ── -->
+  <div class="absolute inset-0 bg-gradient-to-br from-primary-dark via-[#0f2044] to-[#111827] md:hidden"></div>
+
+  <!-- ── FUNDO DESKTOP: imagem do banner ── -->
+  <div class="absolute inset-0 hidden md:block">
+    <img
+      src="/img/banners/Fotos%20do%20site%2C%202025.jpg"
+      alt=""
+      class="w-full h-full object-cover object-top"
+      loading="eager"
+    >
+    <!-- Overlay para garantir legibilidade do texto -->
+    <div class="absolute inset-0 bg-gradient-to-t from-[#0a0f1e]/95 via-[#0a0f1e]/60 to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-[#0a0f1e]/70 via-transparent to-transparent"></div>
+  </div>
+
+  <!-- ── CONTEÚDO ── -->
+  <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full">
+
+    <!-- Label -->
+    <div class="scroll-reveal mb-5">
+      <span class="inline-flex items-center gap-2 font-body text-xs font-bold uppercase tracking-[0.3em] text-primary border-b border-primary/40 pb-2">
+        Casa de Palestras · Curadoria
+      </span>
+    </div>
+
+    <!-- Título -->
+    <div class="overflow-hidden mb-6 py-4">
+      <h1 class="scroll-reveal font-title font-bold text-white leading-[1.05]" style="font-size: clamp(2.4rem, 6vw, 5.5rem); --delay: 0.1s;">
+        Curadoria de palestrantes<br class="hidden sm:block">
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-light">com estratégia.</span>
+      </h1>
+    </div>
+
+    <!-- Subtítulo -->
+    <p class="scroll-reveal font-body text-white/70 leading-relaxed max-w-xl mb-10" style="font-size: clamp(1rem, 1.8vw, 1.2rem); --delay: 0.2s;">
+      Conectamos empresas aos especialistas certos, com aderência ao público,<br class="hidden lg:block">
+      ao momento e ao objetivo do evento.
+    </p>
+
+    <!-- Botão -->
+    <div class="scroll-reveal" style="--delay: 0.3s;">
+      <a
+        href="#contato"
+        class="inline-flex items-center gap-3 px-8 py-4 bg-primary text-white font-body font-bold text-sm uppercase tracking-wider rounded-full hover:bg-primary/90 hover:scale-105 transition-all duration-300 shadow-lg shadow-primary/30"
+      >
+        Quero ajuda para escolher
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-reveal flex items-center gap-4 mt-14" style="--delay: 0.45s;">
+      <div class="w-[1px] h-10 relative overflow-hidden">
+        <div class="absolute inset-0 w-full bg-gradient-to-b from-primary to-secondary scroll-line-anim"></div>
+      </div>
+      <span class="font-body text-xs text-white/40 uppercase tracking-[0.3em]">Role para explorar</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SEÇÃO: ESPECIALISTAS DO PORTFÓLIO
+     Layout: card contido split (foto square controlada + texto)
+     ═══════════════════════════════════════════════════════════ -->
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+<style>
+  /* ── Card do slide ── */
+  #palestranteSwiper {
+    width: 100%;
+    overflow: visible;
+  }
+  #palestranteSwiper .swiper-slide {
+    opacity: 0 !important;
+    transition: opacity 0.8s ease !important;
+    pointer-events: none;
+  }
+  #palestranteSwiper .swiper-slide-active {
+    opacity: 1 !important;
+    pointer-events: auto;
+  }
+
+  /* Foto contida — quadrada, max 420px */
+  .pal-photo-wrap {
+    width: 100%;
+    max-width: 420px;
+    aspect-ratio: 1 / 1;
+    border-radius: 1rem;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .pal-photo-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+  }
+
+  /* Animação dos textos ao trocar slide */
+  .slide-tag, .slide-title, .slide-sub {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+  }
+  .swiper-slide-active .slide-tag  { opacity: 1; transform: none; transition-delay: 0.15s; }
+  .swiper-slide-active .slide-title { opacity: 1; transform: none; transition-delay: 0.28s; }
+  .swiper-slide-active .slide-sub  { opacity: 1; transform: none; transition-delay: 0.42s; }
+
+  /* Setas */
+  .pal-btn {
+    width: 52px; height: 52px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid #E5E7EB;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+  }
+  .pal-btn:hover { 
+    background: #38b6ff; 
+    border-color: #38b6ff;
+    transform: scale(1.05); 
+  }
+  .pal-btn:hover svg { color: white; }
+
+  /* Progress bar */
+  .pal-progress-track {
+    height: 3px;
+    background: #f3f4f6;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .pal-progress-fill {
+    height: 100%;
+    background: linear-gradient(to right, #38b6ff, #1E3A8A);
+    width: 0%;
+  }
+
+  /* Thumbs */
+  #thumbSwiper .swiper-slide {
+    width: 72px !important;
+    height: 72px;
+    border-radius: 50%;
+    overflow: hidden;
+    opacity: 0.3;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: grayscale(100%);
+  }
+  #thumbSwiper .swiper-slide-thumb-active {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px -5px rgba(56, 182, 255, 0.4);
+    border: 2px solid white;
+  }
+  #thumbSwiper .swiper-slide img {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: top center;
+  }
+</style>
+
+<section id="especialistas" class="bg-white py-20 md:py-32 overflow-hidden">
+  <div class="max-w-6xl mx-auto px-6 md:px-12">
+
+    <!-- ── Cabeçalho ── -->
+    <div class="mb-20 text-center md:text-left flex flex-col md:flex-row md:items-end justify-between gap-6">
+      <div>
+        <span class="scroll-reveal font-body text-primary text-xs font-bold uppercase tracking-[0.3em] border-b border-primary/30 pb-2 inline-block mb-6">Portfólio</span>
+        <h2 class="scroll-reveal font-title font-extrabold text-text-primary leading-tight" style="font-size: clamp(2rem, 4vw, 3.5rem); --delay:0.1s;">
+          Alguns dos especialistas<br>do nosso portfólio
+        </h2>
+      </div>
+    </div>
+
+    <!-- ── Carrossel (Awwwards Style) ── -->
+    <div class="scroll-reveal" style="--delay:0.3s;">
+      <div id="palestranteSwiper" class="swiper overflow-visible pb-10">
+        <div class="swiper-wrapper">
+
+          {{#each (range 4 49)}}
+          <div class="swiper-slide">
+            <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-24 relative select-none">
+
+              <!-- Foto -->
+              <div class="w-full md:w-5/12 shrink-0 relative group cursor-grab">
+                <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-[2rem] transform translate-x-4 translate-y-4 transition-transform duration-700 group-hover:translate-x-6 group-hover:translate-y-6 -z-10"></div>
+                <div class="relative z-10 w-full aspect-square rounded-[2rem] overflow-hidden shadow-2xl shadow-primary/10 transition-transform duration-700 group-hover:scale-[1.02]">
+                  <img src="/img/palestrantes/{{this}}.jpg" alt="Especialista do portfólio" loading="lazy" class="w-full h-full object-cover object-top">
+                </div>
+              </div>
+
+              <!-- Texto e Controles internos -->
+              <div class="w-full md:w-7/12 flex flex-col justify-center text-center md:text-left py-6">
+                
+                <div class="slide-tag inline-block mb-8">
+                  <span class="font-body text-xs font-bold uppercase tracking-[0.25em] text-primary bg-primary/5 px-4 py-2 rounded-full border border-primary/10">Especialista do portfólio</span>
+                </div>
+
+                <p class="slide-title font-title font-extrabold text-text-primary leading-tight mb-6" style="font-size: clamp(2rem, 4vw, 3.2rem);">
+                  Nome do palestrante
+                </p>
+
+                <div class="w-16 h-1 bg-gradient-to-r from-primary to-secondary rounded-full mb-8 mx-auto md:mx-0 opacity-80"></div>
+
+                <p class="slide-sub font-body text-text-muted text-base lg:text-lg leading-relaxed max-w-md mx-auto md:mx-0 mb-12">
+                  Área de atuação · Tema principal
+                </p>
+                
+                <!-- Controles: setas + contador -->
+                <div class="flex items-center justify-center md:justify-start gap-6 mt-auto">
+                  <button class="pal-btn pal-prev" aria-label="Anterior">
+                    <svg class="w-5 h-5 text-text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                    </svg>
+                  </button>
+
+                  <span class="font-title font-bold text-text-primary text-lg tabular-nums"><span id="pal-current">01</span><span class="text-gray-300 font-body font-normal text-sm"> / 46</span></span>
+
+                  <button class="pal-btn pal-next" aria-label="Próximo">
+                    <svg class="w-5 h-5 text-text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          {{/each}}
+
+        </div>
+      </div>
+
+      <!-- Barra e Thumbs isolados em baixo -->
+      <div class="mt-16 md:mt-24 max-w-4xl mx-auto">
+        <div class="pal-progress-track mb-10 w-full max-w-md mx-auto md:max-w-none">
+          <div class="pal-progress-fill" id="pal-progress-bar"></div>
+        </div>
+
+        <!-- Thumbs strip -->
+        <div id="thumbSwiper" class="swiper overflow-visible px-4">
+          <div class="swiper-wrapper py-4">
+            {{#each (range 4 49)}}
+            <div class="swiper-slide">
+              <img src="/img/palestrantes/{{this}}.jpg" alt="" loading="lazy">
+            </div>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+(function () {
+  const DELAY = 6500;
+
+  const thumbSwiper = new Swiper('#thumbSwiper', {
+    slidesPerView: 'auto',
+    spaceBetween: 8,
+    watchSlidesProgress: true,
+    freeMode: true,
+  });
+
+  const mainSwiper = new Swiper('#palestranteSwiper', {
+    effect: 'fade',
+    fadeEffect: { crossFade: true },
+    speed: 800,
+    loop: true,
+    grabCursor: true,
+    autoplay: { delay: DELAY, disableOnInteraction: false, pauseOnMouseEnter: true },
+    navigation: { prevEl: '.pal-prev', nextEl: '.pal-next' },
+    thumbs: { swiper: thumbSwiper },
+  });
+
+  const currentEl = document.getElementById('pal-current');
+  const bar = document.getElementById('pal-progress-bar');
+
+  function updateCounter() {
+    const n = mainSwiper.realIndex + 1;
+    currentEl.textContent = String(n).padStart(2, '0');
+  }
+
+  mainSwiper.on('slideChange', updateCounter);
+  mainSwiper.on('autoplayTimeLeft', (s, time, progress) => {
+    bar.style.transition = 'none';
+    bar.style.width = ((1 - progress) * 100) + '%';
+  });
+  mainSwiper.on('slideChangeTransitionStart', () => {
+    bar.style.transition = 'none';
+    bar.style.width = '0%';
+  });
+
+  updateCounter();
+})();
+</script>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SEÇÃO 3+4: DIFERENCIAL + CAIXA DE CONVERSÃO
+     Layout desktop: diferencial à esquerda, formulário à direita
+     ═══════════════════════════════════════════════════════════ -->
+<style>
+  #diferencial {
+    background-color: #FAFAFA;
+    position: relative;
+  }
+  #diferencial::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(#E5E7EB 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+  .input-flushed {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #E5E7EB;
+    padding: 12px 0;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: #111827;
+    transition: all 0.3s ease;
+  }
+  .input-flushed:focus {
+    outline: none;
+    box-shadow: none;
+    border-bottom-color: #38b6ff;
+  }
+  .input-flushed::placeholder {
+    color: #9CA3AF;
+  }
+</style>
+
+<section id="diferencial" class="py-24 md:py-32 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-[1fr_500px] gap-16 lg:gap-24 items-center">
+
+      <!-- ── Bloco Diferencial ── -->
+      <div>
+        <span class="scroll-reveal font-body text-primary text-xs font-bold uppercase tracking-[0.3em] border-b border-primary/30 pb-2 inline-block mb-8">Diferencial</span>
+
+        <h2 class="scroll-reveal font-title font-extrabold text-text-primary leading-tight mb-16" style="font-size: clamp(2.2rem, 4vw, 3.8rem); --delay:0.1s;">
+          A escolha do palestrante<br>não pode ser aleatória
+        </h2>
+
+        <!-- Frases Especiais (Estilo Awwwards 01 02 03) -->
+        <div class="space-y-12">
+
+          <div class="scroll-reveal flex gap-6 md:gap-8 items-start group" style="--delay:0.15s;">
+            <span class="font-title text-5xl md:text-6xl font-extrabold text-gray-200 transition-colors duration-500 group-hover:text-primary/30 leading-none mt-1">01</span>
+            <p class="font-body text-text-muted text-lg lg:text-xl leading-relaxed">
+              Cada evento tem um <span class="text-primary font-bold">contexto, um público e um objetivo.</span>
+            </p>
+          </div>
+
+          <div class="scroll-reveal flex gap-6 md:gap-8 items-start group" style="--delay:0.25s;">
+            <span class="font-title text-5xl md:text-6xl font-extrabold text-gray-200 transition-colors duration-500 group-hover:text-primary/30 leading-none mt-1">02</span>
+            <p class="font-body text-text-muted text-lg lg:text-xl leading-relaxed">
+              Não indicamos nomes disponíveis.<br>
+              <span class="text-primary font-bold">Indicamos o especialista certo para o momento certo.</span>
+            </p>
+          </div>
+
+          <div class="scroll-reveal flex gap-6 md:gap-8 items-start group" style="--delay:0.35s;">
+            <span class="font-title text-5xl md:text-6xl font-extrabold text-gray-200 transition-colors duration-500 group-hover:text-primary/30 leading-none mt-1">03</span>
+            <p class="font-body text-text-muted text-lg lg:text-xl leading-relaxed">
+              <span class="text-primary font-bold">Nossa curadoria</span> considera conteúdo, presença, aderência ao tema e alinhamento com o perfil da empresa.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Caixa de Conversão (Glass/Flat Design) ── -->
+      <div class="scroll-reveal w-full" style="--delay:0.3s;">
+        <div class="bg-white rounded-[2rem] border border-gray-100 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.06)] p-8 md:p-12 relative overflow-hidden">
+
+          <!-- Background decor -->
+          <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-primary/10 to-transparent rounded-bl-full pointer-events-none"></div>
+
+          <h3 class="font-title font-extrabold text-text-primary leading-tight mb-4 relative z-10" style="font-size: clamp(1.6rem, 2.5vw, 2rem);">
+            Você não precisa <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-dark">escolher sozinho</span>
+          </h3>
+          <p class="font-body text-text-muted text-sm md:text-base leading-relaxed mb-10 relative z-10">
+            Conte o contexto do seu evento.<br>Nós indicamos o especialista certo para esse momento.
+          </p>
+
+          <form id="form-indicacao" class="space-y-8 relative z-10" novalidate>
+
+            <div>
+              <label class="block font-body text-xs font-bold uppercase tracking-wider text-gray-400 mb-1" for="ind-nome">Nome</label>
+              <input
+                id="ind-nome" name="nome" type="text" required
+                placeholder="Seu nome"
+                class="input-flushed"
+              >
+            </div>
+
+            <div>
+              <label class="block font-body text-xs font-bold uppercase tracking-wider text-gray-400 mb-1" for="ind-email">E-mail</label>
+              <input
+                id="ind-email" name="email" type="email" required
+                placeholder="seu@email.com"
+                class="input-flushed"
+              >
+            </div>
+
+            <div>
+              <label class="block font-body text-xs font-bold uppercase tracking-wider text-gray-400 mb-1" for="ind-empresa">Empresa</label>
+              <input
+                id="ind-empresa" name="empresa" type="text"
+                placeholder="Nome da empresa"
+                class="input-flushed"
+              >
+            </div>
+
+            <div>
+              <label class="block font-body text-xs font-bold uppercase tracking-wider text-gray-400 mb-1" for="ind-mensagem">Mensagem</label>
+              <textarea
+                id="ind-mensagem" name="mensagem" rows="3" required
+                placeholder="Ex: evento de liderança para 200 pessoas, foco em cultura organizacional"
+                class="input-flushed resize-none"
+              ></textarea>
+            </div>
+
+            <p id="ind-feedback" class="hidden text-sm font-body text-center py-3 rounded-xl"></p>
+
+            <button
+              type="submit"
+              id="ind-btn"
+              class="w-full bg-primary text-white font-body font-bold text-sm uppercase tracking-[0.2em] py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
+            >
+              Quero uma indicação
+            </button>
+
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  const form     = document.getElementById('form-indicacao');
+  const btn      = document.getElementById('ind-btn');
+  const feedback = document.getElementById('ind-feedback');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const nome    = document.getElementById('ind-nome').value.trim();
+    const email   = document.getElementById('ind-email').value.trim();
+    const empresa = document.getElementById('ind-empresa').value.trim();
+    const mensagem = document.getElementById('ind-mensagem').value.trim();
+
+    if (!nome || !email || !mensagem) return;
+
+    btn.disabled = true;
+    btn.textContent = 'Enviando…';
+
+    try {
+      const res = await fetch('/contato', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nome, email, empresa, mensagem }),
+      });
+
+      if (res.ok) {
+        feedback.textContent = 'Mensagem enviada! Entraremos em contato em breve.';
+        feedback.className = 'text-sm font-body text-center py-2 rounded-lg bg-green-50 text-green-700';
+        form.reset();
+      } else {
+        throw new Error();
+      }
+    } catch (_) {
+      feedback.textContent = 'Erro ao enviar. Tente novamente.';
+      feedback.className = 'text-sm font-body text-center py-2 rounded-lg bg-red-50 text-red-600';
+    } finally {
+      feedback.classList.remove('hidden');
+      btn.disabled = false;
+      btn.textContent = 'Quero uma indicação';
+    }
+  });
+})();
+</script>
+
