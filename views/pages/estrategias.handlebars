@@ -1,172 +1,322 @@
-﻿<!-- HERO: ESTRATEGIA DIGITAL -->
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
+<!-- ESTILOS DO EFEITO CROOKED -->
+<style>
+    /* Base das palavras interativas */
+    .hover-word {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        text-decoration: underline;
+        text-underline-offset: 8px;
+        text-decoration-thickness: 2px;
+        text-decoration-color: rgba(255, 255, 255, 0.3);
+        z-index: 1;
+        /* Mantém o texto acima do fundo */
+        transition: all 0.3s ease;
+        font-family: 'DM Serif Display', 'Playfair Display', serif;
+        /* Fonte fora do padrão, mais criativa */
+        font-style: italic;
+        font-weight: 500;
+    }
 
-    <!-- Gradientes decorativos espalhados no fundo -->
+    /* O fundo que vai ficar "torto" */
+    .hover-word::before {
+        content: '';
+        position: absolute;
+        top: 4px;
+        bottom: 0px;
+        left: -12px;
+        right: -12px;
+        z-index: -1;
+        opacity: 0;
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        /* Animação com um leve 'bounce' */
+        border-radius: 4px;
+    }
+
+    /* --- EFEITO 1: CASA DE PALESTRAS (AZUL) --- */
+    .highlight-palestras::before {
+        background-color: #1877F2;
+        transform: rotate(-3deg) scale(0.9);
+    }
+
+    .highlight-palestras:hover {
+        text-decoration-color: transparent;
+        color: #fff;
+    }
+
+    .highlight-palestras:hover::before {
+        opacity: 1;
+        transform: rotate(-3deg) scale(1);
+    }
+
+    /* --- EFEITO 2: CASA DE CONTEÚDO (ROSA/LILÁS) --- */
+    .highlight-conteudo::before {
+        background-color: #E406B8;
+        transform: rotate(3deg) scale(0.9);
+    }
+
+    .highlight-conteudo:hover {
+        text-decoration-color: transparent;
+        color: #fff;
+    }
+
+    .highlight-conteudo:hover::before {
+        opacity: 1;
+        transform: rotate(2deg) scale(1.2);
+    }
+
+    /* Ajuste sutil na logo tipo botão WORK do Homerun */
+    .badge-hero {
+        display: inline-block;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50px;
+        padding: 8px 24px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+        color: #fff;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+    }
+
+</style>
+
+<!-- HERO: ESTRATEGIA DIGITAL -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#161616]">
+
+    <!-- Gradientes decorativos espalhados no fundo (escurecidos para matchar com bg dark) -->
     <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-        <!-- Azul corporativo — canto superior esquerdo, bem difuso -->
-        <div class="absolute -top-64 -left-64 w-[800px] h-[800px] rounded-full" style="background: radial-gradient(circle, rgba(24,119,242,0.07) 0%, transparent 65%);"></div>
-        <!-- Azul ciano tech — canto inferior direito -->
-        <div class="absolute -bottom-48 -right-48 w-[700px] h-[700px] rounded-full" style="background: radial-gradient(circle, rgba(14,165,233,0.06) 0%, transparent 65%);"></div>
-        <!-- Azul médio — centro-esquerda, muito sutil -->
-        <div class="absolute top-1/2 -left-40 w-[500px] h-[500px] rounded-full" style="background: radial-gradient(circle, rgba(13,95,190,0.05) 0%, transparent 60%); transform: translateY(-50%);"></div>
+        <!-- Azul corporativo — canto superior esquerdo -->
+        <div class="absolute -top-64 -left-64 w-[800px] h-[800px] rounded-full"
+            style="background: radial-gradient(circle, rgba(24,119,242,0.15) 0%, transparent 65%);"></div>
+        <!-- Rosa neon — canto inferior direito -->
+        <div class="absolute -bottom-48 -right-48 w-[700px] h-[700px] rounded-full"
+            style="background: radial-gradient(circle, rgba(228,6,184,0.15) 0%, transparent 65%);"></div>
     </div>
 
     <!-- Canvas de Background Dinamico -->
     <canvas id="socialCanvas" class="absolute inset-0 w-full h-full pointer-events-none z-0"></canvas>
 
-    <!-- Gradiente de rodape suave -->
-    <div class="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-white to-transparent z-0 pointer-events-none"></div>
-
     <div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-20 md:mt-0 pointer-events-none">
 
-        <!-- Titulo principal -->
-        <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-title font-bold text-text-primary leading-tight mb-8 hero-element pointer-events-auto " style="opacity: 0; transform: translateY(20px);">
-            Estratégia Digital <br class="hidden sm:block"/>
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">
-                com Direção
-            </span>
+        <!-- Titulo principal INTERATIVO -->
+        <h1 class="text-4xl sm:text-6xl md:text-[5.5rem] lg:text-[6.5rem] tracking-tight font-title font-bold text-white leading-tight mb-8 hero-element pointer-events-auto"
+            style="opacity: 0; transform: translateY(20px);">
+            Estratégia
+            <span class="hover-word highlight-palestras text-blue-100">Digital</span><br class="hidden sm:block" /> com
+            <span class="hover-word highlight-conteudo text-pink-100">Direção.</span><br class="hidden md:block" />
         </h1>
 
         <!-- Subtitulo -->
-        <p class="text-lg sm:text-xl md:text-2xl text-text-muted font-body font-light max-w-3xl mx-auto mb-12 hero-element pointer-events-auto" style="opacity: 0; transform: translateY(20px);">
-            Transformamos conhecimento em presença contínua, com <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-lilac font-bold">conteúdo, posicionamento e soluções com IA.</span>
+        <p class="text-lg sm:text-xl md:text-2xl text-white font-body font-light max-w-3xl mx-auto mb-12 hero-element pointer-events-auto"
+            style="opacity: 0; transform: translateY(20px);">
+            Transformamos <strong>conhecimento</strong> em <strong>presença contínua</strong>, <br>
+            com conteudo, posicionamento e soluções com IA.
         </p>
 
         <!-- CTA -->
         <div class="hero-element pointer-events-auto" style="opacity: 0; transform: translateY(20px);">
-            <a href="#reservar" class="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-secondary rounded-full transition-all duration-300 hover:scale-105 shadow-[0_4px_30px_rgba(228,6,184,0.35)]">
+            <a href="#reservar"
+                class="inline-flex items-center justify-center px-9 py-4 text-base font-bold text-[#161616] bg-white rounded-full transition-all duration-300 hover:scale-105 hover:bg-secondary hover:text-white shadow-[0_4px_30px_rgba(255,255,255,0.15)]">
                 Quero estruturar meu projeto
                 <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
             </a>
         </div>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full z-20 h-20 md:h-32 pointer-events-none">
+        <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <line x1="0" y1="100" x2="100" y2="20" stroke="#222" stroke-width="2" />
+            <polygon points="0,100 100,20 100,100 0,100" fill="#F9F4E9" />
+        </svg>
     </div>
 </section>
 
 <!-- ─────────────────────────────────────────────────────────────
      SEÇÃO 2: CONSULTORIA (PREMIUM HERO)
      ───────────────────────────────────────────────────────────── -->
-<section id="consult-section" class="scroll-section relative bg-white" style="height: 300vh;">
+<section id="consult-section" class="scroll-section relative bg-[#F9F4E9]" style="height: 300vh;">
 
     <div class="sticky-container sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
-        
+
         <!-- Cards Flutuantes — Content Creation / Social Media -->
         <div class="absolute inset-0 w-full h-full pointer-events-none z-30 flex items-center justify-center">
 
             <!-- Card 1: Top Left grande — criadora de conteúdo com câmera -->
-            <div class="imagem-flutuante absolute hidden md:block rounded-[20px] md:rounded-[32px] overflow-hidden shadow-[0_24px_80px_rgba(0,0,0,0.14)] pointer-events-auto transition-transform duration-100 ease-out max-w-[42vw] max-h-[48vh] md:max-w-none md:max-h-none"
-                 style="width: 340px; height: 430px; z-index: 5; transform: translate(0, 0) rotate(0deg);"
-                 data-tx="-620" data-ty="-590" data-rot="-14">
+            <div class="imagem-flutuante absolute hidden md:block rounded-[20px] md:rounded-[32px] overflow-hidden shadow-[0_24px_80px_rgba(0,0,0,0.14)] border-[3px] border-[#000000] pointer-events-auto transition-transform duration-100 ease-out max-w-[42vw] max-h-[48vh] md:max-w-none md:max-h-none"
+                style="width: 340px; height: 430px; z-index: 5; transform: translate(0, 0) rotate(0deg);" data-tx="-620"
+                data-ty="-590" data-rot="-14">
                 <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=680&q=85"
-                     class="w-full h-full object-cover" alt="Content Creator">
+                    class="w-full h-full object-cover" alt="Content Creator">
             </div>
 
             <!-- Card 2: Top Right — profissional digital -->
-            <div class="imagem-flutuante absolute rounded-[20px] md:rounded-[32px] overflow-hidden shadow-[0_24px_80px_rgba(0,0,0,0.14)] pointer-events-auto transition-transform duration-100 ease-out max-w-[42vw] max-h-[48vh] md:max-w-none md:max-h-none"
-                 style="width: 300px; height: 380px; z-index: 5; transform: translate(0, 0) rotate(0deg);"
-                 data-tx="630" data-ty="-560" data-rot="13">
+            <div class="imagem-flutuante absolute rounded-[20px] md:rounded-[32px] overflow-hidden shadow-[0_24px_80px_rgba(0,0,0,0.14)] border-[3px] border-[#000000] pointer-events-auto transition-transform duration-100 ease-out max-w-[42vw] max-h-[48vh] md:max-w-none md:max-h-none"
+                style="width: 300px; height: 380px; z-index: 5; transform: translate(0, 0) rotate(0deg);" data-tx="630"
+                data-ty="-560" data-rot="13">
                 <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=85"
-                     class="w-full h-full object-cover" alt="Digital Professional">
+                    class="w-full h-full object-cover" alt="Digital Professional">
             </div>
 
             <!-- Card 3: Mid Left — estratégia e produção digital -->
-            <div class="imagem-flutuante absolute hidden md:block rounded-[16px] md:rounded-[28px] overflow-hidden shadow-[0_16px_60px_rgba(0,0,0,0.12)] pointer-events-auto transition-transform duration-100 ease-out max-w-[42vw] max-h-[48vh] md:max-w-none md:max-h-none"
-                 style="width: 280px; height: 350px; z-index: 5; transform: translate(0, 0) rotate(0deg);"
-                 data-tx="-740" data-ty="120" data-rot="-18">
+            <div class="imagem-flutuante absolute hidden md:block rounded-[16px] md:rounded-[28px] overflow-hidden shadow-[0_16px_60px_rgba(0,0,0,0.12)] border-[3px] border-[#000000] pointer-events-auto transition-transform duration-100 ease-out max-w-[42vw] max-h-[48vh] md:max-w-none md:max-h-none"
+                style="width: 280px; height: 350px; z-index: 5; transform: translate(0, 0) rotate(0deg);" data-tx="-740"
+                data-ty="120" data-rot="-18">
                 <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=560&q=85"
-                     class="w-full h-full object-cover" alt="Digital Strategy">
+                    class="w-full h-full object-cover" alt="Digital Strategy">
             </div>
 
             <!-- Card 4: Mid Right — criação colaborativa -->
-            <div class="imagem-flutuante absolute hidden md:block rounded-[16px] md:rounded-[28px] overflow-hidden shadow-[0_16px_60px_rgba(0,0,0,0.12)] pointer-events-auto transition-transform duration-100 ease-out max-w-[42vw] max-h-[48vh] md:max-w-none md:max-h-none"
-                 style="width: 310px; height: 390px; z-index: 5; transform: translate(0, 0) rotate(0deg);"
-                 data-tx="750" data-ty="100" data-rot="10">
+            <div class="imagem-flutuante absolute hidden md:block rounded-[16px] md:rounded-[28px] overflow-hidden shadow-[0_16px_60px_rgba(0,0,0,0.12)] border-[3px] border-[#000000] pointer-events-auto transition-transform duration-100 ease-out max-w-[42vw] max-h-[48vh] md:max-w-none md:max-h-none"
+                style="width: 310px; height: 390px; z-index: 5; transform: translate(0, 0) rotate(0deg);" data-tx="750"
+                data-ty="100" data-rot="10">
                 <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=620&q=85"
-                     class="w-full h-full object-cover" alt="Creative Team">
+                    class="w-full h-full object-cover" alt="Creative Team">
             </div>
 
             <!-- Card 5: Bottom Left — lifestyle social -->
-            <div class="imagem-flutuante absolute block md:block rounded-[20px] md:rounded-[32px] overflow-hidden shadow-[0_24px_80px_rgba(0,0,0,0.14)] pointer-events-auto transition-transform duration-100 ease-out max-w-[42vw] max-h-[48vh] md:max-w-none md:max-h-none"
-                 style="width: 320px; height: 400px; z-index: 5; transform: translate(0, 0) rotate(0deg);"
-                 data-tx="-580" data-ty="620" data-rot="20">
+            <div class="imagem-flutuante absolute block md:block rounded-[20px] md:rounded-[32px] overflow-hidden shadow-[0_24px_80px_rgba(0,0,0,0.14)] border-[3px] border-[#000000] pointer-events-auto transition-transform duration-100 ease-out max-w-[42vw] max-h-[48vh] md:max-w-none md:max-h-none"
+                style="width: 320px; height: 400px; z-index: 5; transform: translate(0, 0) rotate(0deg);" data-tx="-580"
+                data-ty="620" data-rot="20">
                 <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=640&q=85"
-                     class="w-full h-full object-cover" alt="Social Lifestyle">
+                    class="w-full h-full object-cover" alt="Social Lifestyle">
             </div>
 
             <!-- Card 6: Bottom Right grande — retrato impactante -->
-            <div class="imagem-flutuante absolute rounded-[20px] md:rounded-[32px] overflow-hidden shadow-[0_24px_80px_rgba(0,0,0,0.14)] pointer-events-auto transition-transform duration-100 ease-out max-w-[42vw] max-h-[48vh] md:max-w-none md:max-h-none"
-                 style="width: 360px; height: 450px; z-index: 5; transform: translate(0, 0) rotate(0deg);"
-                 data-tx="600" data-ty="650" data-rot="-10">
+            <div class="imagem-flutuante absolute rounded-[20px] md:rounded-[32px] overflow-hidden shadow-[0_24px_80px_rgba(0,0,0,0.14)] border-[3px] border-[#000000] pointer-events-auto transition-transform duration-100 ease-out max-w-[42vw] max-h-[48vh] md:max-w-none md:max-h-none"
+                style="width: 360px; height: 450px; z-index: 5; transform: translate(0, 0) rotate(0deg);" data-tx="600"
+                data-ty="650" data-rot="-10">
                 <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=720&q=85"
-                     class="w-full h-full object-cover" alt="Portrait">
+                    class="w-full h-full object-cover" alt="Portrait">
             </div>
 
             <!-- Card 7: Top Center-Left — fotografia mobile -->
-            <div class="imagem-flutuante absolute hidden lg:block rounded-[16px] md:rounded-[28px] overflow-hidden shadow-[0_16px_60px_rgba(0,0,0,0.12)] pointer-events-auto transition-transform duration-100 ease-out max-w-[42vw] max-h-[48vh] md:max-w-none md:max-h-none"
-                 style="width: 240px; height: 300px; z-index: 5; transform: translate(0, 0) rotate(0deg);"
-                 data-tx="-450" data-ty="-400" data-rot="6">
+            <div class="imagem-flutuante absolute hidden lg:block rounded-[16px] md:rounded-[28px] overflow-hidden shadow-[0_16px_60px_rgba(0,0,0,0.12)] border-[3px] border-[#000000] pointer-events-auto transition-transform duration-100 ease-out max-w-[42vw] max-h-[48vh] md:max-w-none md:max-h-none"
+                style="width: 240px; height: 300px; z-index: 5; transform: translate(0, 0) rotate(0deg);" data-tx="-450"
+                data-ty="-400" data-rot="6">
                 <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=480&q=85"
-                     class="w-full h-full object-cover" alt="Mobile Content">
+                    class="w-full h-full object-cover" alt="Mobile Content">
             </div>
 
             <!-- Card 8: Bottom Center-Right — influencer -->
-            <div class="imagem-flutuante absolute hidden lg:block rounded-[16px] md:rounded-[28px] overflow-hidden shadow-[0_16px_60px_rgba(0,0,0,0.12)] pointer-events-auto transition-transform duration-100 ease-out max-w-[42vw] max-h-[48vh] md:max-w-none md:max-h-none"
-                 style="width: 250px; height: 316px; z-index: 5; transform: translate(0, 0) rotate(0deg);"
-                 data-tx="480" data-ty="420" data-rot="-12">
+            <div class="imagem-flutuante absolute hidden lg:block rounded-[16px] md:rounded-[28px] overflow-hidden shadow-[0_16px_60px_rgba(0,0,0,0.12)] border-[3px] border-[#000000] pointer-events-auto transition-transform duration-100 ease-out max-w-[42vw] max-h-[48vh] md:max-w-none md:max-h-none"
+                style="width: 250px; height: 316px; z-index: 5; transform: translate(0, 0) rotate(0deg);" data-tx="480"
+                data-ty="420" data-rot="-12">
                 <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?auto=format&fit=crop&w=500&q=85"
-                     class="w-full h-full object-cover" alt="Influencer">
+                    class="w-full h-full object-cover" alt="Influencer">
             </div>
 
             <!-- Card 9: Top Right extra — equipe criativa -->
-            <div class="imagem-flutuante absolute hidden xl:block rounded-[16px] md:rounded-[24px] overflow-hidden shadow-[0_12px_48px_rgba(0,0,0,0.10)] pointer-events-auto transition-transform duration-100 ease-out max-w-[42vw] max-h-[48vh] md:max-w-none md:max-h-none"
-                 style="width: 210px; height: 268px; z-index: 5; transform: translate(0, 0) rotate(0deg);"
-                 data-tx="490" data-ty="-390" data-rot="-5">
+            <div class="imagem-flutuante absolute hidden xl:block rounded-[16px] md:rounded-[24px] overflow-hidden shadow-[0_12px_48px_rgba(0,0,0,0.10)] border-[3px] border-[#000000] pointer-events-auto transition-transform duration-100 ease-out max-w-[42vw] max-h-[48vh] md:max-w-none md:max-h-none"
+                style="width: 210px; height: 268px; z-index: 5; transform: translate(0, 0) rotate(0deg);" data-tx="490"
+                data-ty="-390" data-rot="-5">
                 <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=420&q=85"
-                     class="w-full h-full object-cover" alt="Creative Team">
+                    class="w-full h-full object-cover" alt="Creative Team">
             </div>
 
         </div>
 
-    <!-- Conteúdo Central -->
-    <div class="relative z-10 flex flex-col items-center text-center px-10 max-w-lg mx-auto consult-content will-change-transform">
+        <!-- Conteúdo Central -->
+        <div
+            class="relative z-10 flex flex-col items-center text-center px-10 max-w-lg mx-auto consult-content will-change-transform">
 
+            <!-- Label decorativo para manter a estrutura -->
+            <div class="flex items-center gap-3 mb-6">
+                <span class="block w-10 h-px opacity-50" style="background-color: #E406B8;"></span>
+                <span class="text-[11px] font-semibold tracking-[0.28em] uppercase font-body"
+                    style="color: #E406B8;">Estratégia & Conteúdo</span>
+                <span class="block w-10 h-px opacity-50" style="background-color: #E406B8;"></span>
+            </div>
 
-        <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-title font-bold text-text-primary leading-tight mb-8 hero-element pointer-events-auto " style="opacity: 0; transform: translateY(20px);">
-            Tudo começa <br class="hidden sm:block"/>
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">
-                com Direção
-            </span>
-        </h1>
+            <h1
+                class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-title font-bold text-text-primary leading-tight mb-8 pointer-events-auto uppercase tracking-tighter">
+                Tudo começa <br />
+                com <span class="hover-word highlight-palestras">Direção</span>.
+            </h1>
 
-        <p class="text-base md:text-lg text-[#555] font-light max-w-md leading-relaxed mb-8 font-body">
-            Antes de produzir conteúdo, <span class="font-semibold text-[#222]"><br/>definimos o caminho.</span><br/>
-            Nossa consultoria identifica posicionamento, prioridades e oportunidades, estruturando uma estratégia clara para construção de autoridade.
-        </p>
+            <p class="text-base md:text-lg text-[#555] font-light max-w-md leading-relaxed mb-8 font-body">
+                Antes de produzir conteúdo, <span class="font-semibold text-[#222]">definimos o caminho.</span><br />
+                Nossa consultoria identifica posicionamento, prioridades e oportunidades, estruturando uma estratégia
+                clara para construção de autoridade.
+            </p>
 
-        <!-- CTA com inline style para garantir cor sem depender do Tailwind runtime -->
-        <a id="consult-cta" href="#contato"
-           class="inline-flex items-center gap-2 px-9 py-4 text-base font-semibold text-white rounded-full pointer-events-auto transition-all duration-300 hover:scale-[1.04]"
-           style="background-color: #E406B8; box-shadow: 0 8px 32px rgba(228,6,184,0.38); opacity: 0;"
-           onmouseover="this.style.backgroundColor='#f71f75'; this.style.boxShadow='0 12px 40px rgba(180,20,84,0.45)';"
-           onmouseout="this.style.backgroundColor='#E406B8'; this.style.boxShadow='0 8px 32px rgba(228,6,184,0.38)';">
-            Quero estruturar meu projeto
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-            </svg>
-        </a>
-    </div>
-
-    </div> <!-- fecha sticky-container -->
+            <!-- CTA com inline style para garantir cor sem depender do Tailwind runtime -->
+            <a id="consult-cta" href="#contato"
+                class="inline-flex items-center gap-2 px-9 py-4 text-base font-semibold text-white rounded-full pointer-events-auto transition-all duration-300 hover:scale-[1.04]"
+                style="background-color: #E406B8; box-shadow: 0 8px 32px rgba(228,6,184,0.38); opacity: 0;"
+                onmouseover="this.style.backgroundColor='#f71f75'; this.style.boxShadow='0 12px 40px rgba(180,20,84,0.45)';"
+                onmouseout="this.style.backgroundColor='#E406B8'; this.style.boxShadow='0 8px 32px rgba(228,6,184,0.38)';">
+                Quero estruturar meu projeto
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+            </a>
+        </div>
+        <!-- Gradient fade-out para a próxima seção -->
+        <div class="absolute bottom-0 left-0 w-full z-40 h-40 md:h-64 pointer-events-none bg-gradient-to-t from-[#F9F4E9] to-transparent"></div>
 </section>
 
 <!-- ─────────────────────────────────────────────────────────────
-     SEÇÃO 3: O QUE FAZEMOS
+     SEÇÃO 3: O QUE FAZEMOS (SCROLL HORIZONTAL)
      ───────────────────────────────────────────────────────────── -->
-<section id="services-section" class="relative bg-white py-32 px-6 md:px-16 flex items-center justify-center" style="min-height: 60vh;">
-    <div class="text-center text-text-muted font-body text-lg">
-        <!-- Seção 3 aguardando reformulação -->
-        <p class="opacity-40">[ Seção 3 — em construção ]</p>
+<section id="services-section" class="relative bg-[#F9F4E9] overflow-hidden text-[#161616]" style="height: 300vh;">
+    <!-- Container que ficará fixo (Pinned) -->
+    <div class="services-pin-container sticky top-0 w-full h-screen flex items-center overflow-hidden">
+        
+        <!-- Bloco Fixo da Esquerda (Título) -->
+        <div class="absolute left-6 md:left-16 z-20 top-1/4 pointer-events-none">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="block w-10 h-px opacity-50" style="background-color: #1877F2;"></span>
+                <span class="text-[11px] font-semibold tracking-[0.28em] uppercase font-body" style="color: #1877F2;">
+                    A Nossa Entrega
+                </span>
+            </div>
+            <h2 class="text-4xl md:text-6xl lg:text-[4rem] font-title font-bold leading-tight uppercase tracking-tighter text-[#161616]">
+                A partir disso,<br/>
+                <span class="inline-block bg-[#E406B8] text-white py-2 px-8 rounded-[11px] transform rotate-2 mt-4" style="font-family: 'DM Serif Display', 'Playfair Display', serif; font-style: italic; font-weight: 500;">estruturamos</span>
+            </h2>
+        </div>
+
+        <!-- Container Deslizante (Scroll Horizontal) -->
+        <div class="services-scroll-wrapper absolute top-0 left-0 h-full flex items-center pl-[100vw] md:pl-[60vw]">
+            <div class="flex items-stretch gap-8 md:gap-16 px-10 md:px-20 h-[50vh] md:h-[60vh] py-10">
+                
+                <!-- Card 1 -->
+                <div class="w-[280px] md:w-[450px] shrink-0 border-4 border-black rounded-[2rem] p-8 md:p-12 flex flex-col justify-between transition-colors duration-500 hover:border-[#1877F2] bg-[#F9F4E9] shadow-lg hover:shadow-2xl">
+                    <span class="text-6xl md:text-8xl font-title font-black text-[#161616]/5 block mb-4">01</span>
+                    <h3 class="text-3xl md:text-5xl font-title font-light tracking-tight text-[#161616] leading-tight">Conteúdo<br>estratégico</h3>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="w-[280px] md:w-[450px] shrink-0 border-4 border-black rounded-[2rem] p-8 md:p-12 flex flex-col justify-between transition-colors duration-500 hover:border-[#E406B8] bg-[#F9F4E9] shadow-lg hover:shadow-2xl">
+                    <span class="text-6xl md:text-8xl font-title font-black text-[#161616]/5 block mb-4">02</span>
+                    <h3 class="text-3xl md:text-5xl font-title font-light tracking-tight text-[#161616] leading-tight">Posicionamento<br>digital</h3>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="w-[280px] md:w-[450px] shrink-0 border-4 border-black rounded-[2rem] p-8 md:p-12 flex flex-col justify-between transition-colors duration-500 hover:border-[#1877F2] bg-[#F9F4E9] shadow-lg hover:shadow-2xl">
+                    <span class="text-6xl md:text-8xl font-title font-black text-[#161616]/5 block mb-4">03</span>
+                    <h3 class="text-3xl md:text-5xl font-title font-light tracking-tight text-[#161616] leading-tight">Séries e presença<br>contínua</h3>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="w-[280px] md:w-[450px] shrink-0 border-4 border-black rounded-[2rem] p-8 md:p-12 flex flex-col justify-between transition-colors duration-500 hover:border-[#E406B8] bg-[#F9F4E9] shadow-lg hover:shadow-2xl">
+                    <span class="text-6xl md:text-8xl font-title font-black text-[#161616]/5 block mb-4">04</span>
+                    <h3 class="text-3xl md:text-5xl font-title font-light tracking-tight text-[#161616] leading-tight">Soluções<br>com IA</h3>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="w-[280px] md:w-[450px] shrink-0 border-4 border-black rounded-[2rem] p-8 md:p-12 flex flex-col justify-between transition-colors duration-500 hover:border-[#1877F2] bg-[#F9F4E9] shadow-lg hover:shadow-2xl">
+                    <span class="text-6xl md:text-8xl font-title font-black text-[#161616]/5 block mb-4">05</span>
+                    <h3 class="text-3xl md:text-4xl lg:text-5xl font-title font-light tracking-tight text-[#161616] leading-tight">Estruturação de<br>produtos digitais</h3>
+                </div>
+
+            </div>
+        </div>
     </div>
 </section>
 
@@ -178,122 +328,150 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-    gsap.registerPlugin(ScrollTrigger);
+    document.addEventListener("DOMContentLoaded", () => {
+        gsap.registerPlugin(ScrollTrigger);
 
-    /* ── Hero: fade-in dos elementos (Seção 1) ── */
-    gsap.to(".hero-element", {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        stagger: 0.2,
-        ease: "power3.out",
-        delay: 0.2
-    });
-
-    /* ── Consultoria (Seção 2): Premium Hero ── */
-    
-    // 1. Animação de Entrada Inicial (Fade Up + Textos)
-    const consultEntry = gsap.timeline({
-        scrollTrigger: {
-            trigger: "#consult-section",
-            start: "top 75%", // Inicia quando 25% da seção está visível na tela
-            once: true
-        }
-    });
-
-    // Fade-up dos textos centrais (exclui o botão — animado separadamente)
-    consultEntry.from(".consult-content > *:not(#consult-cta)", {
-        opacity: 0,
-        y: 50,
-        duration: 1.4,
-        stagger: 0.2,
-        ease: "power4.out"
-    });
-
-    // Botão CTA animado separadamente — garantia de sempre aparecer
-    consultEntry.to("#consult-cta", {
-        opacity: 1,
-        y: 0,
-        duration: 0.9,
-        ease: "power3.out"
-    }, "-=0.6");
-
-    // Fade in das imagens para começar no centro inicialmente
-    consultEntry.from(".imagem-flutuante", {
-        opacity: 0,
-        scale: 0.4,
-        duration: 1.6,
-        stagger: 0.15,
-        ease: "back.out(1.2)",
-    }, "-=1.0");
-
-    // Badges de resultado — entram com bounce
-    consultEntry.from(".stat-badge", {
-        opacity: 0,
-        scale: 0.75,
-        y: 18,
-        duration: 0.9,
-        stagger: 0.2,
-        ease: "back.out(1.8)"
-    }, "-=0.8");
-
-    // Flutuação suave dos badges (loop)
-    gsap.utils.toArray(".stat-badge").forEach((badge, i) => {
-        gsap.to(badge, {
-            y: "+=10",
-            duration: 2.2 + i * 0.4,
-            repeat: -1,
-            yoyo: true,
-            ease: "sine.inOut",
-            delay: i * 0.5
+        /* ── Hero: fade-in dos elementos (Seção 1) ── */
+        gsap.to(".hero-element", {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            stagger: 0.2,
+            ease: "power3.out",
+            delay: 0.2
         });
-    });
 
-    // 2. Animação Scroll-linked via Vanilla JS (dispersão)
-    const section = document.querySelector('.scroll-section');
-    const images = document.querySelectorAll('.imagem-flutuante');
+        /* ── Consultoria (Seção 2): Premium Hero ── */
 
-    window.addEventListener('scroll', () => {
-        // Pega as dimensões e a posição atual da seção em relação à janela
-        const rect = section.getBoundingClientRect();
-        
-        // Calcula o progresso do scroll de 0 (início) até 1 (fim da seção)
-        let scrollProgress = 0;
-        
-        if (rect.top <= 0) {
-            // Subtraímos a altura da janela (innerHeight) para que o progresso
-            // chegue a 1 exatamente quando o final da seção bater no final da tela
-            const scrollableDistance = rect.height - window.innerHeight;
-            scrollProgress = Math.abs(rect.top) / scrollableDistance;
-        }
-
-        // Trava o progresso entre 0 e 1
-        scrollProgress = Math.max(0, Math.min(1, scrollProgress));
-
-        // Define um fator de escala para o espalhamento focar em telas menores (Responsividade)
-        let scaleFactor = 1;
-        if (window.innerWidth < 768) {
-            scaleFactor = 0.45; // Em celulares, espalha menos para não vazar a tela
-        } else if (window.innerWidth < 1024) {
-            scaleFactor = 0.75; // Em tablets, espalha mediano
-        }
-
-        // Aplica o cálculo individualmente para cada imagem
-        images.forEach(img => {
-            // Pega os valores configurados no HTML
-            const tx = parseFloat(img.getAttribute('data-tx'));
-            const ty = parseFloat(img.getAttribute('data-ty'));
-            const rot = parseFloat(img.getAttribute('data-rot'));
-
-            // Multiplica o valor final desejado pelo progresso e pelo espaçamento responsivo
-            const currentX = (tx * scaleFactor) * scrollProgress;
-            const currentY = (ty * scaleFactor) * scrollProgress;
-            const currentRot = rot * scrollProgress;
-
-            // Aplica as transformações CSS, mantendo o controle sobre as posições absolutas centrais
-            img.style.transform = `translate(${currentX}px, ${currentY}px) rotate(${currentRot}deg)`;
+        // 1. Animação de Entrada Inicial (Fade Up + Textos)
+        const consultEntry = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#consult-section",
+                start: "top 75%", // Inicia quando 25% da seção está visível na tela
+                once: true
+            }
         });
+
+        // Fade-up dos textos centrais (exclui o botão — animado separadamente)
+        consultEntry.from(".consult-content > *:not(#consult-cta)", {
+            opacity: 0,
+            y: 50,
+            duration: 1.4,
+            stagger: 0.2,
+            ease: "power4.out"
+        });
+
+        // Botão CTA animado separadamente — garantia de sempre aparecer
+        consultEntry.to("#consult-cta", {
+            opacity: 1,
+            y: 0,
+            duration: 0.9,
+            ease: "power3.out"
+        }, "-=0.6");
+
+        // Fade in das imagens para começar no centro inicialmente
+        consultEntry.from(".imagem-flutuante", {
+            opacity: 0,
+            scale: 0.4,
+            duration: 1.6,
+            stagger: 0.15,
+            ease: "back.out(1.2)",
+        }, "-=1.0");
+
+        // Badges de resultado — entram com bounce
+        consultEntry.from(".stat-badge", {
+            opacity: 0,
+            scale: 0.75,
+            y: 18,
+            duration: 0.9,
+            stagger: 0.2,
+            ease: "back.out(1.8)"
+        }, "-=0.8");
+
+        // Flutuação suave dos badges (loop)
+        gsap.utils.toArray(".stat-badge").forEach((badge, i) => {
+            gsap.to(badge, {
+                y: "+=10",
+                duration: 2.2 + i * 0.4,
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut",
+                delay: i * 0.5
+            });
+        });
+
+        // 2. Animação Scroll-linked via Vanilla JS (dispersão)
+        const section = document.querySelector('.scroll-section');
+        const images = document.querySelectorAll('.imagem-flutuante');
+
+        window.addEventListener('scroll', () => {
+            // Pega as dimensões e a posição atual da seção em relação à janela
+            const rect = section.getBoundingClientRect();
+
+            // Calcula o progresso do scroll de 0 (início) até 1 (fim da seção)
+            let scrollProgress = 0;
+
+            if (rect.top <= 0) {
+                // Subtraímos a altura da janela (innerHeight) para que o progresso
+                // chegue a 1 exatamente quando o final da seção bater no final da tela
+                const scrollableDistance = rect.height - window.innerHeight;
+                scrollProgress = Math.abs(rect.top) / scrollableDistance;
+            }
+
+            // Trava o progresso entre 0 e 1
+            scrollProgress = Math.max(0, Math.min(1, scrollProgress));
+
+            // Define um fator de escala para o espalhamento focar em telas menores (Responsividade)
+            let scaleFactor = 1;
+            if (window.innerWidth < 768) {
+                scaleFactor = 0.45; // Em celulares, espalha menos para não vazar a tela
+            } else if (window.innerWidth < 1024) {
+                scaleFactor = 0.75; // Em tablets, espalha mediano
+            }
+
+            // Aplica o cálculo individualmente para cada imagem
+            images.forEach(img => {
+                // Pega os valores configurados no HTML
+                const tx = parseFloat(img.getAttribute('data-tx'));
+                const ty = parseFloat(img.getAttribute('data-ty'));
+                const rot = parseFloat(img.getAttribute('data-rot'));
+
+                // Multiplica o valor final desejado pelo progresso e pelo espaçamento responsivo
+                const currentX = (tx * scaleFactor) * scrollProgress;
+                const currentY = (ty * scaleFactor) * scrollProgress;
+                const currentRot = rot * scrollProgress;
+
+                // Aplica as transformações CSS, mantendo o controle sobre as posições absolutas centrais
+                img.style.transform = `translate(${currentX}px, ${currentY}px) rotate(${currentRot}deg)`;
+            });
+        });
+
+        /* ── Serviços (Seção 3): Scroll Horizontal Tipográfico ── */
+        const servicesSection = document.getElementById("services-section");
+        const servicesWrapper = document.querySelector(".services-scroll-wrapper");
+        
+        if (servicesSection && servicesWrapper) {
+            
+            function getScrollAmount() {
+                let wrapperWidth = servicesWrapper.scrollWidth;
+                return -(wrapperWidth - window.innerWidth);
+            }
+
+            const tween = gsap.to(servicesWrapper, {
+                x: getScrollAmount,
+                ease: "none"
+            });
+
+            ScrollTrigger.create({
+                trigger: servicesSection,
+                start: "top top",
+                end: () => `+=${servicesWrapper.scrollWidth - window.innerWidth}`,
+                pin: true,
+                animation: tween,
+                scrub: 1,
+                invalidateOnRefresh: true,
+            });
+        }
+
     });
-});
 </script>
