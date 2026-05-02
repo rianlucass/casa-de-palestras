@@ -78,11 +78,25 @@
         margin-bottom: 30px;
         text-transform: uppercase;
     }
-
 </style>
 
 <!-- HERO: ESTRATEGIA DIGITAL -->
 <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#161616]">
+
+    <!-- OVERLAY DE LOADING -->
+    <div id="page-loader"
+        class="fixed inset-0 z-[9999] bg-[#0f0f0f] flex flex-col items-center justify-center transition-opacity duration-700 ease-out">
+        <div class="relative flex items-center justify-center w-24 h-24 mb-8">
+            <div class="absolute inset-0 border-t-2 border-[#1877F2] rounded-full animate-spin"></div>
+            <div class="absolute inset-2 border-r-2 border-[#E406B8] rounded-full animate-spin"
+                style="animation-direction: reverse; animation-duration: 1.5s;"></div>
+            <div class="absolute inset-4 border-b-2 border-white/50 rounded-full animate-spin"
+                style="animation-duration: 5s;"></div>
+        </div>
+        <div class="text-white font-title text-sm md:text-base tracking-[0.3em] uppercase opacity-80 animate-pulse">
+            Preparando estratégia...
+        </div>
+    </div>
 
     <!-- Gradientes decorativos espalhados no fundo (escurecidos para matchar com bg dark) -->
     <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
@@ -117,9 +131,9 @@
         <!-- CTA -->
         <div class="hero-element pointer-events-auto" style="opacity: 0; transform: translateY(20px);">
             <a href="#reservar"
-                class="inline-flex items-center justify-center px-9 py-4 text-base font-bold text-[#161616] bg-white rounded-full transition-all duration-300 hover:scale-105 hover:bg-secondary hover:text-white shadow-[0_4px_30px_rgba(255,255,255,0.15)]">
+                class="inline-flex items-center justify-center px-6 py-3 md:px-9 md:py-4 text-sm md:text-base font-bold text-[#161616] bg-white rounded-full transition-all duration-300 hover:scale-105 hover:bg-secondary hover:text-white shadow-[0_4px_30px_rgba(255,255,255,0.15)]">
                 Quero estruturar meu projeto
-                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-4 h-4 md:w-5 md:h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
@@ -146,7 +160,7 @@
         <div class="absolute inset-0 w-full h-full pointer-events-none z-30 flex items-center justify-center">
 
             <!-- Card 1: Top Left grande — criadora de conteúdo com câmera -->
-            <div class="imagem-flutuante absolute hidden md:block rounded-[20px] md:rounded-[32px] overflow-hidden shadow-[0_24px_80px_rgba(0,0,0,0.14)] border-[3px] border-[#000000] pointer-events-auto transition-transform duration-100 ease-out max-w-[42vw] max-h-[48vh] md:max-w-none md:max-h-none"
+            <div class="imagem-flutuante absolute block rounded-[20px] md:rounded-[32px] overflow-hidden shadow-[0_24px_80px_rgba(0,0,0,0.14)] border-[3px] border-[#000000] pointer-events-auto transition-transform duration-100 ease-out max-w-[42vw] max-h-[48vh] md:max-w-none md:max-h-none"
                 style="width: 340px; height: 430px; z-index: 5; transform: translate(0, 0) rotate(0deg);" data-tx="-620"
                 data-ty="-590" data-rot="-14">
                 <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=680&q=85"
@@ -170,7 +184,7 @@
             </div>
 
             <!-- Card 4: Mid Right — criação colaborativa -->
-            <div class="imagem-flutuante absolute hidden md:block rounded-[16px] md:rounded-[28px] overflow-hidden shadow-[0_16px_60px_rgba(0,0,0,0.12)] border-[3px] border-[#000000] pointer-events-auto transition-transform duration-100 ease-out max-w-[42vw] max-h-[48vh] md:max-w-none md:max-h-none"
+            <div class="imagem-flutuante absolute block rounded-[16px] md:rounded-[28px] overflow-hidden shadow-[0_16px_60px_rgba(0,0,0,0.12)] border-[3px] border-[#000000] pointer-events-auto transition-transform duration-100 ease-out max-w-[42vw] max-h-[48vh] md:max-w-none md:max-h-none"
                 style="width: 310px; height: 390px; z-index: 5; transform: translate(0, 0) rotate(0deg);" data-tx="750"
                 data-ty="100" data-rot="10">
                 <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=620&q=85"
@@ -245,74 +259,199 @@
 
             <!-- CTA com inline style para garantir cor sem depender do Tailwind runtime -->
             <a id="consult-cta" href="#contato"
-                class="inline-flex items-center gap-2 px-9 py-4 text-base font-semibold text-white rounded-full pointer-events-auto transition-all duration-300 hover:scale-[1.04]"
+                class="inline-flex items-center gap-2 px-6 py-3 md:px-9 md:py-4 text-sm md:text-base font-semibold text-white rounded-full pointer-events-auto transition-all duration-300 hover:scale-[1.04]"
                 style="background-color: #E406B8; box-shadow: 0 8px 32px rgba(228,6,184,0.38); opacity: 0;"
                 onmouseover="this.style.backgroundColor='#f71f75'; this.style.boxShadow='0 12px 40px rgba(180,20,84,0.45)';"
                 onmouseout="this.style.backgroundColor='#E406B8'; this.style.boxShadow='0 8px 32px rgba(228,6,184,0.38)';">
                 Quero estruturar meu projeto
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
             </a>
         </div>
         <!-- Gradient fade-out para a próxima seção -->
-        <div class="absolute bottom-0 left-0 w-full z-40 h-40 md:h-64 pointer-events-none bg-gradient-to-t from-[#F9F4E9] to-transparent"></div>
+        <div
+            class="absolute bottom-0 left-0 w-full z-40 h-40 md:h-64 pointer-events-none bg-gradient-to-t from-[#F9F4E9] to-transparent">
+        </div>
 </section>
 
 <!-- ─────────────────────────────────────────────────────────────
      SEÇÃO 3: O QUE FAZEMOS (SCROLL HORIZONTAL)
      ───────────────────────────────────────────────────────────── -->
-<section id="services-section" class="relative bg-[#F9F4E9] overflow-hidden text-[#161616]" style="height: 300vh;">
+<section id="services-section" class="relative overflow-hidden text-[#161616]" style="height: 300vh;">
     <!-- Container que ficará fixo (Pinned) -->
-    <div class="services-pin-container sticky top-0 w-full h-screen flex items-center overflow-hidden">
-        
+    <div
+        class="services-pin-container sticky top-0 w-full h-screen flex items-center overflow-hidden bg-gradient-to-br from-[#F9F4E9] to-[#ffffff]">
+
         <!-- Bloco Fixo da Esquerda (Título) -->
-        <div class="absolute left-6 md:left-16 z-20 top-1/4 pointer-events-none">
-            <div class="flex items-center gap-3 mb-6">
+        <div class="absolute left-6 md:left-16 z-20 top-16 md:top-1/4 pointer-events-none">
+            <div class="flex items-center gap-3 mb-4 md:mb-6">
                 <span class="block w-10 h-px opacity-50" style="background-color: #1877F2;"></span>
-                <span class="text-[11px] font-semibold tracking-[0.28em] uppercase font-body" style="color: #1877F2;">
+                <span class="text-[10px] md:text-[11px] font-semibold tracking-[0.28em] uppercase font-body" style="color: #1877F2;">
                     A Nossa Entrega
                 </span>
             </div>
-            <h2 class="text-4xl md:text-6xl lg:text-[4rem] font-title font-bold leading-tight uppercase tracking-tighter text-[#161616]">
-                A partir disso,<br/>
-                <span class="inline-block bg-[#E406B8] text-white py-2 px-8 rounded-[11px] transform rotate-2 mt-4" style="font-family: 'DM Serif Display', 'Playfair Display', serif; font-style: italic; font-weight: 500;">estruturamos</span>
+            <h2
+                class="text-3xl md:text-6xl lg:text-[4rem] font-title font-bold leading-tight uppercase tracking-tighter text-[#161616]">
+                A partir disso,<br />
+                <span class="inline-block bg-[#E406B8] text-white py-1.5 md:py-2 px-6 md:px-8 rounded-[11px] transform rotate-2 mt-2 md:mt-4 text-2xl md:text-5xl"
+                    style="font-family: 'DM Serif Display', 'Playfair Display', serif; font-style: italic; font-weight: 500; box-shadow: 0 10px 30px rgba(228,6,184,0.2);">estruturamos</span>
             </h2>
         </div>
 
         <!-- Container Deslizante (Scroll Horizontal) -->
-        <div class="services-scroll-wrapper absolute top-0 left-0 h-full flex items-center pl-[100vw] md:pl-[60vw]">
-            <div class="flex items-stretch gap-8 md:gap-16 px-10 md:px-20 h-[50vh] md:h-[60vh] py-10">
-                
+        <div class="services-scroll-wrapper absolute top-0 left-0 h-full flex items-end pb-12 md:pb-0 md:items-center pl-[100vw] md:pl-[45vw]">
+            <!-- CONTAINER DOS CARDS COM LINHA DE CONTINUIDADE E MAIS ESPAÇO -->
+            <div class="relative flex items-stretch gap-6 md:gap-[60px] px-6 md:px-20 py-6 md:py-10 h-[55vh] md:h-[65vh] before:absolute before:top-1/2 before:left-0 before:right-0 before:h-[2px] before:bg-gradient-to-r before:from-transparent before:via-black/10 before:to-transparent before:-z-10">
+
                 <!-- Card 1 -->
-                <div class="w-[280px] md:w-[450px] shrink-0 border-4 border-black rounded-[2rem] p-8 md:p-12 flex flex-col justify-between transition-colors duration-500 hover:border-[#1877F2] bg-[#F9F4E9] shadow-lg hover:shadow-2xl">
-                    <span class="text-6xl md:text-8xl font-title font-black text-[#161616]/5 block mb-4">01</span>
-                    <h3 class="text-3xl md:text-5xl font-title font-light tracking-tight text-[#161616] leading-tight">Conteúdo<br>estratégico</h3>
+                <div
+                    class="group relative w-[280px] sm:w-[320px] md:w-[420px] shrink-0 bg-white border border-black/5 rounded-[2rem] p-6 md:p-10 flex flex-col justify-between shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:border-transparent hover:shadow-[0_20px_60px_rgba(0,0,0,0.08),0_0_0_1px_rgba(56,182,255,0.3)] transition-all duration-500 overflow-hidden cursor-pointer hover:-translate-y-2 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[3px] after:bg-gradient-to-r after:from-[#38b6ff] after:to-[#E406B8] after:opacity-0 group-hover:after:opacity-100 after:transition-opacity after:duration-300 z-0 hover:z-10">
+
+                    <!-- Imagem -->
+                    <div
+                        class="absolute bottom-0 left-0 w-full h-[55%] opacity-30 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 ease-in-out z-0">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent z-10 group-hover:opacity-0 transition-opacity duration-500">
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80"
+                            class="w-full h-full object-cover" alt="Conteúdo Estratégico">
+                    </div>
+
+                    <!-- Conteúdo do Card -->
+                    <div class="relative z-20 flex flex-col h-full">
+                        <div class="flex justify-between items-start">
+                            <h3
+                                class="text-3xl md:text-4xl font-title font-medium tracking-tight text-gray-900 leading-tight group-hover:text-[#1877F2] transition-colors duration-300 mt-4">
+                                Conteúdo<br>estratégico
+                            </h3>
+                            <!-- Número Editorial -->
+                            <span
+                                class="absolute top-5 right-5 text-[80px] md:text-[90px] font-title font-extrabold text-black/[0.04] leading-none group-hover:text-[#1877F2]/10 transition-colors duration-500">01</span>
+                        </div>
+
+                        <div
+                            class="mt-auto opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="w-[280px] md:w-[450px] shrink-0 border-4 border-black rounded-[2rem] p-8 md:p-12 flex flex-col justify-between transition-colors duration-500 hover:border-[#E406B8] bg-[#F9F4E9] shadow-lg hover:shadow-2xl">
-                    <span class="text-6xl md:text-8xl font-title font-black text-[#161616]/5 block mb-4">02</span>
-                    <h3 class="text-3xl md:text-5xl font-title font-light tracking-tight text-[#161616] leading-tight">Posicionamento<br>digital</h3>
+                <div
+                    class="group relative w-[280px] sm:w-[320px] md:w-[420px] shrink-0 bg-white border border-black/5 rounded-[2rem] p-6 md:p-10 flex flex-col justify-between shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:border-transparent hover:shadow-[0_20px_60px_rgba(0,0,0,0.08),0_0_0_1px_rgba(228,6,184,0.3)] transition-all duration-500 overflow-hidden cursor-pointer hover:-translate-y-2 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[3px] after:bg-gradient-to-r after:from-[#38b6ff] after:to-[#E406B8] after:opacity-0 group-hover:after:opacity-100 after:transition-opacity after:duration-300 z-0 hover:z-10">
+
+                    <div
+                        class="absolute bottom-0 left-0 w-full h-[55%] opacity-30 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 ease-in-out z-0">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent z-10 group-hover:opacity-0 transition-opacity duration-500">
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80"
+                            class="w-full h-full object-cover" alt="Posicionamento Digital">
+                    </div>
+
+                    <div class="relative z-20 flex flex-col h-full">
+                        <div class="flex justify-between items-start">
+                            <h3
+                                class="text-3xl md:text-4xl font-title font-medium tracking-tight text-gray-900 leading-tight group-hover:text-[#E406B8] transition-colors duration-300 mt-4">
+                                Posicionamento<br>digital
+                            </h3>
+                            <span
+                                class="absolute top-5 right-5 text-[80px] md:text-[90px] font-title font-extrabold text-black/[0.04] leading-none group-hover:text-[#E406B8]/10 transition-colors duration-500">02</span>
+                        </div>
+
+                        <div
+                            class="mt-auto opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Card 3 -->
-                <div class="w-[280px] md:w-[450px] shrink-0 border-4 border-black rounded-[2rem] p-8 md:p-12 flex flex-col justify-between transition-colors duration-500 hover:border-[#1877F2] bg-[#F9F4E9] shadow-lg hover:shadow-2xl">
-                    <span class="text-6xl md:text-8xl font-title font-black text-[#161616]/5 block mb-4">03</span>
-                    <h3 class="text-3xl md:text-5xl font-title font-light tracking-tight text-[#161616] leading-tight">Séries e presença<br>contínua</h3>
+                <!-- Card 3 (FEATURED) -->
+                <div
+                    class="group relative w-[280px] sm:w-[320px] md:w-[420px] shrink-0 bg-white border border-black/5 rounded-[2rem] p-6 md:p-10 flex flex-col justify-between shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:border-transparent hover:shadow-[0_20px_60px_rgba(0,0,0,0.08),0_0_0_1px_rgba(56,182,255,0.4)] transition-all duration-500 overflow-hidden cursor-pointer hover:-translate-y-2 z-0 hover:z-10 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[3px] after:bg-gradient-to-r after:from-[#38b6ff] after:to-[#E406B8] after:opacity-0 group-hover:after:opacity-100 after:transition-opacity after:duration-300">
+
+                    <div
+                        class="absolute bottom-0 left-0 w-full h-[55%] opacity-30 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 ease-in-out z-0">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-[#f9fafb] via-[#f9fafb]/80 to-transparent z-10 group-hover:opacity-0 transition-opacity duration-500">
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80"
+                            class="w-full h-full object-cover" alt="Séries e Presença">
+                    </div>
+
+                    <div class="relative z-20 flex flex-col h-full">
+                        <div class="flex justify-between items-start">
+                            <h3
+                                class="text-3xl md:text-4xl font-title font-medium tracking-tight text-gray-900 leading-tight group-hover:text-[#1877F2] transition-colors duration-300 mt-4">
+                                Presença<br>contínua
+                            </h3>
+                            <span
+                                class="absolute top-5 right-5 text-[80px] md:text-[90px] font-title font-extrabold text-black/[0.04] leading-none group-hover:text-[#1877F2]/10 transition-colors duration-500">03</span>
+                        </div>
+
+                        <div
+                            class="mt-auto opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Card 4 -->
-                <div class="w-[280px] md:w-[450px] shrink-0 border-4 border-black rounded-[2rem] p-8 md:p-12 flex flex-col justify-between transition-colors duration-500 hover:border-[#E406B8] bg-[#F9F4E9] shadow-lg hover:shadow-2xl">
-                    <span class="text-6xl md:text-8xl font-title font-black text-[#161616]/5 block mb-4">04</span>
-                    <h3 class="text-3xl md:text-5xl font-title font-light tracking-tight text-[#161616] leading-tight">Soluções<br>com IA</h3>
+                <div
+                    class="group relative w-[280px] sm:w-[320px] md:w-[420px] shrink-0 bg-white border border-black/5 rounded-[2rem] p-6 md:p-10 flex flex-col justify-between shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:border-transparent hover:shadow-[0_20px_60px_rgba(0,0,0,0.08),0_0_0_1px_rgba(228,6,184,0.3)] transition-all duration-500 overflow-hidden cursor-pointer hover:-translate-y-2 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[3px] after:bg-gradient-to-r after:from-[#38b6ff] after:to-[#E406B8] after:opacity-0 group-hover:after:opacity-100 after:transition-opacity after:duration-300 z-0 hover:z-10">
+
+                    <div
+                        class="absolute bottom-0 left-0 w-full h-[55%] opacity-30 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 ease-in-out z-0">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent z-10 group-hover:opacity-0 transition-opacity duration-500">
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=600&q=80"
+                            class="w-full h-full object-cover" alt="Soluções com IA">
+                    </div>
+
+                    <div class="relative z-20 flex flex-col h-full">
+                        <div class="flex justify-between items-start">
+                            <h3
+                                class="text-3xl md:text-4xl font-title font-medium tracking-tight text-gray-900 leading-tight group-hover:text-[#E406B8] transition-colors duration-300 mt-4">
+                                Soluções<br>com IA
+                            </h3>
+                            <span
+                                class="absolute top-5 right-5 text-[80px] md:text-[90px] font-title font-extrabold text-black/[0.04] leading-none group-hover:text-[#E406B8]/10 transition-colors duration-500">04</span>
+                        </div>
+
+                        <div
+                            class="mt-auto opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Card 5 -->
-                <div class="w-[280px] md:w-[450px] shrink-0 border-4 border-black rounded-[2rem] p-8 md:p-12 flex flex-col justify-between transition-colors duration-500 hover:border-[#1877F2] bg-[#F9F4E9] shadow-lg hover:shadow-2xl">
-                    <span class="text-6xl md:text-8xl font-title font-black text-[#161616]/5 block mb-4">05</span>
-                    <h3 class="text-3xl md:text-4xl lg:text-5xl font-title font-light tracking-tight text-[#161616] leading-tight">Estruturação de<br>produtos digitais</h3>
+                <div
+                    class="group relative w-[280px] sm:w-[320px] md:w-[420px] shrink-0 bg-white border border-black/5 rounded-[2rem] p-6 md:p-10 flex flex-col justify-between shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:border-transparent hover:shadow-[0_20px_60px_rgba(0,0,0,0.08),0_0_0_1px_rgba(56,182,255,0.3)] transition-all duration-500 overflow-hidden cursor-pointer hover:-translate-y-2 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[3px] after:bg-gradient-to-r after:from-[#38b6ff] after:to-[#E406B8] after:opacity-0 group-hover:after:opacity-100 after:transition-opacity after:duration-300 z-0 hover:z-10">
+
+                    <div
+                        class="absolute bottom-0 left-0 w-full h-[55%] opacity-30 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 ease-in-out z-0">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent z-10 group-hover:opacity-0 transition-opacity duration-500">
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=600&q=80"
+                            class="w-full h-full object-cover" alt="Produtos Digitais">
+                    </div>
+
+                    <div class="relative z-20 flex flex-col h-full">
+                        <div class="flex justify-between items-start">
+                            <h3
+                                class="text-3xl md:text-4xl font-title font-medium tracking-tight text-gray-900 leading-tight group-hover:text-[#1877F2] transition-colors duration-300 mt-4">
+                                Produtos<br>Digitais
+                            </h3>
+                            <span
+                                class="absolute top-5 right-5 text-[80px] md:text-[90px] font-title font-extrabold text-black/[0.04] leading-none group-hover:text-[#1877F2]/10 transition-colors duration-500">05</span>
+                        </div>
+
+                        <div
+                            class="mt-auto opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -369,15 +508,8 @@
             ease: "power3.out"
         }, "-=0.6");
 
-        // Fade in das imagens para começar no centro inicialmente
-        consultEntry.from(".imagem-flutuante", {
-            opacity: 0,
-            scale: 0.4,
-            duration: 1.6,
-            stagger: 0.15,
-            ease: "back.out(1.2)",
-        }, "-=1.0");
-
+        // Removido o Fade in (surgimento) das imagens a pedido (para evitar bugs caso o scroll seja muito rápido).
+        // As imagens agora carregam rápido e já começam renderizadas no centro da tela.
         // Badges de resultado — entram com bounce
         consultEntry.from(".stat-badge", {
             opacity: 0,
@@ -449,9 +581,9 @@
         /* ── Serviços (Seção 3): Scroll Horizontal Tipográfico ── */
         const servicesSection = document.getElementById("services-section");
         const servicesWrapper = document.querySelector(".services-scroll-wrapper");
-        
+
         if (servicesSection && servicesWrapper) {
-            
+
             function getScrollAmount() {
                 let wrapperWidth = servicesWrapper.scrollWidth;
                 return -(wrapperWidth - window.innerWidth);
@@ -472,6 +604,20 @@
                 invalidateOnRefresh: true,
             });
         }
+
+        // Remove o loading screen quando todos os assets estiverem carregados
+        window.addEventListener("load", () => {
+            const loader = document.getElementById("page-loader");
+            if(loader) {
+                // Delay muito sutil para o navegador recalcular todo o DOM sem travar visualmente
+                setTimeout(() => {
+                    loader.style.opacity = "0";
+                    setTimeout(() => {
+                        loader.remove();
+                    }, 700);
+                }, 400);
+            }
+        });
 
     });
 </script>
