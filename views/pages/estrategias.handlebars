@@ -279,31 +279,35 @@
 <!-- ─────────────────────────────────────────────────────────────
      SEÇÃO 3: O QUE FAZEMOS (SCROLL HORIZONTAL)
      ───────────────────────────────────────────────────────────── -->
-<section id="services-section" class="relative overflow-hidden text-[#161616]" style="height: 300vh;">
+<section id="services-section" class="relative overflow-hidden text-[#161616]">
     <!-- Container que ficará fixo (Pinned) -->
     <div
         class="services-pin-container sticky top-0 w-full h-screen flex items-center overflow-hidden bg-gradient-to-br from-[#F9F4E9] to-[#ffffff]">
 
         <!-- Bloco Fixo da Esquerda (Título) -->
-        <div class="absolute left-6 md:left-16 z-20 top-16 md:top-1/4 pointer-events-none">
+        <div class="absolute left-6 md:left-16 z-20 top-24 md:top-1/4 pointer-events-none">
             <div class="flex items-center gap-3 mb-4 md:mb-6">
                 <span class="block w-10 h-px opacity-50" style="background-color: #1877F2;"></span>
-                <span class="text-[10px] md:text-[11px] font-semibold tracking-[0.28em] uppercase font-body" style="color: #1877F2;">
+                <span class="text-[10px] md:text-[11px] font-semibold tracking-[0.28em] uppercase font-body"
+                    style="color: #1877F2;">
                     A Nossa Entrega
                 </span>
             </div>
             <h2
                 class="text-3xl md:text-6xl lg:text-[4rem] font-title font-bold leading-tight uppercase tracking-tighter text-[#161616]">
                 A partir disso,<br />
-                <span class="inline-block bg-[#E406B8] text-white py-1.5 md:py-2 px-6 md:px-8 rounded-[11px] transform rotate-2 mt-2 md:mt-4 text-2xl md:text-5xl"
+                <span
+                    class="inline-block bg-[#E406B8] text-white py-1.5 md:py-2 px-6 md:px-8 rounded-[11px] transform rotate-2 mt-2 md:mt-4 text-2xl md:text-5xl"
                     style="font-family: 'DM Serif Display', 'Playfair Display', serif; font-style: italic; font-weight: 500; box-shadow: 0 10px 30px rgba(228,6,184,0.2);">estruturamos</span>
             </h2>
         </div>
 
         <!-- Container Deslizante (Scroll Horizontal) -->
-        <div class="services-scroll-wrapper absolute top-0 left-0 h-full flex items-end pb-12 md:pb-0 md:items-center pl-[100vw] md:pl-[45vw]">
+        <div
+            class="services-scroll-wrapper absolute top-0 left-0 h-full flex items-end pb-8 md:pb-0 md:items-center pl-[100vw] md:pl-[45vw]">
             <!-- CONTAINER DOS CARDS COM LINHA DE CONTINUIDADE E MAIS ESPAÇO -->
-            <div class="relative flex items-stretch gap-6 md:gap-[60px] px-6 md:px-20 py-6 md:py-10 h-[55vh] md:h-[65vh] before:absolute before:top-1/2 before:left-0 before:right-0 before:h-[2px] before:bg-gradient-to-r before:from-transparent before:via-black/10 before:to-transparent before:-z-10">
+            <div
+                class="relative flex items-stretch gap-6 md:gap-[60px] px-6 md:px-20 py-6 md:py-10 h-[65vh] before:absolute before:top-1/2 before:left-0 before:right-0 before:h-[2px] before:bg-gradient-to-r before:from-transparent before:via-black/10 before:to-transparent before:-z-10">
 
                 <!-- Card 1 -->
                 <div
@@ -457,7 +461,351 @@
             </div>
         </div>
     </div>
+
+    <div class="absolute bottom-0 left-0 w-full z-20 h-20 md:h-32 pointer-events-none">
+        <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <line x1="0" y1="100" x2="100" y2="20" stroke="#161616" stroke-width="2" />
+            <polygon points="0,100 100,20 100,100 0,100" fill="#161616" />
+        </svg>
+    </div>
+
+    <style>
+        @media (max-width: 767px) {
+
+            /* Forçar estado "hover" ativo e remover transições lentas no mobile */
+            #services-section .group {
+                border-color: transparent !important;
+                transform: none !important;
+            }
+
+            #services-section .group:nth-child(odd) {
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(56, 182, 255, 0.3) !important;
+            }
+
+            #services-section .group:nth-child(even) {
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(228, 6, 184, 0.3) !important;
+            }
+
+            #services-section .group::after {
+                opacity: 1 !important;
+            }
+
+            #services-section .group>div:nth-child(1) {
+                opacity: 1 !important;
+                filter: grayscale(0) !important;
+            }
+
+            #services-section .group>div:nth-child(1)>div:nth-child(1) {
+                opacity: 0 !important;
+            }
+
+            #services-section .group h3 {
+                color: #1877F2 !important;
+            }
+
+            #services-section .group:nth-child(even) h3 {
+                color: #E406B8 !important;
+            }
+
+            #services-section .group span.absolute {
+                color: rgba(24, 119, 242, 0.1) !important;
+            }
+
+            #services-section .group:nth-child(even) span.absolute {
+                color: rgba(228, 6, 184, 0.1) !important;
+            }
+
+            /* Remove transições pesadas para melhor performance de scroll no mobile */
+            #services-section .group,
+            #services-section .group * {
+                transition: none !important;
+            }
+        }
+    </style>
 </section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     BLOCO ESCURO GLOBAL — Seções 4, 5, 6 e CTA (bg #161616 compartilhado)
+     Estrelas geradas UMA VEZ para todo o bloco
+     ═══════════════════════════════════════════════════════════ -->
+<div id="dark-sections-wrapper" class="relative bg-[#161616] overflow-hidden">
+
+    <!-- ★ GLOBAL STARS — cobre todo o bloco escuro -->
+    <div class="absolute inset-0 z-0 pointer-events-none">
+        <div id="global-stars-container" class="absolute inset-0 w-full h-full"></div>
+    </div>
+
+    <style>
+        .star-point {
+            position: absolute;
+            background-color: #fff;
+            border-radius: 50%;
+            animation: blink 4s infinite ease-in-out;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 0.08; }
+            50%       { opacity: 0.75; }
+        }
+    </style>
+
+    <!-- ─────────────────────────────────────────────────────────────
+         SEÇÃO 4: COMO ISSO SE TRADUZ
+         ───────────────────────────────────────────────────────────── -->
+    <section id="traduz-section" class="relative py-16 md:py-32 flex flex-col justify-center">
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto flex flex-col justify-center items-center">
+            <!-- Label decorativo -->
+            <div class="flex items-center gap-3 mb-4 md:mb-6 s4-element" style="opacity: 0; transform: translateY(40px);">
+                <span class="block w-8 md:w-10 h-px opacity-50" style="background-color: #1877F2;"></span>
+                <span class="text-[10px] md:text-[11px] font-semibold tracking-[0.22em] md:tracking-[0.28em] uppercase font-body" style="color: #1877F2;">O RESULTADO</span>
+                <span class="block w-8 md:w-10 h-px opacity-50" style="background-color: #1877F2;"></span>
+            </div>
+
+            <h2 class="text-2xl sm:text-4xl md:text-6xl lg:text-[5rem] tracking-tight font-title font-bold text-white leading-tight mb-5 md:mb-8 s4-element"
+                style="opacity: 0; transform: translateY(40px);">
+                Como isso se traduz<br />na <span class="hover-word highlight-conteudo text-pink-100">prática?</span>
+            </h2>
+
+            <p class="text-sm sm:text-base md:text-2xl text-gray-300 font-body font-light max-w-3xl mx-auto leading-relaxed s4-element"
+                style="opacity: 0; transform: translateY(40px);">
+                Não se trata de produzir conteúdo por produzir.<br class="hidden sm:block"><br class="hidden sm:block">
+                <span class="sm:hidden"> </span>Estruturamos uma presença com direção, consistência e objetivo — conectando o que você fala com o que o mercado precisa ouvir.
+            </p>
+            <div class="scroll-reveal flex items-center gap-4 mt-10 md:mt-14" style="--delay: 0.45s;">
+                <div class="w-[1px] h-8 md:h-10 relative overflow-hidden">
+                    <div class="absolute inset-0 w-full bg-gradient-to-b from-[#38b6ff] to-[#E406B8] scroll-line-anim"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─────────────────────────────────────────────────────────────
+         SEÇÃO 5: ESCALA COM INTELIGÊNCIA (IA)
+         ───────────────────────────────────────────────────────────── -->
+    <section id="ia-section" class="relative py-16 md:py-32 flex flex-col justify-center">
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto flex flex-col justify-center items-center">
+            <!-- Label decorativo -->
+            <div class="flex items-center gap-3 mb-4 md:mb-6 s5-element" style="opacity: 0; transform: translateY(40px);">
+                <span class="block w-8 md:w-10 h-px opacity-50" style="background-color: #00f0ff;"></span>
+                <span class="text-[10px] md:text-[11px] font-semibold tracking-[0.22em] md:tracking-[0.28em] uppercase font-body"
+                    style="color: #00f0ff;">TECNOLOGIA E ESCALA</span>
+                <span class="block w-8 md:w-10 h-px opacity-50" style="background-color: #00f0ff;"></span>
+            </div>
+
+            <h2 class="text-2xl sm:text-4xl md:text-6xl lg:text-[5rem] tracking-tight font-title font-bold text-white leading-tight mb-5 md:mb-8 s5-element"
+                style="opacity: 0; transform: translateY(40px);">
+                Escala com <span class="hover-word highlight-conteudo text-pink-100">inteligência.</span>
+            </h2>
+
+            <p class="text-sm sm:text-base md:text-2xl text-gray-300 font-body font-light max-w-3xl mx-auto leading-relaxed mb-6 md:mb-10 s5-element"
+                style="opacity: 0; transform: translateY(40px);">
+                Utilizamos IA para ampliar produção e consistência, sem perder autenticidade.
+            </p>
+
+            <ul class="space-y-3 md:space-y-4 s5-element flex flex-col items-center" style="opacity: 0; transform: translateY(40px);">
+                <li class="flex items-center gap-3 md:gap-4">
+                    <div class="w-1.5 h-1.5 rounded-full bg-[#00f0ff] shadow-[0_0_10px_#00f0ff] shrink-0"></div>
+                    <span class="text-gray-200 font-body text-base md:text-xl tracking-wide">Agentes de IA</span>
+                </li>
+                <li class="flex items-center gap-3 md:gap-4">
+                    <div class="w-1.5 h-1.5 rounded-full bg-[#7a00ff] shadow-[0_0_10px_#7a00ff] shrink-0"></div>
+                    <span class="text-gray-200 font-body text-base md:text-xl tracking-wide">Produção assistida</span>
+                </li>
+                <li class="flex items-center gap-3 md:gap-4">
+                    <div class="w-1.5 h-1.5 rounded-full bg-[#001eff] shadow-[0_0_10px_#001eff] shrink-0"></div>
+                    <span class="text-gray-200 font-body text-base md:text-xl tracking-wide">Automação de conteúdo</span>
+                </li>
+            </ul>
+
+            <div class="scroll-reveal flex items-center gap-4 mt-10 md:mt-14" style="--delay: 0.45s;">
+                <div class="w-[1px] h-8 md:h-10 relative overflow-hidden">
+                    <div class="absolute inset-0 w-full bg-gradient-to-b from-[#00f0ff] to-[#7a00ff] scroll-line-anim"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─────────────────────────────────────────────────────────────
+         SEÇÃO 6: O QUE ISSO CONSTRÓI
+         ───────────────────────────────────────────────────────────── -->
+    <section id="constroi-section" class="relative py-16 md:py-32 flex flex-col justify-center">
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto flex flex-col justify-center items-center">
+            <!-- Label decorativo -->
+            <div class="flex items-center gap-3 mb-4 md:mb-6 s6-element" style="opacity: 0; transform: translateY(40px);">
+                <span class="block w-8 md:w-10 h-px opacity-50" style="background-color: #E406B8;"></span>
+                <span class="text-[10px] md:text-[11px] font-semibold tracking-[0.22em] md:tracking-[0.28em] uppercase font-body"
+                    style="color: #E406B8;">RESULTADO FINAL</span>
+                <span class="block w-8 md:w-10 h-px opacity-50" style="background-color: #E406B8;"></span>
+            </div>
+
+            <h2 class="text-2xl sm:text-4xl md:text-6xl lg:text-[5rem] tracking-tight font-title font-bold text-white leading-tight mb-8 md:mb-12 s6-element"
+                style="opacity: 0; transform: translateY(40px);">
+                O que isso <span class="hover-word highlight-conteudo text-pink-100">constrói?</span>
+            </h2>
+
+            <ul class="space-y-4 md:space-y-5 s6-element flex flex-col items-center" style="opacity: 0; transform: translateY(40px);">
+                <li class="flex items-center gap-3 md:gap-4">
+                    <div class="w-1.5 h-1.5 rounded-full bg-[#E406B8] shadow-[0_0_10px_#E406B8] shrink-0"></div>
+                    <span class="text-gray-200 font-body text-lg md:text-2xl tracking-wide font-light">Autoridade</span>
+                </li>
+                <li class="flex items-center gap-3 md:gap-4">
+                    <div class="w-1.5 h-1.5 rounded-full bg-[#E406B8] shadow-[0_0_10px_#E406B8] shrink-0"></div>
+                    <span class="text-gray-200 font-body text-lg md:text-2xl tracking-wide font-light">Consistência</span>
+                </li>
+                <li class="flex items-center gap-3 md:gap-4">
+                    <div class="w-1.5 h-1.5 rounded-full bg-[#E406B8] shadow-[0_0_10px_#E406B8] shrink-0"></div>
+                    <span class="text-gray-200 font-body text-lg md:text-2xl tracking-wide font-light">Presença digital</span>
+                </li>
+                <li class="flex items-center gap-3 md:gap-4">
+                    <div class="w-1.5 h-1.5 rounded-full bg-[#E406B8] shadow-[0_0_10px_#E406B8] shrink-0"></div>
+                    <span class="text-gray-200 font-body text-lg md:text-2xl tracking-wide font-light">Novas formas de monetização</span>
+                </li>
+            </ul>
+
+            <div class="scroll-reveal flex items-center gap-4 mt-12 md:mt-16" style="--delay: 0.45s;">
+                <div class="w-[1px] h-12 md:h-16 relative overflow-hidden">
+                    <div class="absolute inset-0 w-full bg-gradient-to-b from-[#E406B8] to-[#161616] scroll-line-anim"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─────────────────────────────────────────────────────────────
+         SEÇÃO FINAL: CTA
+         ───────────────────────────────────────────────────────────── -->
+    <section id="cta-section" class="relative py-14 md:py-32 flex flex-col justify-center">
+
+    <!-- Intro Text -->
+    <div class="relative z-10 text-center mb-8 md:mb-12 px-6 max-w-4xl mx-auto cta-estrategias-intro">
+        <p class="text-lg md:text-3xl text-white font-title font-light leading-snug tracking-wide">
+            Conteúdo sem direção <span class="font-bold text-white">não constrói autoridade.</span><br>
+            Estratégia sem execução <span class="font-bold text-white">não gera resultado.</span>
+        </p>
+    </div>
+
+    <!-- CTA Box Frente -->
+    <div class="relative z-10 max-w-2xl mx-auto px-4 md:px-6 w-full cta-box-estrategias">
+        <div class="bg-white/10 backdrop-blur-xl border border-white/20 p-7 md:p-14 rounded-[1.75rem] md:rounded-[2.5rem] shadow-2xl"
+            style="box-shadow: 0 25px 60px rgba(100,0,60,0.35);">
+
+            <h2 class="text-xl md:text-4xl font-title font-bold text-white mb-2 md:mb-3 text-center">Vamos estruturar isso juntos?</h2>
+            <p class="text-white/60 font-body text-sm md:text-base mb-6 md:mb-8 text-center">
+                Preencha e entraremos em contato em breve.
+            </p>
+
+            <form id="cta-form-estrategias" class="flex flex-col gap-5" onsubmit="handleCtaFormSubmit(event)">
+
+                <!-- Nome -->
+                <div class="flex flex-col gap-1.5">
+                    <label for="cta-nome" class="text-white/80 font-body text-sm font-semibold uppercase tracking-widest text-left">Nome</label>
+                    <input
+                        id="cta-nome"
+                        type="text"
+                        name="nome"
+                        placeholder="Seu nome completo"
+                        required
+                        class="w-full bg-white/10 border border-white/20 text-white placeholder-white/40 font-body text-base px-5 py-3.5 rounded-xl outline-none focus:border-[#E406B8] focus:bg-white/15 transition-all duration-200"
+                    />
+                </div>
+
+                <!-- Email -->
+                <div class="flex flex-col gap-1.5">
+                    <label for="cta-email" class="text-white/80 font-body text-sm font-semibold uppercase tracking-widest text-left">E-mail</label>
+                    <input
+                        id="cta-email"
+                        type="email"
+                        name="email"
+                        placeholder="seu@email.com"
+                        required
+                        class="w-full bg-white/10 border border-white/20 text-white placeholder-white/40 font-body text-base px-5 py-3.5 rounded-xl outline-none focus:border-[#E406B8] focus:bg-white/15 transition-all duration-200"
+                    />
+                </div>
+
+                <!-- Mensagem -->
+                <div class="flex flex-col gap-1.5">
+                    <label for="cta-mensagem" class="text-white/80 font-body text-sm font-semibold uppercase tracking-widest text-left">Mensagem</label>
+                    <textarea
+                        id="cta-mensagem"
+                        name="mensagem"
+                        rows="4"
+                        placeholder="Conte um pouco sobre o que você precisa..."
+                        required
+                        class="w-full bg-white/10 border border-white/20 text-white placeholder-white/40 font-body text-base px-5 py-3.5 rounded-xl outline-none focus:border-[#E406B8] focus:bg-white/15 transition-all duration-200 resize-none"
+                    ></textarea>
+                </div>
+
+                <!-- Botão de envio -->
+                <button
+                    type="submit"
+                    id="cta-submit-btn"
+                    class="w-full mt-2 font-title font-semibold text-lg py-4 rounded-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(228,6,184,0.5)]"
+                    style="background-color: #E406B8; color: #fff; box-shadow: 0 8px 32px rgba(228,6,184,0.35);"
+                >
+                    Quero começar
+                </button>
+
+                <!-- Feedback de envio -->
+                <p id="cta-form-feedback" class="text-center text-white/70 font-body text-sm hidden"></p>
+
+            </form>
+        </div>
+    </div>
+
+    <style>
+        #cta-form-estrategias input:-webkit-autofill,
+        #cta-form-estrategias textarea:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0px 1000px rgba(255,255,255,0.08) inset;
+            -webkit-text-fill-color: #fff;
+        }
+    </style>
+
+    <script>
+        function handleCtaFormSubmit(e) {
+            e.preventDefault();
+            const btn = document.getElementById('cta-submit-btn');
+            const feedback = document.getElementById('cta-form-feedback');
+
+            btn.disabled = true;
+            btn.textContent = 'Enviando...';
+            btn.style.opacity = '0.7';
+
+            // Simulação de envio (substituir por fetch/integração real futuramente)
+            setTimeout(() => {
+                btn.textContent = 'Mensagem enviada ✓';
+                btn.style.backgroundColor = '#16a34a';
+                btn.style.boxShadow = '0 8px 32px rgba(22,163,74,0.35)';
+                feedback.textContent = 'Em breve entraremos em contato!';
+                feedback.classList.remove('hidden');
+                feedback.classList.add('text-green-400');
+                document.getElementById('cta-form-estrategias').reset();
+            }, 1200);
+        }
+    </script>
+</section>
+
+</div>
+<!-- /#dark-sections-wrapper -->
+
+<!-- Script: Global Stars para o bloco escuro -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const starsContainer = document.getElementById('global-stars-container');
+        if (!starsContainer) return;
+
+        // Gera 200 estrelas distribuídas por todo o bloco escuro
+        for (let i = 0; i < 200; i++) {
+            const star = document.createElement('div');
+            star.className = 'star-point';
+            const size = Math.random() * 2.2 + 0.8;
+            star.style.width  = size + 'px';
+            star.style.height = size + 'px';
+            star.style.left   = Math.random() * 100 + '%';
+            star.style.top    = Math.random() * 100 + '%';
+            star.style.animationDelay    = (Math.random() * 6) + 's';
+            star.style.animationDuration = (Math.random() * 4 + 2) + 's';
+            starsContainer.appendChild(star);
+        }
+    });
+</script>
 
 <!-- Script canvas background -->
 <script src="/js/social-bg.js"></script>
@@ -605,10 +953,60 @@
             });
         }
 
+        /* ── Nova Seção 4: Como isso se traduz ── */
+        gsap.to(".s4-element", {
+            scrollTrigger: {
+                trigger: "#traduz-section",
+                start: "top 75%",
+            },
+            opacity: 1,
+            y: 0,
+            duration: 1.2,
+            stagger: 0.2,
+            ease: "power3.out"
+        });
+
+        /* ── Nova Seção 5: Inteligência Artificial (IA) ── */
+        gsap.to(".s5-element", {
+            scrollTrigger: {
+                trigger: "#ia-section",
+                start: "top 75%",
+            },
+            opacity: 1,
+            y: 0,
+            duration: 1.2,
+            stagger: 0.2,
+            ease: "power3.out"
+        });
+
+        /* ── Nova Seção 6: O que isso constrói ── */
+        gsap.to(".s6-element", {
+            scrollTrigger: {
+                trigger: "#constroi-section",
+                start: "top 75%",
+            },
+            opacity: 1,
+            y: 0,
+            duration: 1.2,
+            stagger: 0.2,
+            ease: "power3.out"
+        });
+
+        /* ── Animação: CTA Master Estratégias ── */
+        gsap.from(".cta-estrategias-intro", {
+            scrollTrigger: { trigger: ".cta-estrategias-intro", start: "top 85%" },
+            y: 30, opacity: 0, duration: 0.8, ease: "power3.out"
+        });
+
+        gsap.from(".cta-box-estrategias", {
+            scrollTrigger: { trigger: ".cta-box-estrategias", start: "top 80%" },
+            scale: 0.95, y: 50, opacity: 0, duration: 0.8, ease: "back.out(1.5)"
+        });
+
         // Remove o loading screen quando todos os assets estiverem carregados
         window.addEventListener("load", () => {
             const loader = document.getElementById("page-loader");
-            if(loader) {
+            if (loader) {
                 // Delay muito sutil para o navegador recalcular todo o DOM sem travar visualmente
                 setTimeout(() => {
                     loader.style.opacity = "0";
