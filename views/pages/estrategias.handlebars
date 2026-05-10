@@ -122,10 +122,10 @@
         </h1>
 
         <!-- Subtitulo -->
-        <p class="text-lg sm:text-xl md:text-2xl text-white font-body font-light max-w-3xl mx-auto mb-12 hero-element pointer-events-auto"
+        <p class="text-base sm:text-lg md:text-2xl text-white font-body font-light max-w-3xl mx-auto mb-12 hero-element pointer-events-auto"
             style="opacity: 0; transform: translateY(20px);">
-            Transformamos <strong>conhecimento</strong> em <strong>presença contínua</strong>, <br>
-            com conteudo, posicionamento e soluções com IA.
+            Transformamos <strong>conhecimento</strong> em <strong>presença contínua</strong>,<br class="hidden sm:block">
+            com conteúdo, posicionamento e soluções com IA.
         </p>
 
         <!-- CTA -->
@@ -542,9 +542,17 @@
             border-radius: 50%;
             animation: blink 4s infinite ease-in-out;
         }
+
         @keyframes blink {
-            0%, 100% { opacity: 0.08; }
-            50%       { opacity: 0.75; }
+
+            0%,
+            100% {
+                opacity: 0.08;
+            }
+
+            50% {
+                opacity: 0.75;
+            }
         }
     </style>
 
@@ -554,9 +562,12 @@
     <section id="traduz-section" class="relative py-16 md:py-32 flex flex-col justify-center">
         <div class="relative z-10 text-center px-6 max-w-4xl mx-auto flex flex-col justify-center items-center">
             <!-- Label decorativo -->
-            <div class="flex items-center gap-3 mb-4 md:mb-6 s4-element" style="opacity: 0; transform: translateY(40px);">
+            <div class="flex items-center gap-3 mb-4 md:mb-6 s4-element"
+                style="opacity: 0; transform: translateY(40px);">
                 <span class="block w-8 md:w-10 h-px opacity-50" style="background-color: #1877F2;"></span>
-                <span class="text-[10px] md:text-[11px] font-semibold tracking-[0.22em] md:tracking-[0.28em] uppercase font-body" style="color: #1877F2;">O RESULTADO</span>
+                <span
+                    class="text-[10px] md:text-[11px] font-semibold tracking-[0.22em] md:tracking-[0.28em] uppercase font-body"
+                    style="color: #1877F2;">O RESULTADO</span>
                 <span class="block w-8 md:w-10 h-px opacity-50" style="background-color: #1877F2;"></span>
             </div>
 
@@ -568,11 +579,13 @@
             <p class="text-sm sm:text-base md:text-2xl text-gray-300 font-body font-light max-w-3xl mx-auto leading-relaxed s4-element"
                 style="opacity: 0; transform: translateY(40px);">
                 Não se trata de produzir conteúdo por produzir.<br class="hidden sm:block"><br class="hidden sm:block">
-                <span class="sm:hidden"> </span>Estruturamos uma presença com direção, consistência e objetivo — conectando o que você fala com o que o mercado precisa ouvir.
+                <span class="sm:hidden"> </span>Estruturamos uma presença com direção, consistência e
+                objetivo — conectando o que você fala com o que o mercado precisa ouvir.
             </p>
             <div class="scroll-reveal flex items-center gap-4 mt-10 md:mt-14" style="--delay: 0.45s;">
                 <div class="w-[1px] h-8 md:h-10 relative overflow-hidden">
-                    <div class="absolute inset-0 w-full bg-gradient-to-b from-[#38b6ff] to-[#E406B8] scroll-line-anim"></div>
+                    <div class="absolute inset-0 w-full bg-gradient-to-b from-[#38b6ff] to-[#E406B8] scroll-line-anim">
+                    </div>
                 </div>
             </div>
         </div>
@@ -584,9 +597,11 @@
     <section id="ia-section" class="relative py-16 md:py-32 flex flex-col justify-center">
         <div class="relative z-10 text-center px-6 max-w-4xl mx-auto flex flex-col justify-center items-center">
             <!-- Label decorativo -->
-            <div class="flex items-center gap-3 mb-4 md:mb-6 s5-element" style="opacity: 0; transform: translateY(40px);">
+            <div class="flex items-center gap-3 mb-4 md:mb-6 s5-element"
+                style="opacity: 0; transform: translateY(40px);">
                 <span class="block w-8 md:w-10 h-px opacity-50" style="background-color: #00f0ff;"></span>
-                <span class="text-[10px] md:text-[11px] font-semibold tracking-[0.22em] md:tracking-[0.28em] uppercase font-body"
+                <span
+                    class="text-[10px] md:text-[11px] font-semibold tracking-[0.22em] md:tracking-[0.28em] uppercase font-body"
                     style="color: #00f0ff;">TECNOLOGIA E ESCALA</span>
                 <span class="block w-8 md:w-10 h-px opacity-50" style="background-color: #00f0ff;"></span>
             </div>
@@ -601,7 +616,8 @@
                 Utilizamos IA para ampliar produção e consistência, sem perder autenticidade.
             </p>
 
-            <ul class="space-y-3 md:space-y-4 s5-element flex flex-col items-center" style="opacity: 0; transform: translateY(40px);">
+            <ul class="space-y-3 md:space-y-4 s5-element flex flex-col items-center"
+                style="opacity: 0; transform: translateY(40px);">
                 <li class="flex items-center gap-3 md:gap-4">
                     <div class="w-1.5 h-1.5 rounded-full bg-[#00f0ff] shadow-[0_0_10px_#00f0ff] shrink-0"></div>
                     <span class="text-gray-200 font-body text-base md:text-xl tracking-wide">Agentes de IA</span>
@@ -612,13 +628,15 @@
                 </li>
                 <li class="flex items-center gap-3 md:gap-4">
                     <div class="w-1.5 h-1.5 rounded-full bg-[#001eff] shadow-[0_0_10px_#001eff] shrink-0"></div>
-                    <span class="text-gray-200 font-body text-base md:text-xl tracking-wide">Automação de conteúdo</span>
+                    <span class="text-gray-200 font-body text-base md:text-xl tracking-wide">Automação de
+                        conteúdo</span>
                 </li>
             </ul>
 
             <div class="scroll-reveal flex items-center gap-4 mt-10 md:mt-14" style="--delay: 0.45s;">
                 <div class="w-[1px] h-8 md:h-10 relative overflow-hidden">
-                    <div class="absolute inset-0 w-full bg-gradient-to-b from-[#00f0ff] to-[#7a00ff] scroll-line-anim"></div>
+                    <div class="absolute inset-0 w-full bg-gradient-to-b from-[#00f0ff] to-[#7a00ff] scroll-line-anim">
+                    </div>
                 </div>
             </div>
         </div>
@@ -630,9 +648,11 @@
     <section id="constroi-section" class="relative py-16 md:py-32 flex flex-col justify-center">
         <div class="relative z-10 text-center px-6 max-w-4xl mx-auto flex flex-col justify-center items-center">
             <!-- Label decorativo -->
-            <div class="flex items-center gap-3 mb-4 md:mb-6 s6-element" style="opacity: 0; transform: translateY(40px);">
+            <div class="flex items-center gap-3 mb-4 md:mb-6 s6-element"
+                style="opacity: 0; transform: translateY(40px);">
                 <span class="block w-8 md:w-10 h-px opacity-50" style="background-color: #E406B8;"></span>
-                <span class="text-[10px] md:text-[11px] font-semibold tracking-[0.22em] md:tracking-[0.28em] uppercase font-body"
+                <span
+                    class="text-[10px] md:text-[11px] font-semibold tracking-[0.22em] md:tracking-[0.28em] uppercase font-body"
                     style="color: #E406B8;">RESULTADO FINAL</span>
                 <span class="block w-8 md:w-10 h-px opacity-50" style="background-color: #E406B8;"></span>
             </div>
@@ -642,28 +662,33 @@
                 O que isso <span class="hover-word highlight-conteudo text-pink-100">constrói?</span>
             </h2>
 
-            <ul class="space-y-4 md:space-y-5 s6-element flex flex-col items-center" style="opacity: 0; transform: translateY(40px);">
+            <ul class="space-y-4 md:space-y-5 s6-element flex flex-col items-center"
+                style="opacity: 0; transform: translateY(40px);">
                 <li class="flex items-center gap-3 md:gap-4">
                     <div class="w-1.5 h-1.5 rounded-full bg-[#E406B8] shadow-[0_0_10px_#E406B8] shrink-0"></div>
                     <span class="text-gray-200 font-body text-lg md:text-2xl tracking-wide font-light">Autoridade</span>
                 </li>
                 <li class="flex items-center gap-3 md:gap-4">
                     <div class="w-1.5 h-1.5 rounded-full bg-[#E406B8] shadow-[0_0_10px_#E406B8] shrink-0"></div>
-                    <span class="text-gray-200 font-body text-lg md:text-2xl tracking-wide font-light">Consistência</span>
+                    <span
+                        class="text-gray-200 font-body text-lg md:text-2xl tracking-wide font-light">Consistência</span>
                 </li>
                 <li class="flex items-center gap-3 md:gap-4">
                     <div class="w-1.5 h-1.5 rounded-full bg-[#E406B8] shadow-[0_0_10px_#E406B8] shrink-0"></div>
-                    <span class="text-gray-200 font-body text-lg md:text-2xl tracking-wide font-light">Presença digital</span>
+                    <span class="text-gray-200 font-body text-lg md:text-2xl tracking-wide font-light">Presença
+                        digital</span>
                 </li>
                 <li class="flex items-center gap-3 md:gap-4">
                     <div class="w-1.5 h-1.5 rounded-full bg-[#E406B8] shadow-[0_0_10px_#E406B8] shrink-0"></div>
-                    <span class="text-gray-200 font-body text-lg md:text-2xl tracking-wide font-light">Novas formas de monetização</span>
+                    <span class="text-gray-200 font-body text-lg md:text-2xl tracking-wide font-light">Novas formas de
+                        monetização</span>
                 </li>
             </ul>
 
             <div class="scroll-reveal flex items-center gap-4 mt-12 md:mt-16" style="--delay: 0.45s;">
                 <div class="w-[1px] h-12 md:h-16 relative overflow-hidden">
-                    <div class="absolute inset-0 w-full bg-gradient-to-b from-[#E406B8] to-[#161616] scroll-line-anim"></div>
+                    <div class="absolute inset-0 w-full bg-gradient-to-b from-[#E406B8] to-[#161616] scroll-line-anim">
+                    </div>
                 </div>
             </div>
         </div>
@@ -674,113 +699,133 @@
          ───────────────────────────────────────────────────────────── -->
     <section id="cta-section" class="relative py-14 md:py-32 flex flex-col justify-center">
 
-    <!-- Intro Text -->
-    <div class="relative z-10 text-center mb-8 md:mb-12 px-6 max-w-4xl mx-auto cta-estrategias-intro">
-        <p class="text-lg md:text-3xl text-white font-title font-light leading-snug tracking-wide">
-            Conteúdo sem direção <span class="font-bold text-white">não constrói autoridade.</span><br>
-            Estratégia sem execução <span class="font-bold text-white">não gera resultado.</span>
-        </p>
-    </div>
-
-    <!-- CTA Box Frente -->
-    <div class="relative z-10 max-w-2xl mx-auto px-4 md:px-6 w-full cta-box-estrategias">
-        <div class="bg-white/10 backdrop-blur-xl border border-white/20 p-7 md:p-14 rounded-[1.75rem] md:rounded-[2.5rem] shadow-2xl"
-            style="box-shadow: 0 25px 60px rgba(100,0,60,0.35);">
-
-            <h2 class="text-xl md:text-4xl font-title font-bold text-white mb-2 md:mb-3 text-center">Vamos estruturar isso juntos?</h2>
-            <p class="text-white/60 font-body text-sm md:text-base mb-6 md:mb-8 text-center">
-                Preencha e entraremos em contato em breve.
+        <!-- Intro Text -->
+        <div class="relative z-10 text-center mb-6 md:mb-12 px-6 max-w-4xl mx-auto cta-estrategias-intro">
+            <p class="text-base md:text-3xl text-white font-title font-light leading-snug tracking-wide">
+                Conteúdo sem direção
+                <span class="font-bold text-white">não constrói autoridade.</span><br class="hidden md:block">
+                <span class="hidden md:inline"> </span>Estratégia sem execução
+                <span class="font-bold text-white">não gera resultado.</span>
             </p>
-
-            <form id="cta-form-estrategias" class="flex flex-col gap-5" onsubmit="handleCtaFormSubmit(event)">
-
-                <!-- Nome -->
-                <div class="flex flex-col gap-1.5">
-                    <label for="cta-nome" class="text-white/80 font-body text-sm font-semibold uppercase tracking-widest text-left">Nome</label>
-                    <input
-                        id="cta-nome"
-                        type="text"
-                        name="nome"
-                        placeholder="Seu nome completo"
-                        required
-                        class="w-full bg-white/10 border border-white/20 text-white placeholder-white/40 font-body text-base px-5 py-3.5 rounded-xl outline-none focus:border-[#E406B8] focus:bg-white/15 transition-all duration-200"
-                    />
-                </div>
-
-                <!-- Email -->
-                <div class="flex flex-col gap-1.5">
-                    <label for="cta-email" class="text-white/80 font-body text-sm font-semibold uppercase tracking-widest text-left">E-mail</label>
-                    <input
-                        id="cta-email"
-                        type="email"
-                        name="email"
-                        placeholder="seu@email.com"
-                        required
-                        class="w-full bg-white/10 border border-white/20 text-white placeholder-white/40 font-body text-base px-5 py-3.5 rounded-xl outline-none focus:border-[#E406B8] focus:bg-white/15 transition-all duration-200"
-                    />
-                </div>
-
-                <!-- Mensagem -->
-                <div class="flex flex-col gap-1.5">
-                    <label for="cta-mensagem" class="text-white/80 font-body text-sm font-semibold uppercase tracking-widest text-left">Mensagem</label>
-                    <textarea
-                        id="cta-mensagem"
-                        name="mensagem"
-                        rows="4"
-                        placeholder="Conte um pouco sobre o que você precisa..."
-                        required
-                        class="w-full bg-white/10 border border-white/20 text-white placeholder-white/40 font-body text-base px-5 py-3.5 rounded-xl outline-none focus:border-[#E406B8] focus:bg-white/15 transition-all duration-200 resize-none"
-                    ></textarea>
-                </div>
-
-                <!-- Botão de envio -->
-                <button
-                    type="submit"
-                    id="cta-submit-btn"
-                    class="w-full mt-2 font-title font-semibold text-lg py-4 rounded-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(228,6,184,0.5)]"
-                    style="background-color: #E406B8; color: #fff; box-shadow: 0 8px 32px rgba(228,6,184,0.35);"
-                >
-                    Quero começar
-                </button>
-
-                <!-- Feedback de envio -->
-                <p id="cta-form-feedback" class="text-center text-white/70 font-body text-sm hidden"></p>
-
-            </form>
         </div>
-    </div>
 
-    <style>
-        #cta-form-estrategias input:-webkit-autofill,
-        #cta-form-estrategias textarea:-webkit-autofill {
-            -webkit-box-shadow: 0 0 0px 1000px rgba(255,255,255,0.08) inset;
-            -webkit-text-fill-color: #fff;
-        }
-    </style>
+        <!-- CTA Box Frente -->
+        <div class="relative z-10 max-w-xl mx-auto px-4 md:px-6 w-full cta-box-estrategias">
 
-    <script>
-        function handleCtaFormSubmit(e) {
-            e.preventDefault();
-            const btn = document.getElementById('cta-submit-btn');
-            const feedback = document.getElementById('cta-form-feedback');
+            <!-- Caixa branca — mesmo estilo da curadoria, adaptado pro fundo escuro -->
+            <div class="bg-white rounded-[1.5rem] md:rounded-[2rem] border border-gray-100 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)] p-6 md:p-12 relative overflow-hidden">
 
-            btn.disabled = true;
-            btn.textContent = 'Enviando...';
-            btn.style.opacity = '0.7';
+                <!-- Decor canto superior direito (rosa, como accent da página) -->
+                <div class="absolute top-0 right-0 w-32 h-32 md:w-40 md:h-40 bg-gradient-to-bl from-[#E406B8]/10 to-transparent rounded-bl-full pointer-events-none"></div>
 
-            // Simulação de envio (substituir por fetch/integração real futuramente)
-            setTimeout(() => {
-                btn.textContent = 'Mensagem enviada ✓';
-                btn.style.backgroundColor = '#16a34a';
-                btn.style.boxShadow = '0 8px 32px rgba(22,163,74,0.35)';
-                feedback.textContent = 'Em breve entraremos em contato!';
-                feedback.classList.remove('hidden');
-                feedback.classList.add('text-green-400');
-                document.getElementById('cta-form-estrategias').reset();
-            }, 1200);
-        }
-    </script>
-</section>
+                <h2 class="text-lg md:text-3xl font-title font-extrabold text-text-primary leading-tight mb-2 md:mb-3 relative z-10">
+                    Você não precisa
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#E406B8] to-[#f71f75]">decidir sozinho</span>
+                </h2>
+                <p class="font-body text-text-muted text-sm leading-relaxed mb-6 md:mb-10 relative z-10">
+                    Conte o que você precisa. Vamos estruturar esse caminho juntos.
+                </p>
+
+                <form id="cta-form-estrategias" class="space-y-5 md:space-y-8 relative z-10" novalidate
+                    onsubmit="handleCtaFormSubmit(event)">
+
+                    <!-- Nome -->
+                    <div>
+                        <label class="block font-body text-xs font-bold uppercase tracking-wider text-gray-400 mb-1"
+                            for="cta-nome">Nome</label>
+                        <input id="cta-nome" name="nome" type="text" required placeholder="Seu nome"
+                            class="input-flushed-est">
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label class="block font-body text-xs font-bold uppercase tracking-wider text-gray-400 mb-1"
+                            for="cta-email">E-mail</label>
+                        <input id="cta-email" name="email" type="email" required placeholder="seu@email.com"
+                            class="input-flushed-est">
+                    </div>
+
+                    <!-- Telefone -->
+                    <div>
+                        <label class="block font-body text-xs font-bold uppercase tracking-wider text-gray-400 mb-1"
+                            for="cta-telefone">Telefone / WhatsApp</label>
+                        <input id="cta-telefone" name="telefone" type="tel" required placeholder="(00) 00000-0000"
+                            class="input-flushed-est">
+                    </div>
+
+                    <!-- Mensagem -->
+                    <div>
+                        <label class="block font-body text-xs font-bold uppercase tracking-wider text-gray-400 mb-1"
+                            for="cta-mensagem">Mensagem</label>
+                        <textarea id="cta-mensagem" name="mensagem" rows="3" required
+                            placeholder="Ex: quero estruturar minha presença digital, tenho palestras mensais..."
+                            class="input-flushed-est resize-none"></textarea>
+                    </div>
+
+                    <p id="cta-form-feedback" class="hidden text-sm font-body text-center py-3 rounded-xl"></p>
+
+                    <button type="submit" id="cta-submit-btn"
+                        class="w-full font-body font-bold text-sm uppercase tracking-[0.2em] py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 text-white"
+                        style="background-color: #E406B8;">
+                        Quero começar
+                    </button>
+
+                </form>
+            </div>
+        </div>
+
+        <style>
+            /* Input flushed — mesmo padrão da curadoria */
+            .input-flushed-est {
+                width: 100%;
+                background: transparent;
+                border: none;
+                border-bottom: 2px solid #E5E7EB;
+                padding: 12px 0;
+                font-family: inherit;
+                font-size: 0.95rem;
+                color: #111827;
+                transition: all 0.3s ease;
+            }
+
+            .input-flushed-est:focus {
+                outline: none;
+                box-shadow: none;
+                border-bottom-color: #E406B8;
+            }
+
+            .input-flushed-est::placeholder {
+                color: #9CA3AF;
+            }
+        </style>
+
+        <script>
+            function handleCtaFormSubmit(e) {
+                e.preventDefault();
+                const btn = document.getElementById('cta-submit-btn');
+                const feedback = document.getElementById('cta-form-feedback');
+
+                const nome = document.getElementById('cta-nome').value.trim();
+                const email = document.getElementById('cta-email').value.trim();
+                const mensagem = document.getElementById('cta-mensagem').value.trim();
+                if (!nome || !email || !mensagem) return;
+
+                btn.disabled = true;
+                btn.textContent = 'Enviando...';
+                btn.style.opacity = '0.7';
+
+                /* Substituir o setTimeout por fetch('/contato', ...) quando o back-end estiver pronto */
+                setTimeout(() => {
+                    btn.textContent = 'Mensagem enviada ✓';
+                    btn.style.backgroundColor = '#16a34a';
+                    feedback.textContent = 'Em breve entraremos em contato!';
+                    feedback.className = 'text-sm font-body text-center py-2 rounded-lg bg-green-50 text-green-700';
+                    feedback.classList.remove('hidden');
+                    document.getElementById('cta-form-estrategias').reset();
+                }, 1200);
+            }
+        </script>
+    </section>
 
 </div>
 <!-- /#dark-sections-wrapper -->
@@ -796,11 +841,11 @@
             const star = document.createElement('div');
             star.className = 'star-point';
             const size = Math.random() * 2.2 + 0.8;
-            star.style.width  = size + 'px';
+            star.style.width = size + 'px';
             star.style.height = size + 'px';
-            star.style.left   = Math.random() * 100 + '%';
-            star.style.top    = Math.random() * 100 + '%';
-            star.style.animationDelay    = (Math.random() * 6) + 's';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDelay = (Math.random() * 6) + 's';
             star.style.animationDuration = (Math.random() * 4 + 2) + 's';
             starsContainer.appendChild(star);
         }

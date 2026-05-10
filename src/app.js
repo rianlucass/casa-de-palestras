@@ -37,6 +37,10 @@ app.get("/curadoria", (req, res) =>
 app.get("/estrategias", (req, res) => 
     res.render("pages/estrategias")
 );
+app.get("/mentoria", (req, res) => 
+    res.render("pages/mentoria")
+);
+
 
 app.get("/reserva", (req, res) => 
     res.render("pages/_secoes-reserva")
