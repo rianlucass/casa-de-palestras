@@ -97,6 +97,41 @@
             Preparando estratégia...
         </div>
     </div>
+    <!-- Script independente — não depende de GSAP nem de DOMContentLoaded -->
+    <script>
+        // Desabilita a restauração automática de scroll do browser para evitar
+        // conflito com o GSAP ScrollTrigger que inicializa antes do scroll ser restaurado
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+
+        (function () {
+            function removeLoader() {
+                var loader = document.getElementById('page-loader');
+                if (!loader) return;
+                loader.style.opacity = '0';
+                setTimeout(function () { if (loader.parentNode) loader.parentNode.removeChild(loader); }, 700);
+            }
+            // Fallback absoluto: remove após 3s no máximo
+            var maxTimer = setTimeout(removeLoader, 3000);
+            function onReady() {
+                clearTimeout(maxTimer);
+                setTimeout(removeLoader, 250);
+            }
+            if (document.readyState === 'complete') {
+                onReady();
+            } else {
+                window.addEventListener('load', onReady, { once: true });
+                // Se load demorar muito, DOMContentLoaded serve como safety net
+                document.addEventListener('DOMContentLoaded', function () {
+                    setTimeout(function () {
+                        if (document.getElementById('page-loader')) removeLoader();
+                    }, 2000);
+                }, { once: true });
+            }
+        }());
+    </script>
 
     <!-- Gradientes decorativos espalhados no fundo (escurecidos para matchar com bg dark) -->
     <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
@@ -130,7 +165,7 @@
 
         <!-- CTA -->
         <div class="hero-element pointer-events-auto" style="opacity: 0; transform: translateY(20px);">
-            <a href="#reservar"
+            <a href="#cta-section"
                 class="inline-flex items-center justify-center px-6 py-3 md:px-9 md:py-4 text-sm md:text-base font-bold text-[#161616] bg-white rounded-full transition-all duration-300 hover:scale-105 hover:bg-secondary hover:text-white shadow-[0_4px_30px_rgba(255,255,255,0.15)]">
                 Quero estruturar meu projeto
                 <svg class="w-4 h-4 md:w-5 md:h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -163,16 +198,16 @@
             <div class="imagem-flutuante absolute block rounded-[20px] md:rounded-[32px] overflow-hidden shadow-[0_24px_80px_rgba(0,0,0,0.14)] border-[3px] border-[#000000] pointer-events-auto transition-transform duration-100 ease-out max-w-[42vw] max-h-[48vh] md:max-w-none md:max-h-none"
                 style="width: 340px; height: 430px; z-index: 5; transform: translate(0, 0) rotate(0deg);" data-tx="-620"
                 data-ty="-590" data-rot="-14">
-                <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=680&q=85"
-                    class="w-full h-full object-cover" alt="Content Creator">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=680&q=85"
+                    class="w-full h-full object-cover" alt="Moda & Estilo">
             </div>
 
             <!-- Card 2: Top Right — profissional digital -->
             <div class="imagem-flutuante absolute rounded-[20px] md:rounded-[32px] overflow-hidden shadow-[0_24px_80px_rgba(0,0,0,0.14)] border-[3px] border-[#000000] pointer-events-auto transition-transform duration-100 ease-out max-w-[42vw] max-h-[48vh] md:max-w-none md:max-h-none"
                 style="width: 300px; height: 380px; z-index: 5; transform: translate(0, 0) rotate(0deg);" data-tx="630"
                 data-ty="-560" data-rot="13">
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=85"
-                    class="w-full h-full object-cover" alt="Digital Professional">
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=85"
+                    class="w-full h-full object-cover" alt="Fitness & Lifestyle">
             </div>
 
             <!-- Card 3: Mid Left — estratégia e produção digital -->
@@ -258,7 +293,7 @@
             </p>
 
             <!-- CTA com inline style para garantir cor sem depender do Tailwind runtime -->
-            <a id="consult-cta" href="#contato"
+            <a id="consult-cta" href="#cta-section"
                 class="inline-flex items-center gap-2 px-6 py-3 md:px-9 md:py-4 text-sm md:text-base font-semibold text-white rounded-full pointer-events-auto transition-all duration-300 hover:scale-[1.04]"
                 style="background-color: #E406B8; box-shadow: 0 8px 32px rgba(228,6,184,0.38); opacity: 0;"
                 onmouseover="this.style.backgroundColor='#f71f75'; this.style.boxShadow='0 12px 40px rgba(180,20,84,0.45)';"
@@ -350,7 +385,7 @@
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent z-10 group-hover:opacity-0 transition-opacity duration-500">
                         </div>
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80"
+                        <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=600&q=80"
                             class="w-full h-full object-cover" alt="Posicionamento Digital">
                     </div>
 
@@ -379,7 +414,7 @@
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-[#f9fafb] via-[#f9fafb]/80 to-transparent z-10 group-hover:opacity-0 transition-opacity duration-500">
                         </div>
-                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80"
+                        <img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?auto=format&fit=crop&w=600&q=80"
                             class="w-full h-full object-cover" alt="Séries e Presença">
                     </div>
 
@@ -1003,6 +1038,7 @@
             scrollTrigger: {
                 trigger: "#traduz-section",
                 start: "top 75%",
+                once: true,
             },
             opacity: 1,
             y: 0,
@@ -1016,6 +1052,7 @@
             scrollTrigger: {
                 trigger: "#ia-section",
                 start: "top 75%",
+                once: true,
             },
             opacity: 1,
             y: 0,
@@ -1029,6 +1066,7 @@
             scrollTrigger: {
                 trigger: "#constroi-section",
                 start: "top 75%",
+                once: true,
             },
             opacity: 1,
             y: 0,
@@ -1039,28 +1077,49 @@
 
         /* ── Animação: CTA Master Estratégias ── */
         gsap.from(".cta-estrategias-intro", {
-            scrollTrigger: { trigger: ".cta-estrategias-intro", start: "top 85%" },
+            scrollTrigger: { trigger: ".cta-estrategias-intro", start: "top 85%", once: true },
             y: 30, opacity: 0, duration: 0.8, ease: "power3.out"
         });
 
         gsap.from(".cta-box-estrategias", {
-            scrollTrigger: { trigger: ".cta-box-estrategias", start: "top 80%" },
+            scrollTrigger: { trigger: ".cta-box-estrategias", start: "top 80%", once: true },
             scale: 0.95, y: 50, opacity: 0, duration: 0.8, ease: "back.out(1.5)"
         });
 
-        // Remove o loading screen quando todos os assets estiverem carregados
-        window.addEventListener("load", () => {
-            const loader = document.getElementById("page-loader");
-            if (loader) {
-                // Delay muito sutil para o navegador recalcular todo o DOM sem travar visualmente
-                setTimeout(() => {
-                    loader.style.opacity = "0";
-                    setTimeout(() => {
-                        loader.remove();
-                    }, 700);
-                }, 400);
-            }
+        // Força visibilidade dos elementos já na viewport ao recarregar no meio da página.
+        // O browser restaura o scroll DEPOIS do GSAP inicializar, então fazemos refresh
+        // em dois frames (double rAF) para garantir que as posições estão corretas.
+        function revealInViewport() {
+            const animated = [
+                { els: document.querySelectorAll('.s4-element') },
+                { els: document.querySelectorAll('.s5-element') },
+                { els: document.querySelectorAll('.s6-element') },
+                { els: document.querySelectorAll('.cta-estrategias-intro') },
+                { els: document.querySelectorAll('.cta-box-estrategias') },
+            ];
+            animated.forEach(function(group) {
+                group.els.forEach(function(el) {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        el.style.opacity = '1';
+                        el.style.transform = 'none';
+                    }
+                });
+            });
+            ScrollTrigger.refresh();
+        }
+
+        requestAnimationFrame(function() {
+            requestAnimationFrame(revealInViewport);
         });
+
+        window.addEventListener('load', function() {
+            requestAnimationFrame(function() {
+                requestAnimationFrame(revealInViewport);
+            });
+        }, { once: true });
+
+        // Loader removido por script independente logo acima
 
     });
 

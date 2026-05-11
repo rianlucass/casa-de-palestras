@@ -1,0 +1,350 @@
+<!-- ══════════════════════════════════════════════════════════
+     CONTATO — Formulário de Contato
+     Rota: GET /contato
+══════════════════════════════════════════════════════════ -->
+
+<style>
+    /* ── Inputs — mesmo padrão curadoria/estratégias ── */
+    .input-flushed-ct {
+        width: 100%;
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid #E5E7EB;
+        padding: 12px 0;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 0.95rem;
+        color: #111827;
+        transition: all 0.3s ease;
+    }
+    .input-flushed-ct:focus {
+        outline: none;
+        box-shadow: none;
+        border-bottom-color: #38b6ff;
+    }
+    .input-flushed-ct::placeholder { color: #9CA3AF; }
+
+    /* ── Ken Burns no banner ── */
+    @keyframes kenBurnsContact {
+        0%   { transform: scale(1)    translate(0, 0); }
+        50%  { transform: scale(1.06) translate(-1.5%, 1%); }
+        100% { transform: scale(1)    translate(0, 0); }
+    }
+    .contact-bg-img { animation: kenBurnsContact 18s ease-in-out infinite; }
+
+    /* ── Fade-in ── */
+    .cf-fade { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .cf-fade.is-visible { opacity: 1; transform: translateY(0); }
+
+    /* ── Botão submit ── */
+    .btn-submit {
+        width: 100%;
+        background: #38b6ff;
+        border: none;
+        border-radius: 0.75rem;
+        padding: 1rem;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 0.8125rem;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .btn-submit:hover { box-shadow: 0 8px 24px -4px rgba(56,182,255,0.5); transform: translateY(-2px); }
+    .btn-submit:active { transform: translateY(0); }
+    .btn-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+
+</style>
+
+<!-- ══════════════════════════════════
+     HERO / FORM SECTION
+══════════════════════════════════ -->
+<section class="relative min-h-screen flex items-center overflow-hidden">
+
+    <!-- Banner de fundo -->
+    <div class="absolute inset-0 overflow-hidden">
+        <img src="/img/banners/15.png"
+             alt=""
+             class="contact-bg-img absolute inset-0 w-full h-full object-cover object-center"
+             style="transform-origin: center center;">
+    </div>
+
+    <!-- Overlay 1 — escurecimento geral forte -->
+    <div class="absolute inset-0" style="background: rgba(8,8,16,0.82);"></div>
+
+    <!-- Overlay 2 — gradiente diagonal -->
+    <div class="absolute inset-0"
+         style="background: linear-gradient(125deg, rgba(10,8,28,0.92) 0%, rgba(8,10,22,0.70) 55%, rgba(6,6,14,0.88) 100%);"></div>
+
+    <!-- Overlay 3 — halo azul esquerda -->
+    <div class="absolute inset-0 pointer-events-none"
+         style="background: radial-gradient(ellipse at 15% 60%, rgba(24,119,242,0.14) 0%, transparent 55%);"></div>
+
+    <!-- Overlay 4 — halo rosa direita -->
+    <div class="absolute inset-0 pointer-events-none"
+         style="background: radial-gradient(ellipse at 85% 40%, rgba(228,6,184,0.10) 0%, transparent 55%);"></div>
+
+    <!-- Grain -->
+    <div class="absolute inset-0 pointer-events-none opacity-[0.025]"
+         style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E');"></div>
+
+    <!-- Linha superior -->
+    <div class="absolute top-0 left-0 right-0 h-[2px]"
+         style="background: linear-gradient(90deg, transparent 0%, rgba(56,182,255,0.5) 35%, rgba(228,6,184,0.5) 65%, transparent 100%);"></div>
+
+    <!-- ── Layout ── -->
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 py-28 md:py-36">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+            <!-- ── Coluna esquerda: Texto ── -->
+            <div class="cf-fade">
+
+                <!-- Badge -->
+                <div class="flex items-center gap-3 mb-7">
+                    <span class="block w-8 h-px" style="background: linear-gradient(to right, transparent, rgba(228,6,184,0.7));"></span>
+                    <span class="font-body text-[10px] font-bold tracking-[0.35em] uppercase text-secondary">Fale com a Gente</span>
+                </div>
+
+                <!-- Título -->
+                <h1 class="font-title font-bold text-white uppercase tracking-tighter leading-[0.9] mb-7"
+                    style="font-size: clamp(2.4rem, 5.5vw, 5rem);">
+                    Estamos Prontos para<br>
+                    <span style="font-family: 'DM Serif Display','Playfair Display',serif; font-style: italic; font-weight: 400; background: linear-gradient(110deg, #38b6ff, #E406B8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Transformar</span><br>
+                    seu Projeto
+                </h1>
+
+                <!-- Subtítulo -->
+                <p class="font-body text-white/60 text-base md:text-lg leading-relaxed mb-4 max-w-md">
+                    Converse conosco e descubra como podemos levar sua marca a outro patamar.
+                </p>
+                <p class="font-body text-white/40 text-sm md:text-base leading-relaxed mb-12 max-w-md">
+                    Preencha o formulário ou entre em contato diretamente pelos nossos canais.
+                </p>
+
+                <!-- Canais diretos -->
+                <div class="flex flex-col gap-4">
+
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer"
+                       class="group flex items-center gap-4 transition-all duration-300">
+                        <div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 border border-white/10 group-hover:border-[#25D366]/40 transition-colors duration-300"
+                             style="background: rgba(37,211,102,0.08);">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24">
+                                <path fill="#25D366" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                                <path fill="#25D366" d="M12 0C5.373 0 0 5.373 0 12c0 2.125.554 4.122 1.524 5.855L.057 23.881l6.199-1.443A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.374l-.36-.214-3.68.856.874-3.598-.234-.369A9.818 9.818 0 1112 21.818z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="font-body text-[10px] font-bold tracking-[0.2em] uppercase text-white/30 mb-0.5">WhatsApp</p>
+                            <p class="font-body text-white/70 text-sm group-hover:text-white transition-colors duration-300">+55 (11) 9 9999-9999</p>
+                        </div>
+                    </a>
+
+                    <!-- E-mail -->
+                    <a href="mailto:contato@casadepalestras.com.br"
+                       class="group flex items-center gap-4 transition-all duration-300">
+                        <div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 border border-white/10 group-hover:border-primary/40 transition-colors duration-300"
+                             style="background: rgba(56,182,255,0.08);">
+                            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="font-body text-[10px] font-bold tracking-[0.2em] uppercase text-white/30 mb-0.5">E-mail</p>
+                            <p class="font-body text-white/70 text-sm group-hover:text-white transition-colors duration-300">contato@casadepalestras.com.br</p>
+                        </div>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/casadeconteudo_oficial/" target="_blank" rel="noopener noreferrer"
+                       class="group flex items-center gap-4 transition-all duration-300">
+                        <div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 border border-white/10 group-hover:border-secondary/40 transition-colors duration-300"
+                             style="background: rgba(228,6,184,0.08);">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24">
+                                <defs>
+                                    <linearGradient id="ig-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+                                        <stop offset="0%" stop-color="#f09433"/>
+                                        <stop offset="25%" stop-color="#e6683c"/>
+                                        <stop offset="50%" stop-color="#dc2743"/>
+                                        <stop offset="75%" stop-color="#cc2366"/>
+                                        <stop offset="100%" stop-color="#bc1888"/>
+                                    </linearGradient>
+                                </defs>
+                                <rect x="2" y="2" width="20" height="20" rx="6" ry="6" fill="none" stroke="url(#ig-grad)" stroke-width="1.8"/>
+                                <circle cx="12" cy="12" r="4" fill="none" stroke="url(#ig-grad)" stroke-width="1.8"/>
+                                <circle cx="17.5" cy="6.5" r="1" fill="url(#ig-grad)"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="font-body text-[10px] font-bold tracking-[0.2em] uppercase text-white/30 mb-0.5">Instagram</p>
+                            <p class="font-body text-white/70 text-sm group-hover:text-white transition-colors duration-300">@casadepalestras</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ── Coluna direita: Formulário ── -->
+            <div class="cf-fade" style="transition-delay: 150ms;">
+                <div class="bg-white rounded-[2rem] border border-gray-100 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)] p-8 md:p-12 relative overflow-hidden">
+
+                    <!-- Decor canto -->
+                    <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-primary/10 to-transparent rounded-bl-full pointer-events-none"></div>
+
+                    <h2 class="font-title font-extrabold text-text-primary leading-tight mb-2 relative z-10"
+                        style="font-size: clamp(1.6rem, 2.5vw, 2rem);">
+                        Envie uma <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-dark">Mensagem</span>
+                    </h2>
+                    <p class="font-body text-text-muted text-sm leading-relaxed mb-10 relative z-10">
+                        Responderemos assim que possível. Estamos ansiosos para ouvir sobre seu projeto e explorar como podemos colaborar!
+                    </p>
+
+                    <form id="contact-form" novalidate class="space-y-8 relative z-10">
+
+                        <!-- Nome -->
+                        <div>
+                            <label class="block font-body text-xs font-bold uppercase tracking-wider text-gray-400 mb-1" for="cf-nome">
+                                Nome completo <span class="text-secondary">*</span>
+                            </label>
+                            <input id="cf-nome" name="nome" type="text"
+                                   placeholder="Seu nome"
+                                   class="input-flushed-ct"
+                                   autocomplete="name" required>
+                        </div>
+
+                        <!-- E-mail -->
+                        <div>
+                            <label class="block font-body text-xs font-bold uppercase tracking-wider text-gray-400 mb-1" for="cf-email">
+                                E-mail <span class="text-secondary">*</span>
+                            </label>
+                            <input id="cf-email" name="email" type="email"
+                                   placeholder="seu@email.com"
+                                   class="input-flushed-ct"
+                                   autocomplete="email" required>
+                        </div>
+
+                        <!-- Telefone -->
+                        <div>
+                            <label class="block font-body text-xs font-bold uppercase tracking-wider text-gray-400 mb-1" for="cf-telefone">
+                                Telefone / WhatsApp
+                            </label>
+                            <input id="cf-telefone" name="telefone" type="tel"
+                                   placeholder="(11) 9 9999-9999"
+                                   class="input-flushed-ct"
+                                   autocomplete="tel">
+                        </div>
+
+                        <!-- Mensagem -->
+                        <div>
+                            <label class="block font-body text-xs font-bold uppercase tracking-wider text-gray-400 mb-1" for="cf-mensagem">
+                                Como podemos ajudar?
+                            </label>
+                            <textarea id="cf-mensagem" name="mensagem"
+                                      placeholder="Conte um pouco sobre seu projeto ou evento..."
+                                      rows="3"
+                                      class="input-flushed-ct resize-none"></textarea>
+                        </div>
+
+                        <p id="contact-feedback" class="hidden text-sm font-body text-center py-2 rounded-lg"></p>
+
+                        <!-- Submit -->
+                        <button type="submit" id="cf-submit" class="btn-submit">
+                            <span id="cf-btn-text">Enviar Mensagem</span>
+                            <svg id="cf-spinner" class="hidden w-5 h-5 mx-auto animate-spin" fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/>
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"/>
+                            </svg>
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Linha inferior -->
+    <div class="absolute bottom-0 left-0 right-0 h-[1px]"
+         style="background: linear-gradient(90deg, transparent 0%, rgba(56,182,255,0.3) 40%, rgba(228,6,184,0.3) 60%, transparent 100%);"></div>
+</section>
+
+<script>
+(function () {
+    'use strict';
+
+    /* ── Scroll reveal ── */
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add('is-visible'); observer.unobserve(e.target); }
+        });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.cf-fade').forEach(function (el) { observer.observe(el); });
+
+    /* ── Máscara de telefone simples ── */
+    var telInput = document.getElementById('cf-telefone');
+    if (telInput) {
+        telInput.addEventListener('input', function () {
+            var v = this.value.replace(/\D/g, '').slice(0, 11);
+            if (v.length >= 7) {
+                this.value = '(' + v.slice(0, 2) + ') ' + v.slice(2, 7) + (v.length > 7 ? '-' + v.slice(7) : '');
+            } else if (v.length >= 3) {
+                this.value = '(' + v.slice(0, 2) + ') ' + v.slice(2);
+            } else if (v.length >= 1) {
+                this.value = '(' + v;
+            }
+        });
+    }
+
+    /* ── Envio do formulário ── */
+    var form     = document.getElementById('contact-form');
+    var btn      = document.getElementById('cf-submit');
+    var btnText  = document.getElementById('cf-btn-text');
+    var spinner  = document.getElementById('cf-spinner');
+    var feedback = document.getElementById('contact-feedback');
+
+    form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        var nome     = document.getElementById('cf-nome').value.trim();
+        var email    = document.getElementById('cf-email').value.trim();
+        var telefone = document.getElementById('cf-telefone').value.trim();
+        var mensagem = document.getElementById('cf-mensagem').value.trim();
+
+        if (!nome || !email) {
+            feedback.textContent = 'Por favor, preencha nome e e-mail.';
+            feedback.className = 'text-sm font-body text-center py-2 rounded-lg bg-red-50 text-red-600';
+            feedback.classList.remove('hidden');
+            return;
+        }
+
+        btn.disabled = true;
+        btnText.classList.add('hidden');
+        spinner.classList.remove('hidden');
+        feedback.classList.add('hidden');
+
+        try {
+            var response = await fetch('/contato', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ nome: nome, email: email, telefone: telefone, mensagem: mensagem || '—' })
+            });
+
+            if (response.ok) {
+                feedback.textContent = 'Mensagem enviada! Entraremos em contato em breve.';
+                feedback.className = 'text-sm font-body text-center py-2 rounded-lg bg-green-50 text-green-700';
+                form.reset();
+            } else {
+                feedback.textContent = 'Não foi possível enviar. Tente novamente.';
+                feedback.className = 'text-sm font-body text-center py-2 rounded-lg bg-red-50 text-red-600';
+            }
+        } catch (err) {
+            feedback.textContent = 'Erro de conexão. Verifique sua internet.';
+            feedback.className = 'text-sm font-body text-center py-2 rounded-lg bg-red-50 text-red-600';
+        } finally {
+            feedback.classList.remove('hidden');
+            btn.disabled = false;
+            btnText.classList.remove('hidden');
+            spinner.classList.add('hidden');
+        }
+    });
+}());
+</script>

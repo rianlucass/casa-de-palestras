@@ -41,9 +41,8 @@ app.get("/estrategias", (req, res) =>
 app.get("/mentoria", (req, res) => 
     res.render("pages/mentoria")
 );
-
-app.get("/reserva", (req, res) => 
-    res.render("pages/_secoes-reserva")
+app.get("/sobre", (req, res) =>
+    res.render("pages/sobre")
 );
 
 app.use("/contato", contatoRoutes);
