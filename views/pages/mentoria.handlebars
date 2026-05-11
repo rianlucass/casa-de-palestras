@@ -3,23 +3,22 @@
      Fundo: gradiente escuro + imagem com overlay
      Inspirado em curadoria.handlebars + home.handlebars
      ═══════════════════════════════════════════════════════════ -->
-<section class="relative flex items-end pb-20 md:pb-28 overflow-hidden pt-[128px] md:pt-[140px]" style="min-height: 100vh;">
+<section class="relative flex items-end pb-20 md:pb-28 overflow-hidden pt-[128px] md:pt-[140px]"
+  style="min-height: 100vh;">
 
   <!-- ── FUNDO: Gradiente escuro + imagem como textura ── -->
   <div class="absolute inset-0 bg-gradient-to-br from-primary-dark via-[#0f2044] to-[#111827]">
     <!-- Imagem sutil de textura -->
-    <img
-      src="/img/banners/16.jpg"
-      alt=""
-      class="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-luminosity"
-      aria-hidden="true"
-    >
+    <img src="/img/banners/16.jpg" alt=""
+      class="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-luminosity" aria-hidden="true">
     <!-- Overlay bottom-up para legibilidade -->
     <div class="absolute inset-0 bg-gradient-to-t from-[#0a0f1e]/95 via-[#0a0f1e]/50 to-transparent"></div>
     <!-- Overlay lateral esquerda -->
     <div class="absolute inset-0 bg-gradient-to-r from-[#0a0f1e]/80 via-transparent to-transparent"></div>
     <!-- Orb decorativo -->
-    <div class="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-primary/10 rounded-full blur-[160px] pointer-events-none"></div>
+    <div
+      class="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-primary/10 rounded-full blur-[160px] pointer-events-none">
+    </div>
   </div>
 
   <!-- ── Accent Line Esquerda ── -->
@@ -36,38 +35,35 @@
 
         <!-- Label -->
         <div class="scroll-reveal mb-5">
-          <span class="inline-flex items-center gap-2 font-body text-xs font-bold uppercase tracking-[0.3em] text-primary border-b border-primary/40 pb-2">
+          <span
+            class="inline-flex items-center gap-2 font-body text-xs font-bold uppercase tracking-[0.3em] text-primary border-b border-primary/40 pb-2">
             Mentoria · Para Palestrantes
           </span>
         </div>
 
         <!-- Título -->
         <div class="overflow-hidden mb-6 py-2">
-          <h1 class="scroll-reveal font-title font-bold text-white leading-[1.05]" style="font-size: clamp(2.4rem, 6vw, 5.5rem); --delay: 0.1s;">
+          <h1 class="scroll-reveal font-title font-bold text-white leading-[1.05]"
+            style="font-size: clamp(2.4rem, 6vw, 5.5rem); --delay: 0.1s;">
             Como funciona<br class="hidden sm:block">
             <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-light">a mentoria</span>
           </h1>
         </div>
 
         <!-- Subtítulo -->
-        <p
-          class="scroll-reveal font-body text-white/70 leading-relaxed max-w-xl mb-10"
-          style="font-size: clamp(1rem, 1.8vw, 1.2rem); --delay: 0.2s;"
-        >
+        <p class="scroll-reveal font-body text-white/70 leading-relaxed max-w-xl mb-10"
+          style="font-size: clamp(1rem, 1.8vw, 1.2rem); --delay: 0.2s;">
           Um processo de direcionamento estratégico para estruturar sua atuação como palestrante,
           com clareza de posicionamento e definição de caminhos.
         </p>
 
         <!-- CTA -->
         <div class="scroll-reveal" style="--delay: 0.35s;">
-          <a
-            href="#contato"
-            id="mentoria-cta"
-            class="inline-flex items-center gap-3 px-8 py-4 bg-primary text-white font-body font-bold text-sm uppercase tracking-wider rounded-full hover:bg-primary/90 hover:scale-105 transition-all duration-300 shadow-lg shadow-primary/30"
-          >
+          <a href="#contato" id="mentoria-cta"
+            class="inline-flex items-center gap-3 px-8 py-4 bg-primary text-white font-body font-bold text-sm uppercase tracking-wider rounded-full hover:bg-primary/90 hover:scale-105 transition-all duration-300 shadow-lg shadow-primary/30">
             Quero entrar na mentoria
             <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </a>
         </div>
@@ -97,38 +93,51 @@
         <ul class="space-y-0 divide-y divide-white/10">
 
           <li class="scroll-reveal flex items-center gap-5 py-5 group cursor-default" style="--delay: 0.3s;">
-            <span class="flex-shrink-0 w-8 h-8 rounded-full border border-primary/40 flex items-center justify-center group-hover:bg-primary/20 group-hover:border-primary transition-all duration-300">
+            <span
+              class="flex-shrink-0 w-8 h-8 rounded-full border border-primary/40 flex items-center justify-center group-hover:bg-primary/20 group-hover:border-primary transition-all duration-300">
               <span class="text-primary text-sm font-title font-bold">✦</span>
             </span>
-            <span class="font-body text-white/80 text-base group-hover:text-white transition-colors duration-300">Posicionamento</span>
+            <span
+              class="font-body text-white/80 text-base group-hover:text-white transition-colors duration-300">Posicionamento</span>
           </li>
 
           <li class="scroll-reveal flex items-center gap-5 py-5 group cursor-default" style="--delay: 0.38s;">
-            <span class="flex-shrink-0 w-8 h-8 rounded-full border border-primary/40 flex items-center justify-center group-hover:bg-primary/20 group-hover:border-primary transition-all duration-300">
+            <span
+              class="flex-shrink-0 w-8 h-8 rounded-full border border-primary/40 flex items-center justify-center group-hover:bg-primary/20 group-hover:border-primary transition-all duration-300">
               <span class="text-primary text-sm font-title font-bold">✦</span>
             </span>
-            <span class="font-body text-white/80 text-base group-hover:text-white transition-colors duration-300">Temas de palestra</span>
+            <span class="font-body text-white/80 text-base group-hover:text-white transition-colors duration-300">Temas
+              de palestra</span>
           </li>
 
           <li class="scroll-reveal flex items-center gap-5 py-5 group cursor-default" style="--delay: 0.46s;">
-            <span class="flex-shrink-0 w-8 h-8 rounded-full border border-primary/40 flex items-center justify-center group-hover:bg-primary/20 group-hover:border-primary transition-all duration-300">
+            <span
+              class="flex-shrink-0 w-8 h-8 rounded-full border border-primary/40 flex items-center justify-center group-hover:bg-primary/20 group-hover:border-primary transition-all duration-300">
               <span class="text-primary text-sm font-title font-bold">✦</span>
             </span>
-            <span class="font-body text-white/80 text-base group-hover:text-white transition-colors duration-300">Construção de narrativa</span>
+            <span
+              class="font-body text-white/80 text-base group-hover:text-white transition-colors duration-300">Construção
+              de narrativa</span>
           </li>
 
           <li class="scroll-reveal flex items-center gap-5 py-5 group cursor-default" style="--delay: 0.54s;">
-            <span class="flex-shrink-0 w-8 h-8 rounded-full border border-primary/40 flex items-center justify-center group-hover:bg-primary/20 group-hover:border-primary transition-all duration-300">
+            <span
+              class="flex-shrink-0 w-8 h-8 rounded-full border border-primary/40 flex items-center justify-center group-hover:bg-primary/20 group-hover:border-primary transition-all duration-300">
               <span class="text-primary text-sm font-title font-bold">✦</span>
             </span>
-            <span class="font-body text-white/80 text-base group-hover:text-white transition-colors duration-300">Presença digital</span>
+            <span
+              class="font-body text-white/80 text-base group-hover:text-white transition-colors duration-300">Presença
+              digital</span>
           </li>
 
           <li class="scroll-reveal flex items-center gap-5 py-5 group cursor-default" style="--delay: 0.62s;">
-            <span class="flex-shrink-0 w-8 h-8 rounded-full border border-primary/40 flex items-center justify-center group-hover:bg-primary/20 group-hover:border-primary transition-all duration-300">
+            <span
+              class="flex-shrink-0 w-8 h-8 rounded-full border border-primary/40 flex items-center justify-center group-hover:bg-primary/20 group-hover:border-primary transition-all duration-300">
               <span class="text-primary text-sm font-title font-bold">✦</span>
             </span>
-            <span class="font-body text-white/80 text-base group-hover:text-white transition-colors duration-300">Estratégia de crescimento</span>
+            <span
+              class="font-body text-white/80 text-base group-hover:text-white transition-colors duration-300">Estratégia
+              de crescimento</span>
           </li>
 
         </ul>
@@ -143,13 +152,14 @@
      Design corporativo, clean e moderno (fundo branco)
      ═══════════════════════════════════════════════════════════ -->
 <section class="bg-white py-24 md:py-32 px-6 md:px-12 relative overflow-hidden">
-  
+
   <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-    
+
     <!-- BLOCO 2: PROBLEMA (IDENTIFICAÇÃO) -->
     <div class="space-y-8">
       <div class="scroll-reveal">
-        <span class="inline-block font-body text-primary text-xs font-bold uppercase tracking-[0.3em] mb-4 border-b border-primary/30 pb-2">
+        <span
+          class="inline-block font-body text-primary text-xs font-bold uppercase tracking-[0.3em] mb-4 border-b border-primary/30 pb-2">
           A Identificação
         </span>
         <h2 class="font-title text-3xl md:text-5xl font-bold text-text-primary leading-tight">
@@ -160,29 +170,41 @@
       <ul class="space-y-5 mt-8">
         <!-- Item 1 -->
         <li class="scroll-reveal flex items-center gap-5" style="--delay: 0.1s">
-          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-surface border border-gray-100 flex items-center justify-center shadow-sm">
-            <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+          <div
+            class="flex-shrink-0 w-10 h-10 rounded-full bg-surface border border-gray-100 flex items-center justify-center shadow-sm">
+            <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
           </div>
           <p class="font-body text-text-muted text-lg md:text-xl">Não sabe como se posicionar</p>
         </li>
         <!-- Item 2 -->
         <li class="scroll-reveal flex items-center gap-5" style="--delay: 0.2s">
-          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-surface border border-gray-100 flex items-center justify-center shadow-sm">
-            <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+          <div
+            class="flex-shrink-0 w-10 h-10 rounded-full bg-surface border border-gray-100 flex items-center justify-center shadow-sm">
+            <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
           </div>
           <p class="font-body text-text-muted text-lg md:text-xl">Não tem clareza dos temas</p>
         </li>
         <!-- Item 3 -->
         <li class="scroll-reveal flex items-center gap-5" style="--delay: 0.3s">
-          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-surface border border-gray-100 flex items-center justify-center shadow-sm">
-            <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+          <div
+            class="flex-shrink-0 w-10 h-10 rounded-full bg-surface border border-gray-100 flex items-center justify-center shadow-sm">
+            <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
           </div>
           <p class="font-body text-text-muted text-lg md:text-xl">Não tem consistência</p>
         </li>
         <!-- Item 4 -->
         <li class="scroll-reveal flex items-center gap-5" style="--delay: 0.4s">
-          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-surface border border-gray-100 flex items-center justify-center shadow-sm">
-            <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+          <div
+            class="flex-shrink-0 w-10 h-10 rounded-full bg-surface border border-gray-100 flex items-center justify-center shadow-sm">
+            <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
           </div>
           <p class="font-body text-text-muted text-lg md:text-xl">Não transforma isso em oportunidade</p>
         </li>
@@ -190,23 +212,26 @@
     </div>
 
     <!-- BLOCO 3: POSICIONAMENTO -->
-    <div class="relative bg-surface rounded-[2.5rem] p-10 md:p-14 border border-gray-100 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] scroll-reveal" style="--delay: 0.3s">
-      
+    <div
+      class="relative bg-surface rounded-[2.5rem] p-10 md:p-14 border border-gray-100 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] scroll-reveal"
+      style="--delay: 0.3s">
+
       <h3 class="font-title text-4xl md:text-5xl font-bold text-text-primary leading-[1.1] mb-8">
         Não é sobre<br>
         <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-dark">dar palestras.</span>
       </h3>
-      
+
       <div class="space-y-6 text-text-muted font-body text-lg leading-relaxed">
         <p>
           <strong class="text-text-primary font-bold">É sobre construir uma atuação consistente no mercado.</strong>
         </p>
         <p>
-          Posicionamento, narrativa e presença precisam estar alinhados para gerar oportunidade e crescimento contínuo, transformando conhecimento em influência real.
+          Posicionamento, narrativa e presença precisam estar alinhados para gerar oportunidade e crescimento contínuo,
+          transformando conhecimento em influência real.
         </p>
       </div>
     </div>
-    
+
   </div>
 </section>
 
@@ -214,95 +239,98 @@
      SEÇÃO 3: O QUE TRABALHAMOS (COMO FUNCIONA)
      Asymmetrical Sticky Layout baseado em _secoes-reserva.handlebars
      ══════════════════════════════════════════════════════════ -->
-<section id="como-funciona" class="bg-white text-text-primary py-32 overflow-hidden">
+<section id="como-funciona" class="bg-white text-text-primary py-32">
   <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16">
 
     <!-- Sticky Left (Textos Mestre) -->
     <div class="lg:col-span-5 relative">
       <div class="lg:sticky lg:top-36 metodo-title">
         <h2 class="text-4xl md:text-5xl lg:text-5xl font-title font-bold leading-tight mb-6 text-text-primary">
-          Como funciona a <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-dark">mentoria.</span>
+          Como funciona a <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-dark">mentoria.</span>
         </h2>
         <p class="text-lg text-text-muted leading-relaxed font-body mb-10">
-          Um processo de direcionamento estratégico para estruturar sua atuação como palestrante, com clareza de posicionamento e definição de caminhos.
+          Um processo de direcionamento estratégico para estruturar sua atuação como palestrante, com clareza de
+          posicionamento e definição de caminhos.
         </p>
-        
+
         <!-- CTA -->
-        <a href="#contato" class="inline-flex items-center gap-3 px-8 py-4 bg-primary text-white font-body font-bold text-sm uppercase tracking-wider rounded-full hover:bg-primary-dark hover:scale-105 transition-all duration-300 shadow-lg shadow-primary/30">
+        <a href="#contato"
+          class="inline-flex items-center gap-3 px-8 py-4 bg-primary text-white font-body font-bold text-sm uppercase tracking-wider rounded-full hover:bg-primary-dark hover:scale-105 transition-all duration-300 shadow-lg shadow-primary/30">
           Quero entrar na mentoria
           <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
         </a>
       </div>
     </div>
 
     <!-- Right Scrolling List -->
-    <div class="lg:col-span-7 space-y-12 mt-12 lg:mt-0">
-      
+    <div class="lg:col-span-7 space-y-16 mt-12 lg:mt-0">
+
       <!-- Item 1: Posicionamento -->
-      <div class="group border-t border-gray-200/60 pt-8 method-item">
-        <div class="flex items-start gap-6">
-          <span class="text-5xl md:text-7xl font-title font-black text-gray-100 group-hover:text-primary/20 transition-colors duration-500 leading-none mt-1">01</span>
-          <div>
-            <h3 class="text-2xl font-title font-bold text-text-primary mb-2 group-hover:text-primary transition-colors duration-300">Posicionamento</h3>
-            <p class="text-text-muted font-body text-base leading-relaxed">
-              Encontramos o lugar único onde sua mensagem se destaca no mercado, alinhando sua expertise com o que o público precisa ouvir.
-            </p>
-          </div>
-        </div>
+      <div class="group border-t border-gray-200/60 pt-10 method-item">
+        <span
+          class="text-6xl md:text-8xl font-title font-black text-gray-100 group-hover:text-primary/20 transition-colors duration-500 block mb-4">01</span>
+        <h3
+          class="text-3xl font-title font-bold text-text-primary mb-4 group-hover:text-primary transition-colors duration-300">
+          Posicionamento</h3>
+        <p class="text-text-muted font-body text-base leading-relaxed">
+          Encontramos o lugar único onde sua mensagem se destaca no mercado, alinhando sua expertise com o que o público
+          precisa ouvir.
+        </p>
       </div>
 
       <!-- Item 2: Temas de palestra -->
-      <div class="group border-t border-gray-200/60 pt-8 method-item">
-        <div class="flex items-start gap-6">
-          <span class="text-5xl md:text-7xl font-title font-black text-gray-100 group-hover:text-primary/20 transition-colors duration-500 leading-none mt-1">02</span>
-          <div>
-            <h3 class="text-2xl font-title font-bold text-text-primary mb-2 group-hover:text-primary transition-colors duration-300">Temas de palestra</h3>
-            <p class="text-text-muted font-body text-base leading-relaxed">
-              Estruturamos as temáticas principais e linhas editoriais que compõem seu portfólio, garantindo alta demanda e clareza de oferta.
-            </p>
-          </div>
-        </div>
+      <div class="group border-t border-gray-200/60 pt-10 method-item">
+        <span
+          class="text-6xl md:text-8xl font-title font-black text-gray-100 group-hover:text-primary/20 transition-colors duration-500 block mb-4">02</span>
+        <h3
+          class="text-3xl font-title font-bold text-text-primary mb-4 group-hover:text-primary transition-colors duration-300">
+          Temas de palestra</h3>
+        <p class="text-text-muted font-body text-base leading-relaxed">
+          Estruturamos as temáticas principais e linhas editoriais que compõem seu portfólio, garantindo alta demanda e
+          clareza de oferta.
+        </p>
       </div>
 
       <!-- Item 3: Construção de narrativa -->
-      <div class="group border-t border-gray-200/60 pt-8 method-item">
-        <div class="flex items-start gap-6">
-          <span class="text-5xl md:text-7xl font-title font-black text-gray-100 group-hover:text-primary/20 transition-colors duration-500 leading-none mt-1">03</span>
-          <div>
-            <h3 class="text-2xl font-title font-bold text-text-primary mb-2 group-hover:text-primary transition-colors duration-300">Construção de narrativa</h3>
-            <p class="text-text-muted font-body text-base leading-relaxed">
-              Desenhamos a forma como você conta sua história, lapidando as mensagens-chave para que sua palestra gere impacto e memorabilidade.
-            </p>
-          </div>
-        </div>
+      <div class="group border-t border-gray-200/60 pt-10 method-item">
+        <span
+          class="text-6xl md:text-8xl font-title font-black text-gray-100 group-hover:text-primary/20 transition-colors duration-500 block mb-4">03</span>
+        <h3
+          class="text-3xl font-title font-bold text-text-primary mb-4 group-hover:text-primary transition-colors duration-300">
+          Construção de narrativa</h3>
+        <p class="text-text-muted font-body text-base leading-relaxed">
+          Desenhamos a forma como você conta sua história, lapidando as mensagens-chave para que sua palestra gere
+          impacto e memorabilidade.
+        </p>
       </div>
 
       <!-- Item 4: Presença digital -->
-      <div class="group border-t border-gray-200/60 pt-8 method-item">
-        <div class="flex items-start gap-6">
-          <span class="text-5xl md:text-7xl font-title font-black text-gray-100 group-hover:text-primary/20 transition-colors duration-500 leading-none mt-1">04</span>
-          <div>
-            <h3 class="text-2xl font-title font-bold text-text-primary mb-2 group-hover:text-primary transition-colors duration-300">Presença digital</h3>
-            <p class="text-text-muted font-body text-base leading-relaxed">
-              Apoiamos na extensão da sua autoridade do palco para as redes, garantindo que sua imagem online suporte seu ticket como palestrante.
-            </p>
-          </div>
-        </div>
+      <div class="group border-t border-gray-200/60 pt-10 method-item">
+        <span
+          class="text-6xl md:text-8xl font-title font-black text-gray-100 group-hover:text-primary/20 transition-colors duration-500 block mb-4">04</span>
+        <h3
+          class="text-3xl font-title font-bold text-text-primary mb-4 group-hover:text-primary transition-colors duration-300">
+          Presença digital</h3>
+        <p class="text-text-muted font-body text-base leading-relaxed">
+          Apoiamos na extensão da sua autoridade do palco para as redes, garantindo que sua imagem online suporte seu
+          ticket como palestrante.
+        </p>
       </div>
 
       <!-- Item 5: Estratégia de crescimento -->
-      <div class="group border-t border-gray-200/60 pt-8 method-item">
-        <div class="flex items-start gap-6">
-          <span class="text-5xl md:text-7xl font-title font-black text-gray-100 group-hover:text-primary/20 transition-colors duration-500 leading-none mt-1">05</span>
-          <div>
-            <h3 class="text-2xl font-title font-bold text-text-primary mb-2 group-hover:text-primary transition-colors duration-300">Estratégia de crescimento</h3>
-            <p class="text-text-muted font-body text-base leading-relaxed">
-              Definimos as táticas comerciais e de networking corretas para que o seu volume de negócios como especialista escale de forma previsível.
-            </p>
-          </div>
-        </div>
+      <div class="group border-t border-gray-200/60 pt-10 method-item">
+        <span
+          class="text-6xl md:text-8xl font-title font-black text-gray-100 group-hover:text-primary/20 transition-colors duration-500 block mb-4">05</span>
+        <h3
+          class="text-3xl font-title font-bold text-text-primary mb-4 group-hover:text-primary transition-colors duration-300">
+          Estratégia de crescimento</h3>
+        <p class="text-text-muted font-body text-base leading-relaxed">
+          Definimos as táticas comerciais e de networking corretas para que o seu volume de negócios como especialista
+          escale de forma previsível.
+        </p>
       </div>
 
     </div>
@@ -326,49 +354,62 @@
     color: #111827;
     transition: all 0.3s ease;
   }
+
   .input-flushed-dark:focus {
     outline: none;
     box-shadow: none;
     border-bottom-color: #38b6ff;
   }
+
   .input-flushed-dark::placeholder {
     color: #9CA3AF;
   }
 </style>
 
 <section id="contato" class="relative bg-primary py-32 overflow-hidden">
-  
+
   <!-- BG Glow / Elementos Decorativos -->
   <div class="absolute inset-0 overflow-hidden pointer-events-none">
     <div class="absolute -top-[20%] -right-[10%] w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[120px]"></div>
-    <div class="absolute -bottom-[20%] -left-[10%] w-[500px] h-[500px] bg-primary-light/10 rounded-full blur-[120px]"></div>
+    <div class="absolute -bottom-[20%] -left-[10%] w-[500px] h-[500px] bg-primary-light/10 rounded-full blur-[120px]">
+    </div>
     <!-- Grain overlay subtil -->
-    <div class="absolute inset-0 opacity-[0.03]" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22/%3E%3C/svg%3E');"></div>
+    <div class="absolute inset-0 opacity-[0.03]"
+      style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22/%3E%3C/svg%3E');">
+    </div>
   </div>
 
   <div class="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-    
+
     <!-- Esquerda: Textos de CTA -->
     <div class="form-text-reveal">
       <h2 class="text-4xl md:text-5xl lg:text-6xl font-title font-bold leading-tight mb-6 text-white">
-        Você não precisa construir isso <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-dark to-blue-700">sozinho.</span>
+        Você não precisa construir isso <span
+          class="text-transparent bg-clip-text bg-gradient-to-r from-primary-dark to-blue-700">sozinho.</span>
       </h2>
       <p class="text-lg md:text-xl text-white leading-relaxed font-body mb-8 max-w-xl">
-        Atuamos com curadoria e desenvolvimento de especialistas. A mentoria conecta estratégia com prática, evitando caminhos aleatórios e acelerando o processo.
+        Atuamos com curadoria e desenvolvimento de especialistas. A mentoria conecta estratégia com prática, evitando
+        caminhos aleatórios e acelerando o processo.
       </p>
-      
+
       <!-- Check list motivacional -->
       <ul class="space-y-4 mb-10">
         <li class="flex items-center gap-3 text-white/90 font-body font-semibold text-lg">
-          <svg class="w-6 h-6 text-primary-dark flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+          <svg class="w-6 h-6 text-primary-dark flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+          </svg>
           Mentoria de Alto Nível
         </li>
         <li class="flex items-center gap-3 text-white/90 font-body font-semibold text-lg">
-          <svg class="w-6 h-6 text-primary-dark flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+          <svg class="w-6 h-6 text-primary-dark flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+          </svg>
           Plano Tático Executável
         </li>
         <li class="flex items-center gap-3 text-white/90 font-body font-semibold text-lg">
-          <svg class="w-6 h-6 text-primary-dark flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+          <svg class="w-6 h-6 text-primary-dark flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+          </svg>
           Direcionamento Focado no Mercado
         </li>
       </ul>
@@ -376,44 +417,59 @@
 
     <!-- Direita: Formulário Flat Design Branco -->
     <div class="form-reveal relative w-full">
-      <div class="bg-white rounded-[2rem] border border-gray-100 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.2)] p-8 md:p-12 relative overflow-hidden">
-        
+      <div
+        class="bg-white rounded-[2rem] border border-gray-100 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.2)] p-8 md:p-12 relative overflow-hidden">
+
         <!-- Background decor no form -->
-        <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-primary/10 to-transparent rounded-bl-full pointer-events-none"></div>
-        
-        <h3 class="font-title font-extrabold text-text-primary leading-tight mb-4 relative z-10" style="font-size: clamp(1.6rem, 2.5vw, 2rem);">
-          Solicitar <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-dark">Aplicação</span>
+        <div
+          class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-primary/10 to-transparent rounded-bl-full pointer-events-none">
+        </div>
+
+        <h3 class="font-title font-extrabold text-text-primary leading-tight mb-4 relative z-10"
+          style="font-size: clamp(1.6rem, 2.5vw, 2rem);">
+          Solicitar <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-dark">Aplicação</span>
         </h3>
         <p class="font-body text-text-muted text-sm md:text-base leading-relaxed mb-8 relative z-10">
           Preencha seus dados para receber o contato da nossa equipe de estratégia.
         </p>
 
-        <form action="#" method="POST" class="space-y-6 relative z-10" novalidate>
-          
+        <form id="mentoria-form" action="#" method="POST" class="space-y-6 relative z-10" novalidate>
+
           <div>
-            <label class="block font-body text-xs font-bold uppercase tracking-wider text-gray-400 mb-1" for="nome">Nome</label>
-            <input type="text" id="nome" name="nome" class="input-flushed-dark" placeholder="Seu nome completo" required>
+            <label class="block font-body text-xs font-bold uppercase tracking-wider text-gray-400 mb-1"
+              for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" class="input-flushed-dark" placeholder="Seu nome completo"
+              required>
           </div>
-          
+
           <div>
-            <label class="block font-body text-xs font-bold uppercase tracking-wider text-gray-400 mb-1" for="email">E-mail</label>
+            <label class="block font-body text-xs font-bold uppercase tracking-wider text-gray-400 mb-1"
+              for="email">E-mail</label>
             <input type="email" id="email" name="email" class="input-flushed-dark" placeholder="seu@email.com" required>
           </div>
 
           <div>
-            <label class="block font-body text-xs font-bold uppercase tracking-wider text-gray-400 mb-1" for="telefone">Telefone / WhatsApp</label>
-            <input type="tel" id="telefone" name="telefone" class="input-flushed-dark" placeholder="(00) 00000-0000" required>
+            <label class="block font-body text-xs font-bold uppercase tracking-wider text-gray-400 mb-1"
+              for="telefone">Telefone / WhatsApp</label>
+            <input type="tel" id="telefone" name="telefone" class="input-flushed-dark" placeholder="(00) 00000-0000"
+              required>
           </div>
 
           <div>
-            <label class="block font-body text-xs font-bold uppercase tracking-wider text-gray-400 mb-1" for="mensagem">Mensagem</label>
-            <textarea id="mensagem" name="mensagem" rows="3" class="input-flushed-dark resize-none" placeholder="Conte brevemente sobre seu momento..." required></textarea>
+            <label class="block font-body text-xs font-bold uppercase tracking-wider text-gray-400 mb-1"
+              for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="3" class="input-flushed-dark resize-none"
+              placeholder="Conte brevemente sobre seu momento..." required></textarea>
           </div>
 
-          <button type="submit" class="w-full bg-primary text-white font-body font-bold text-sm uppercase tracking-[0.2em] py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 mt-4">
+          <button type="submit" id="cta-submit-mentoria"
+            class="w-full bg-primary text-white font-body font-bold text-sm uppercase tracking-[0.2em] py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 mt-4">
             Quero entrar na mentoria
           </button>
-          
+
+          <p id="mentoria-feedback" class="hidden text-sm font-body text-center py-2 rounded-lg"></p>
+
         </form>
       </div>
     </div>
@@ -426,6 +482,54 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('mentoria-form');
+    const submitButton = document.getElementById('cta-submit-mentoria');
+    const feedback = document.getElementById('mentoria-feedback');
+
+    if (form && submitButton && feedback) {
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const nome = document.getElementById('nome')?.value.trim();
+        const email = document.getElementById('email')?.value.trim();
+        const telefone = document.getElementById('telefone')?.value.trim();
+        const mensagem = document.getElementById('mensagem')?.value.trim();
+
+        if (!nome || !email || !telefone || !mensagem) {
+          feedback.textContent = 'Preencha os campos obrigatórios.';
+          feedback.className = 'text-sm font-body text-center py-2 rounded-lg bg-red-50 text-red-600';
+          feedback.classList.remove('hidden');
+          return;
+        }
+
+        submitButton.disabled = true;
+        submitButton.textContent = 'Enviando...';
+
+        try {
+          const response = await fetch('/api/mentoria', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ nome, email, telefone, mensagem }),
+          });
+
+          if (response.ok) {
+            feedback.textContent = 'Aplicação enviada! Nossa equipe entrará em contato em breve.';
+            feedback.className = 'text-sm font-body text-center py-2 rounded-lg bg-green-50 text-green-700';
+            form.reset();
+          } else {
+            throw new Error('Erro ao enviar formulário');
+          }
+        } catch (error) {
+          feedback.textContent = 'Erro ao enviar. Tente novamente mais tarde.';
+          feedback.className = 'text-sm font-body text-center py-2 rounded-lg bg-red-50 text-red-600';
+        } finally {
+          feedback.classList.remove('hidden');
+          submitButton.disabled = false;
+          submitButton.textContent = 'Quero entrar na mentoria';
+        }
+      });
+    }
+
     if (typeof gsap !== 'undefined') {
       gsap.registerPlugin(ScrollTrigger);
 
@@ -450,4 +554,5 @@
       });
     }
   });
+
 </script>

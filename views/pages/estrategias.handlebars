@@ -1063,4 +1063,46 @@
         });
 
     });
+
+    // Função de Envio do Formulário de Estratégias (Leads Digital)
+    async function handleCtaFormSubmit(event) {
+        event.preventDefault();
+        
+        const form = event.target;
+        const btn = document.getElementById('cta-submit-btn');
+        const feedback = document.getElementById('cta-form-feedback');
+        
+        const nome = document.getElementById('cta-nome').value.trim();
+        const email = document.getElementById('cta-email').value.trim();
+        const telefone = document.getElementById('cta-telefone').value.trim();
+        const mensagem = document.getElementById('cta-mensagem').value.trim();
+        
+        if (!nome || !email || !telefone || !mensagem) return;
+        
+        btn.disabled = true;
+        btn.textContent = 'Enviando...';
+        
+        try {
+            const res = await fetch('/api/estrategias', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ nome, email, telefone, mensagem })
+            });
+            
+            if (res.ok) {
+                feedback.textContent = 'Mensagem enviada com sucesso! Entraremos em contato.';
+                feedback.className = 'text-sm font-body text-center py-2 rounded-lg bg-green-50 text-green-700';
+                form.reset();
+            } else {
+                throw new Error('Erro na resposta do servidor.');
+            }
+        } catch (error) {
+            feedback.textContent = 'Erro ao enviar mensagem. Tente novamente mais tarde.';
+            feedback.className = 'text-sm font-body text-center py-2 rounded-lg bg-red-50 text-red-600';
+        } finally {
+            feedback.classList.remove('hidden');
+            btn.disabled = false;
+            btn.textContent = 'Quero começar';
+        }
+    }
 </script>
