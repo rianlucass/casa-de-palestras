@@ -1,39 +1,35 @@
-<!-- ═══════════════════════════════════════════════════════════
-     HERO — Mentoria para Palestrantes
-     Fundo: gradiente escuro + imagem com overlay
-     Inspirado em curadoria.handlebars + home.handlebars
-     ═══════════════════════════════════════════════════════════ -->
+﻿
 <section class="relative flex items-end pb-20 md:pb-28 overflow-hidden pt-[128px] md:pt-[140px]"
   style="min-height: 100vh;">
 
-  <!-- ── FUNDO: Gradiente escuro + imagem como textura ── -->
+  
   <div class="absolute inset-0 bg-gradient-to-br from-primary-dark via-[#0f2044] to-[#111827]">
-    <!-- Imagem sutil de textura -->
+    
     <img src="/img/banners/16.jpg" alt=""
       class="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-luminosity" aria-hidden="true">
-    <!-- Overlay bottom-up para legibilidade -->
+    
     <div class="absolute inset-0 bg-gradient-to-t from-[#0a0f1e]/95 via-[#0a0f1e]/50 to-transparent"></div>
-    <!-- Overlay lateral esquerda -->
+    
     <div class="absolute inset-0 bg-gradient-to-r from-[#0a0f1e]/80 via-transparent to-transparent"></div>
-    <!-- Orb decorativo -->
+    
     <div
       class="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-primary/10 rounded-full blur-[160px] pointer-events-none">
     </div>
   </div>
 
-  <!-- ── Accent Line Esquerda ── -->
+  
   <div class="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-primary via-primary/50 to-transparent z-10"></div>
 
-  <!-- ── CONTEÚDO ── -->
+  
   <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full">
 
-    <!-- Grid: texto à esquerda / lista à direita no desktop -->
+    
     <div class="grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-12 lg:gap-20 items-end">
 
-      <!-- ── Coluna Esquerda: Label + Título + Subtítulo + CTA ── -->
+      
       <div>
 
-        <!-- Label -->
+        
         <div class="scroll-reveal mb-5">
           <span
             class="inline-flex items-center gap-2 font-body text-xs font-bold uppercase tracking-[0.3em] text-primary border-b border-primary/40 pb-2">
@@ -41,7 +37,7 @@
           </span>
         </div>
 
-        <!-- Título -->
+        
         <div class="overflow-hidden mb-6 py-2">
           <h1 class="scroll-reveal font-title font-bold text-white leading-[1.05]"
             style="font-size: clamp(2.4rem, 6vw, 5.5rem); --delay: 0.1s;">
@@ -50,14 +46,14 @@
           </h1>
         </div>
 
-        <!-- Subtítulo -->
+        
         <p class="scroll-reveal font-body text-white/70 leading-relaxed max-w-xl mb-10"
           style="font-size: clamp(1rem, 1.8vw, 1.2rem); --delay: 0.2s;">
           Um processo de direcionamento estratégico para estruturar sua atuação como palestrante,
           com clareza de posicionamento e definição de caminhos.
         </p>
 
-        <!-- CTA -->
+        
         <div class="scroll-reveal" style="--delay: 0.35s;">
           <a href="#contato" id="mentoria-cta"
             class="inline-flex items-center gap-3 px-8 py-4 bg-primary text-white font-body font-bold text-sm uppercase tracking-wider rounded-full hover:bg-primary/90 hover:scale-105 transition-all duration-300 shadow-lg shadow-primary/30">
@@ -68,7 +64,7 @@
           </a>
         </div>
 
-        <!-- Scroll indicator -->
+        
         <div class="scroll-reveal flex items-center gap-4 mt-14" style="--delay: 0.5s;">
           <div class="w-[1px] h-10 relative overflow-hidden">
             <div class="absolute inset-0 w-full bg-gradient-to-b from-primary to-secondary scroll-line-anim"></div>
@@ -78,10 +74,10 @@
 
       </div>
 
-      <!-- ── Coluna Direita: "O que trabalhamos" ── -->
+      
       <div class="scroll-reveal" style="--delay: 0.25s;">
 
-        <!-- Divisor label -->
+        
         <div class="flex items-center gap-4 mb-8">
           <div class="w-6 h-[2px] bg-primary rounded-full"></div>
           <span class="font-body text-xs font-bold uppercase tracking-[0.3em] text-white/50">
@@ -89,7 +85,7 @@
           </span>
         </div>
 
-        <!-- Lista de tópicos -->
+        
         <ul class="space-y-0 divide-y divide-white/10">
 
           <li class="scroll-reveal flex items-center gap-5 py-5 group cursor-default" style="--delay: 0.3s;">
@@ -147,15 +143,12 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════
-     SEÇÃO 2: O PROBLEMA & POSICIONAMENTO
-     Design corporativo, clean e moderno (fundo branco)
-     ═══════════════════════════════════════════════════════════ -->
+
 <section class="bg-white py-24 md:py-32 px-6 md:px-12 relative overflow-hidden">
 
   <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
-    <!-- BLOCO 2: PROBLEMA (IDENTIFICAÇÃO) -->
+    
     <div class="space-y-8">
       <div class="scroll-reveal">
         <span
@@ -168,7 +161,7 @@
       </div>
 
       <ul class="space-y-5 mt-8">
-        <!-- Item 1 -->
+        
         <li class="scroll-reveal flex items-center gap-5" style="--delay: 0.1s">
           <div
             class="flex-shrink-0 w-10 h-10 rounded-full bg-surface border border-gray-100 flex items-center justify-center shadow-sm">
@@ -178,7 +171,7 @@
           </div>
           <p class="font-body text-text-muted text-lg md:text-xl">Não sabe como se posicionar</p>
         </li>
-        <!-- Item 2 -->
+        
         <li class="scroll-reveal flex items-center gap-5" style="--delay: 0.2s">
           <div
             class="flex-shrink-0 w-10 h-10 rounded-full bg-surface border border-gray-100 flex items-center justify-center shadow-sm">
@@ -188,7 +181,7 @@
           </div>
           <p class="font-body text-text-muted text-lg md:text-xl">Não tem clareza dos temas</p>
         </li>
-        <!-- Item 3 -->
+        
         <li class="scroll-reveal flex items-center gap-5" style="--delay: 0.3s">
           <div
             class="flex-shrink-0 w-10 h-10 rounded-full bg-surface border border-gray-100 flex items-center justify-center shadow-sm">
@@ -198,7 +191,7 @@
           </div>
           <p class="font-body text-text-muted text-lg md:text-xl">Não tem consistência</p>
         </li>
-        <!-- Item 4 -->
+        
         <li class="scroll-reveal flex items-center gap-5" style="--delay: 0.4s">
           <div
             class="flex-shrink-0 w-10 h-10 rounded-full bg-surface border border-gray-100 flex items-center justify-center shadow-sm">
@@ -211,7 +204,7 @@
       </ul>
     </div>
 
-    <!-- BLOCO 3: POSICIONAMENTO -->
+    
     <div
       class="relative bg-surface rounded-[2.5rem] p-10 md:p-14 border border-gray-100 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] scroll-reveal"
       style="--delay: 0.3s">
@@ -235,14 +228,11 @@
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════════
-     SEÇÃO 3: O QUE TRABALHAMOS (COMO FUNCIONA)
-     Asymmetrical Sticky Layout baseado em _secoes-reserva.handlebars
-     ══════════════════════════════════════════════════════════ -->
+
 <section id="como-funciona" class="bg-white text-text-primary py-32">
   <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16">
 
-    <!-- Sticky Left (Textos Mestre) -->
+    
     <div class="lg:col-span-5 relative">
       <div class="lg:sticky lg:top-36 metodo-title">
         <h2 class="text-4xl md:text-5xl lg:text-5xl font-title font-bold leading-tight mb-6 text-text-primary">
@@ -254,7 +244,7 @@
           posicionamento e definição de caminhos.
         </p>
 
-        <!-- CTA -->
+        
         <a href="#contato"
           class="inline-flex items-center gap-3 px-8 py-4 bg-primary text-white font-body font-bold text-sm uppercase tracking-wider rounded-full hover:bg-primary-dark hover:scale-105 transition-all duration-300 shadow-lg shadow-primary/30">
           Quero entrar na mentoria
@@ -265,10 +255,10 @@
       </div>
     </div>
 
-    <!-- Right Scrolling List -->
+    
     <div class="lg:col-span-7 space-y-16 mt-12 lg:mt-0">
 
-      <!-- Item 1: Posicionamento -->
+      
       <div class="group border-t border-gray-200/60 pt-10 method-item">
         <span
           class="text-6xl md:text-8xl font-title font-black text-gray-100 group-hover:text-primary/20 transition-colors duration-500 block mb-4">01</span>
@@ -281,7 +271,7 @@
         </p>
       </div>
 
-      <!-- Item 2: Temas de palestra -->
+      
       <div class="group border-t border-gray-200/60 pt-10 method-item">
         <span
           class="text-6xl md:text-8xl font-title font-black text-gray-100 group-hover:text-primary/20 transition-colors duration-500 block mb-4">02</span>
@@ -294,7 +284,7 @@
         </p>
       </div>
 
-      <!-- Item 3: Construção de narrativa -->
+      
       <div class="group border-t border-gray-200/60 pt-10 method-item">
         <span
           class="text-6xl md:text-8xl font-title font-black text-gray-100 group-hover:text-primary/20 transition-colors duration-500 block mb-4">03</span>
@@ -307,7 +297,7 @@
         </p>
       </div>
 
-      <!-- Item 4: Presença digital -->
+      
       <div class="group border-t border-gray-200/60 pt-10 method-item">
         <span
           class="text-6xl md:text-8xl font-title font-black text-gray-100 group-hover:text-primary/20 transition-colors duration-500 block mb-4">04</span>
@@ -320,7 +310,7 @@
         </p>
       </div>
 
-      <!-- Item 5: Estratégia de crescimento -->
+      
       <div class="group border-t border-gray-200/60 pt-10 method-item">
         <span
           class="text-6xl md:text-8xl font-title font-black text-gray-100 group-hover:text-primary/20 transition-colors duration-500 block mb-4">05</span>
@@ -338,10 +328,7 @@
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════════════════
-     SEÇÃO 4: APLICAÇÃO (Formulário)
-     Design marcante, bg-primary-dark e glassmorphism form
-     ══════════════════════════════════════════════════════════ -->
+
 <style>
   .input-flushed-dark {
     width: 100%;
@@ -368,12 +355,12 @@
 
 <section id="contato" class="relative bg-primary py-32 overflow-hidden">
 
-  <!-- BG Glow / Elementos Decorativos -->
+  
   <div class="absolute inset-0 overflow-hidden pointer-events-none">
     <div class="absolute -top-[20%] -right-[10%] w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[120px]"></div>
     <div class="absolute -bottom-[20%] -left-[10%] w-[500px] h-[500px] bg-primary-light/10 rounded-full blur-[120px]">
     </div>
-    <!-- Grain overlay subtil -->
+    
     <div class="absolute inset-0 opacity-[0.03]"
       style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22/%3E%3C/svg%3E');">
     </div>
@@ -381,7 +368,7 @@
 
   <div class="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
-    <!-- Esquerda: Textos de CTA -->
+    
     <div class="form-text-reveal">
       <h2 class="text-4xl md:text-5xl lg:text-6xl font-title font-bold leading-tight mb-6 text-white">
         Você não precisa construir isso <span
@@ -392,7 +379,7 @@
         caminhos aleatórios e acelerando o processo.
       </p>
 
-      <!-- Check list motivacional -->
+      
       <ul class="space-y-4 mb-10">
         <li class="flex items-center gap-3 text-white/90 font-body font-semibold text-lg">
           <svg class="w-6 h-6 text-primary-dark flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -415,12 +402,12 @@
       </ul>
     </div>
 
-    <!-- Direita: Formulário Flat Design Branco -->
+    
     <div class="form-reveal relative w-full">
       <div
         class="bg-white rounded-[2rem] border border-gray-100 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.2)] p-8 md:p-12 relative overflow-hidden">
 
-        <!-- Background decor no form -->
+        
         <div
           class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-primary/10 to-transparent rounded-bl-full pointer-events-none">
         </div>
@@ -477,7 +464,7 @@
   </div>
 </section>
 
-<!-- Scripts Locais para GSAP -->
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script>

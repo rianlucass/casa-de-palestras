@@ -1,4 +1,4 @@
-<!-- ESTILOS DO EFEITO CROOKED -->
+﻿
 <style>
     /* Base das palavras interativas */
     .hover-word {
@@ -80,10 +80,10 @@
     }
 </style>
 
-<!-- HERO: ESTRATEGIA DIGITAL -->
+
 <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#161616]">
 
-    <!-- OVERLAY DE LOADING -->
+    
     <div id="page-loader"
         class="fixed inset-0 z-[9999] bg-[#0f0f0f] flex flex-col items-center justify-center transition-opacity duration-700 ease-out">
         <div class="relative flex items-center justify-center w-24 h-24 mb-8">
@@ -97,7 +97,7 @@
             Preparando estratégia...
         </div>
     </div>
-    <!-- Script independente — não depende de GSAP nem de DOMContentLoaded -->
+    
     <script>
         // Desabilita a restauração automática de scroll do browser para evitar
         // conflito com o GSAP ScrollTrigger que inicializa antes do scroll ser restaurado
@@ -133,22 +133,22 @@
         }());
     </script>
 
-    <!-- Gradientes decorativos espalhados no fundo (escurecidos para matchar com bg dark) -->
+    
     <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-        <!-- Azul corporativo — canto superior esquerdo -->
+        
         <div class="absolute -top-64 -left-64 w-[800px] h-[800px] rounded-full"
             style="background: radial-gradient(circle, rgba(24,119,242,0.15) 0%, transparent 65%);"></div>
-        <!-- Rosa neon — canto inferior direito -->
+        
         <div class="absolute -bottom-48 -right-48 w-[700px] h-[700px] rounded-full"
             style="background: radial-gradient(circle, rgba(228,6,184,0.15) 0%, transparent 65%);"></div>
     </div>
 
-    <!-- Canvas de Background Dinamico -->
+    
     <canvas id="socialCanvas" class="absolute inset-0 w-full h-full pointer-events-none z-0"></canvas>
 
     <div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-20 md:mt-0 pointer-events-none">
 
-        <!-- Titulo principal INTERATIVO -->
+        
         <h1 class="text-4xl sm:text-6xl md:text-[5.5rem] lg:text-[6.5rem] tracking-tight font-title font-bold text-white leading-tight mb-8 hero-element pointer-events-auto"
             style="opacity: 0; transform: translateY(20px);">
             Estratégia
@@ -156,14 +156,14 @@
             <span class="hover-word highlight-conteudo text-pink-100">Direção.</span><br class="hidden md:block" />
         </h1>
 
-        <!-- Subtitulo -->
+        
         <p class="text-base sm:text-lg md:text-2xl text-white font-body font-light max-w-3xl mx-auto mb-12 hero-element pointer-events-auto"
             style="opacity: 0; transform: translateY(20px);">
             Transformamos <strong>conhecimento</strong> em <strong>presença contínua</strong>,<br class="hidden sm:block">
             com conteúdo, posicionamento e soluções com IA.
         </p>
 
-        <!-- CTA -->
+        
         <div class="hero-element pointer-events-auto" style="opacity: 0; transform: translateY(20px);">
             <a href="#cta-section"
                 class="inline-flex items-center justify-center px-6 py-3 md:px-9 md:py-4 text-sm md:text-base font-bold text-[#161616] bg-white rounded-full transition-all duration-300 hover:scale-105 hover:bg-secondary hover:text-white shadow-[0_4px_30px_rgba(255,255,255,0.15)]">
@@ -184,17 +184,15 @@
     </div>
 </section>
 
-<!-- ─────────────────────────────────────────────────────────────
-     SEÇÃO 2: CONSULTORIA (PREMIUM HERO)
-     ───────────────────────────────────────────────────────────── -->
+
 <section id="consult-section" class="scroll-section relative bg-[#F9F4E9]" style="height: 300vh;">
 
     <div class="sticky-container sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
 
-        <!-- Cards Flutuantes — Content Creation / Social Media -->
+        
         <div class="absolute inset-0 w-full h-full pointer-events-none z-30 flex items-center justify-center">
 
-            <!-- Card 1: Top Left grande — criadora de conteúdo com câmera -->
+            
             <div class="imagem-flutuante absolute block rounded-[20px] md:rounded-[32px] overflow-hidden shadow-[0_24px_80px_rgba(0,0,0,0.14)] border-[3px] border-[#000000] pointer-events-auto transition-transform duration-100 ease-out max-w-[42vw] max-h-[48vh] md:max-w-none md:max-h-none"
                 style="width: 340px; height: 430px; z-index: 5; transform: translate(0, 0) rotate(0deg);" data-tx="-620"
                 data-ty="-590" data-rot="-14">
@@ -202,7 +200,7 @@
                     class="w-full h-full object-cover" alt="Moda & Estilo">
             </div>
 
-            <!-- Card 2: Top Right — profissional digital -->
+            
             <div class="imagem-flutuante absolute rounded-[20px] md:rounded-[32px] overflow-hidden shadow-[0_24px_80px_rgba(0,0,0,0.14)] border-[3px] border-[#000000] pointer-events-auto transition-transform duration-100 ease-out max-w-[42vw] max-h-[48vh] md:max-w-none md:max-h-none"
                 style="width: 300px; height: 380px; z-index: 5; transform: translate(0, 0) rotate(0deg);" data-tx="630"
                 data-ty="-560" data-rot="13">
@@ -210,7 +208,7 @@
                     class="w-full h-full object-cover" alt="Fitness & Lifestyle">
             </div>
 
-            <!-- Card 3: Mid Left — estratégia e produção digital -->
+            
             <div class="imagem-flutuante absolute hidden md:block rounded-[16px] md:rounded-[28px] overflow-hidden shadow-[0_16px_60px_rgba(0,0,0,0.12)] border-[3px] border-[#000000] pointer-events-auto transition-transform duration-100 ease-out max-w-[42vw] max-h-[48vh] md:max-w-none md:max-h-none"
                 style="width: 280px; height: 350px; z-index: 5; transform: translate(0, 0) rotate(0deg);" data-tx="-740"
                 data-ty="120" data-rot="-18">
@@ -218,7 +216,7 @@
                     class="w-full h-full object-cover" alt="Digital Strategy">
             </div>
 
-            <!-- Card 4: Mid Right — criação colaborativa -->
+            
             <div class="imagem-flutuante absolute block rounded-[16px] md:rounded-[28px] overflow-hidden shadow-[0_16px_60px_rgba(0,0,0,0.12)] border-[3px] border-[#000000] pointer-events-auto transition-transform duration-100 ease-out max-w-[42vw] max-h-[48vh] md:max-w-none md:max-h-none"
                 style="width: 310px; height: 390px; z-index: 5; transform: translate(0, 0) rotate(0deg);" data-tx="750"
                 data-ty="100" data-rot="10">
@@ -226,7 +224,7 @@
                     class="w-full h-full object-cover" alt="Creative Team">
             </div>
 
-            <!-- Card 5: Bottom Left — lifestyle social -->
+            
             <div class="imagem-flutuante absolute block md:block rounded-[20px] md:rounded-[32px] overflow-hidden shadow-[0_24px_80px_rgba(0,0,0,0.14)] border-[3px] border-[#000000] pointer-events-auto transition-transform duration-100 ease-out max-w-[42vw] max-h-[48vh] md:max-w-none md:max-h-none"
                 style="width: 320px; height: 400px; z-index: 5; transform: translate(0, 0) rotate(0deg);" data-tx="-580"
                 data-ty="620" data-rot="20">
@@ -234,7 +232,7 @@
                     class="w-full h-full object-cover" alt="Social Lifestyle">
             </div>
 
-            <!-- Card 6: Bottom Right grande — retrato impactante -->
+            
             <div class="imagem-flutuante absolute rounded-[20px] md:rounded-[32px] overflow-hidden shadow-[0_24px_80px_rgba(0,0,0,0.14)] border-[3px] border-[#000000] pointer-events-auto transition-transform duration-100 ease-out max-w-[42vw] max-h-[48vh] md:max-w-none md:max-h-none"
                 style="width: 360px; height: 450px; z-index: 5; transform: translate(0, 0) rotate(0deg);" data-tx="600"
                 data-ty="650" data-rot="-10">
@@ -242,7 +240,7 @@
                     class="w-full h-full object-cover" alt="Portrait">
             </div>
 
-            <!-- Card 7: Top Center-Left — fotografia mobile -->
+            
             <div class="imagem-flutuante absolute hidden lg:block rounded-[16px] md:rounded-[28px] overflow-hidden shadow-[0_16px_60px_rgba(0,0,0,0.12)] border-[3px] border-[#000000] pointer-events-auto transition-transform duration-100 ease-out max-w-[42vw] max-h-[48vh] md:max-w-none md:max-h-none"
                 style="width: 240px; height: 300px; z-index: 5; transform: translate(0, 0) rotate(0deg);" data-tx="-450"
                 data-ty="-400" data-rot="6">
@@ -250,7 +248,7 @@
                     class="w-full h-full object-cover" alt="Mobile Content">
             </div>
 
-            <!-- Card 8: Bottom Center-Right — influencer -->
+            
             <div class="imagem-flutuante absolute hidden lg:block rounded-[16px] md:rounded-[28px] overflow-hidden shadow-[0_16px_60px_rgba(0,0,0,0.12)] border-[3px] border-[#000000] pointer-events-auto transition-transform duration-100 ease-out max-w-[42vw] max-h-[48vh] md:max-w-none md:max-h-none"
                 style="width: 250px; height: 316px; z-index: 5; transform: translate(0, 0) rotate(0deg);" data-tx="480"
                 data-ty="420" data-rot="-12">
@@ -258,7 +256,7 @@
                     class="w-full h-full object-cover" alt="Influencer">
             </div>
 
-            <!-- Card 9: Top Right extra — equipe criativa -->
+            
             <div class="imagem-flutuante absolute hidden xl:block rounded-[16px] md:rounded-[24px] overflow-hidden shadow-[0_12px_48px_rgba(0,0,0,0.10)] border-[3px] border-[#000000] pointer-events-auto transition-transform duration-100 ease-out max-w-[42vw] max-h-[48vh] md:max-w-none md:max-h-none"
                 style="width: 210px; height: 268px; z-index: 5; transform: translate(0, 0) rotate(0deg);" data-tx="490"
                 data-ty="-390" data-rot="-5">
@@ -268,11 +266,11 @@
 
         </div>
 
-        <!-- Conteúdo Central -->
+        
         <div
             class="relative z-10 flex flex-col items-center text-center px-10 max-w-lg mx-auto consult-content will-change-transform">
 
-            <!-- Label decorativo para manter a estrutura -->
+            
             <div class="flex items-center gap-3 mb-6">
                 <span class="block w-10 h-px opacity-50" style="background-color: #E406B8;"></span>
                 <span class="text-[11px] font-semibold tracking-[0.28em] uppercase font-body"
@@ -292,7 +290,7 @@
                 clara para construção de autoridade.
             </p>
 
-            <!-- CTA com inline style para garantir cor sem depender do Tailwind runtime -->
+            
             <a id="consult-cta" href="#cta-section"
                 class="inline-flex items-center gap-2 px-6 py-3 md:px-9 md:py-4 text-sm md:text-base font-semibold text-white rounded-full pointer-events-auto transition-all duration-300 hover:scale-[1.04]"
                 style="background-color: #E406B8; box-shadow: 0 8px 32px rgba(228,6,184,0.38); opacity: 0;"
@@ -305,21 +303,19 @@
                 </svg>
             </a>
         </div>
-        <!-- Gradient fade-out para a próxima seção -->
+        
         <div
             class="absolute bottom-0 left-0 w-full z-40 h-40 md:h-64 pointer-events-none bg-gradient-to-t from-[#F9F4E9] to-transparent">
         </div>
 </section>
 
-<!-- ─────────────────────────────────────────────────────────────
-     SEÇÃO 3: O QUE FAZEMOS (SCROLL HORIZONTAL)
-     ───────────────────────────────────────────────────────────── -->
+
 <section id="services-section" class="relative overflow-hidden text-[#161616]">
-    <!-- Container que ficará fixo (Pinned) -->
+    
     <div
         class="services-pin-container sticky top-0 w-full h-screen flex items-center overflow-hidden bg-gradient-to-br from-[#F9F4E9] to-[#ffffff]">
 
-        <!-- Bloco Fixo da Esquerda (Título) -->
+        
         <div class="absolute left-6 md:left-16 z-20 top-24 md:top-1/4 pointer-events-none">
             <div class="flex items-center gap-3 mb-4 md:mb-6">
                 <span class="block w-10 h-px opacity-50" style="background-color: #1877F2;"></span>
@@ -337,18 +333,18 @@
             </h2>
         </div>
 
-        <!-- Container Deslizante (Scroll Horizontal) -->
+        
         <div
             class="services-scroll-wrapper absolute top-0 left-0 h-full flex items-end pb-8 md:pb-0 md:items-center pl-[100vw] md:pl-[45vw]">
-            <!-- CONTAINER DOS CARDS COM LINHA DE CONTINUIDADE E MAIS ESPAÇO -->
+            
             <div
                 class="relative flex items-stretch gap-6 md:gap-[60px] px-6 md:px-20 py-6 md:py-10 h-[65vh] before:absolute before:top-1/2 before:left-0 before:right-0 before:h-[2px] before:bg-gradient-to-r before:from-transparent before:via-black/10 before:to-transparent before:-z-10">
 
-                <!-- Card 1 -->
+                
                 <div
                     class="group relative w-[280px] sm:w-[320px] md:w-[420px] shrink-0 bg-white border border-black/5 rounded-[2rem] p-6 md:p-10 flex flex-col justify-between shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:border-transparent hover:shadow-[0_20px_60px_rgba(0,0,0,0.08),0_0_0_1px_rgba(56,182,255,0.3)] transition-all duration-500 overflow-hidden cursor-pointer hover:-translate-y-2 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[3px] after:bg-gradient-to-r after:from-[#38b6ff] after:to-[#E406B8] after:opacity-0 group-hover:after:opacity-100 after:transition-opacity after:duration-300 z-0 hover:z-10">
 
-                    <!-- Imagem -->
+                    
                     <div
                         class="absolute bottom-0 left-0 w-full h-[55%] opacity-30 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 ease-in-out z-0">
                         <div
@@ -358,14 +354,14 @@
                             class="w-full h-full object-cover" alt="Conteúdo Estratégico">
                     </div>
 
-                    <!-- Conteúdo do Card -->
+                    
                     <div class="relative z-20 flex flex-col h-full">
                         <div class="flex justify-between items-start">
                             <h3
                                 class="text-3xl md:text-4xl font-title font-medium tracking-tight text-gray-900 leading-tight group-hover:text-[#1877F2] transition-colors duration-300 mt-4">
                                 Conteúdo<br>estratégico
                             </h3>
-                            <!-- Número Editorial -->
+                            
                             <span
                                 class="absolute top-5 right-5 text-[80px] md:text-[90px] font-title font-extrabold text-black/[0.04] leading-none group-hover:text-[#1877F2]/10 transition-colors duration-500">01</span>
                         </div>
@@ -376,7 +372,7 @@
                     </div>
                 </div>
 
-                <!-- Card 2 -->
+                
                 <div
                     class="group relative w-[280px] sm:w-[320px] md:w-[420px] shrink-0 bg-white border border-black/5 rounded-[2rem] p-6 md:p-10 flex flex-col justify-between shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:border-transparent hover:shadow-[0_20px_60px_rgba(0,0,0,0.08),0_0_0_1px_rgba(228,6,184,0.3)] transition-all duration-500 overflow-hidden cursor-pointer hover:-translate-y-2 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[3px] after:bg-gradient-to-r after:from-[#38b6ff] after:to-[#E406B8] after:opacity-0 group-hover:after:opacity-100 after:transition-opacity after:duration-300 z-0 hover:z-10">
 
@@ -405,7 +401,7 @@
                     </div>
                 </div>
 
-                <!-- Card 3 (FEATURED) -->
+                
                 <div
                     class="group relative w-[280px] sm:w-[320px] md:w-[420px] shrink-0 bg-white border border-black/5 rounded-[2rem] p-6 md:p-10 flex flex-col justify-between shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:border-transparent hover:shadow-[0_20px_60px_rgba(0,0,0,0.08),0_0_0_1px_rgba(56,182,255,0.4)] transition-all duration-500 overflow-hidden cursor-pointer hover:-translate-y-2 z-0 hover:z-10 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[3px] after:bg-gradient-to-r after:from-[#38b6ff] after:to-[#E406B8] after:opacity-0 group-hover:after:opacity-100 after:transition-opacity after:duration-300">
 
@@ -435,7 +431,7 @@
                     </div>
                 </div>
 
-                <!-- Card 4 -->
+                
                 <div
                     class="group relative w-[280px] sm:w-[320px] md:w-[420px] shrink-0 bg-white border border-black/5 rounded-[2rem] p-6 md:p-10 flex flex-col justify-between shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:border-transparent hover:shadow-[0_20px_60px_rgba(0,0,0,0.08),0_0_0_1px_rgba(228,6,184,0.3)] transition-all duration-500 overflow-hidden cursor-pointer hover:-translate-y-2 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[3px] after:bg-gradient-to-r after:from-[#38b6ff] after:to-[#E406B8] after:opacity-0 group-hover:after:opacity-100 after:transition-opacity after:duration-300 z-0 hover:z-10">
 
@@ -464,7 +460,7 @@
                     </div>
                 </div>
 
-                <!-- Card 5 -->
+                
                 <div
                     class="group relative w-[280px] sm:w-[320px] md:w-[420px] shrink-0 bg-white border border-black/5 rounded-[2rem] p-6 md:p-10 flex flex-col justify-between shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:border-transparent hover:shadow-[0_20px_60px_rgba(0,0,0,0.08),0_0_0_1px_rgba(56,182,255,0.3)] transition-all duration-500 overflow-hidden cursor-pointer hover:-translate-y-2 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[3px] after:bg-gradient-to-r after:from-[#38b6ff] after:to-[#E406B8] after:opacity-0 group-hover:after:opacity-100 after:transition-opacity after:duration-300 z-0 hover:z-10">
 
@@ -559,13 +555,10 @@
     </style>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════
-     BLOCO ESCURO GLOBAL — Seções 4, 5, 6 e CTA (bg #161616 compartilhado)
-     Estrelas geradas UMA VEZ para todo o bloco
-     ═══════════════════════════════════════════════════════════ -->
+
 <div id="dark-sections-wrapper" class="relative bg-[#161616] overflow-hidden">
 
-    <!-- ★ GLOBAL STARS — cobre todo o bloco escuro -->
+    
     <div class="absolute inset-0 z-0 pointer-events-none">
         <div id="global-stars-container" class="absolute inset-0 w-full h-full"></div>
     </div>
@@ -591,12 +584,10 @@
         }
     </style>
 
-    <!-- ─────────────────────────────────────────────────────────────
-         SEÇÃO 4: COMO ISSO SE TRADUZ
-         ───────────────────────────────────────────────────────────── -->
+    
     <section id="traduz-section" class="relative py-16 md:py-32 flex flex-col justify-center">
         <div class="relative z-10 text-center px-6 max-w-4xl mx-auto flex flex-col justify-center items-center">
-            <!-- Label decorativo -->
+            
             <div class="flex items-center gap-3 mb-4 md:mb-6 s4-element"
                 style="opacity: 0; transform: translateY(40px);">
                 <span class="block w-8 md:w-10 h-px opacity-50" style="background-color: #1877F2;"></span>
@@ -626,12 +617,10 @@
         </div>
     </section>
 
-    <!-- ─────────────────────────────────────────────────────────────
-         SEÇÃO 5: ESCALA COM INTELIGÊNCIA (IA)
-         ───────────────────────────────────────────────────────────── -->
+    
     <section id="ia-section" class="relative py-16 md:py-32 flex flex-col justify-center">
         <div class="relative z-10 text-center px-6 max-w-4xl mx-auto flex flex-col justify-center items-center">
-            <!-- Label decorativo -->
+            
             <div class="flex items-center gap-3 mb-4 md:mb-6 s5-element"
                 style="opacity: 0; transform: translateY(40px);">
                 <span class="block w-8 md:w-10 h-px opacity-50" style="background-color: #00f0ff;"></span>
@@ -677,12 +666,10 @@
         </div>
     </section>
 
-    <!-- ─────────────────────────────────────────────────────────────
-         SEÇÃO 6: O QUE ISSO CONSTRÓI
-         ───────────────────────────────────────────────────────────── -->
+    
     <section id="constroi-section" class="relative py-16 md:py-32 flex flex-col justify-center">
         <div class="relative z-10 text-center px-6 max-w-4xl mx-auto flex flex-col justify-center items-center">
-            <!-- Label decorativo -->
+            
             <div class="flex items-center gap-3 mb-4 md:mb-6 s6-element"
                 style="opacity: 0; transform: translateY(40px);">
                 <span class="block w-8 md:w-10 h-px opacity-50" style="background-color: #E406B8;"></span>
@@ -729,12 +716,10 @@
         </div>
     </section>
 
-    <!-- ─────────────────────────────────────────────────────────────
-         SEÇÃO FINAL: CTA
-         ───────────────────────────────────────────────────────────── -->
+    
     <section id="cta-section" class="relative py-14 md:py-32 flex flex-col justify-center">
 
-        <!-- Intro Text -->
+        
         <div class="relative z-10 text-center mb-6 md:mb-12 px-6 max-w-4xl mx-auto cta-estrategias-intro">
             <p class="text-base md:text-3xl text-white font-title font-light leading-snug tracking-wide">
                 Conteúdo sem direção
@@ -744,13 +729,13 @@
             </p>
         </div>
 
-        <!-- CTA Box Frente -->
+        
         <div class="relative z-10 max-w-xl mx-auto px-4 md:px-6 w-full cta-box-estrategias">
 
-            <!-- Caixa branca — mesmo estilo da curadoria, adaptado pro fundo escuro -->
+            
             <div class="bg-white rounded-[1.5rem] md:rounded-[2rem] border border-gray-100 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)] p-6 md:p-12 relative overflow-hidden">
 
-                <!-- Decor canto superior direito (rosa, como accent da página) -->
+                
                 <div class="absolute top-0 right-0 w-32 h-32 md:w-40 md:h-40 bg-gradient-to-bl from-[#E406B8]/10 to-transparent rounded-bl-full pointer-events-none"></div>
 
                 <h2 class="text-lg md:text-3xl font-title font-extrabold text-text-primary leading-tight mb-2 md:mb-3 relative z-10">
@@ -764,7 +749,7 @@
                 <form id="cta-form-estrategias" class="space-y-5 md:space-y-8 relative z-10" novalidate
                     onsubmit="handleCtaFormSubmit(event)">
 
-                    <!-- Nome -->
+                    
                     <div>
                         <label class="block font-body text-xs font-bold uppercase tracking-wider text-gray-400 mb-1"
                             for="cta-nome">Nome</label>
@@ -772,7 +757,7 @@
                             class="input-flushed-est">
                     </div>
 
-                    <!-- Email -->
+                    
                     <div>
                         <label class="block font-body text-xs font-bold uppercase tracking-wider text-gray-400 mb-1"
                             for="cta-email">E-mail</label>
@@ -780,7 +765,7 @@
                             class="input-flushed-est">
                     </div>
 
-                    <!-- Telefone -->
+                    
                     <div>
                         <label class="block font-body text-xs font-bold uppercase tracking-wider text-gray-400 mb-1"
                             for="cta-telefone">Telefone / WhatsApp</label>
@@ -788,7 +773,7 @@
                             class="input-flushed-est">
                     </div>
 
-                    <!-- Mensagem -->
+                    
                     <div>
                         <label class="block font-body text-xs font-bold uppercase tracking-wider text-gray-400 mb-1"
                             for="cta-mensagem">Mensagem</label>
@@ -863,9 +848,9 @@
     </section>
 
 </div>
-<!-- /#dark-sections-wrapper -->
 
-<!-- Script: Global Stars para o bloco escuro -->
+
+
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         const starsContainer = document.getElementById('global-stars-container');
@@ -887,10 +872,10 @@
     });
 </script>
 
-<!-- Script canvas background -->
+
 <script src="/js/social-bg.js"></script>
 
-<!-- GSAP + ScrollTrigger via CDN -->
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 

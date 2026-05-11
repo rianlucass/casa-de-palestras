@@ -1,6 +1,4 @@
-<!-- ─────────────────────────────────────────────────────────────
-     ESTILOS DA HERO — SOBRE NÓS
-     ───────────────────────────────────────────────────────────── -->
+﻿
 <style>
     /* Palavra em destaque com fundo torto (reutilizado das outras páginas) */
     .hover-word {
@@ -176,56 +174,52 @@
     }
 </style>
 
-<!-- ─────────────────────────────────────────────────────────────
-     HERO: SOBRE NÓS — Full bleed, editorial, darkroom
-     ───────────────────────────────────────────────────────────── -->
+
 <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
 
-    <!-- ── FUNDO: Imagem + Overlays em camadas ── -->
+    
     <div class="absolute inset-0 z-0">
-        <!-- Imagem principal com Ken Burns -->
+        
         <img src="/img/banners/17.jpg" alt="Nossa Essência — Casa de Palestras"
             class="hero-bg-img w-full h-full object-cover object-center">
 
-        <!-- Overlay 1: escurecimento base -->
+        
         <div class="absolute inset-0" style="background: rgba(12,12,14,0.78);"></div>
 
-        <!-- Overlay 2: gradiente direcional dramático — topo e base mais escuros -->
+        
         <div class="absolute inset-0"
             style="background: linear-gradient(180deg, rgba(10,10,14,0.55) 0%, transparent 40%, transparent 60%, rgba(10,10,14,0.70) 100%);">
         </div>
 
-        <!-- Overlay 3: halo azul — esquerda -->
+        
         <div class="absolute inset-0 pointer-events-none"
             style="background: radial-gradient(ellipse at 10% 55%, rgba(24,119,242,0.18) 0%, transparent 55%);"></div>
 
-        <!-- Overlay 4: halo rosa — direita -->
+        
         <div class="absolute inset-0 pointer-events-none"
             style="background: radial-gradient(ellipse at 88% 45%, rgba(228,6,184,0.16) 0%, transparent 55%);"></div>
     </div>
 
-    <!-- ── Textura de grão sobre tudo ── -->
+    
     <div class="absolute inset-0 z-10 grain-overlay pointer-events-none"></div>
 
-    <!-- ── Linhas verticais decorativas ── -->
+    
     <div class="diagonal-lines z-10"></div>
 
-    <!-- ── Linha de acento vertical — esquerda (desktop) ── -->
+    
     <div class="absolute top-0 left-0 w-[3px] h-full z-20 pointer-events-none hidden lg:block"
         style="background: linear-gradient(to bottom, transparent 0%, #1877F2 30%, #E406B8 70%, transparent 100%); opacity: 0.7;">
     </div>
 
-    <!-- ══════════════════════════════════════════
-         CONTEÚDO PRINCIPAL
-         ══════════════════════════════════════════ -->
+    
     <div class="relative z-30 w-full max-w-7xl mx-auto px-6 md:px-12 pt-28 md:pt-0 pb-36 md:pb-32">
 
         <div class="grid grid-cols-1 lg:grid-cols-12 items-center gap-12 lg:gap-8 min-h-screen py-20">
 
-            <!-- ── COLUNA DE TEXTO ── -->
+            
             <div class="lg:col-span-7 xl:col-span-6 flex flex-col items-start">
 
-                <!-- Título principal -->
+                
                 <h1 class="overflow-hidden mb-0">
                     <span
                         class="hero-word block font-title font-bold text-white uppercase tracking-tighter translate-y-full opacity-0"
@@ -237,18 +231,18 @@
                         style="font-size: clamp(3rem, 7.5vw, 6.5rem); line-height: 0.95;">
                         Nossa
                     </span>
-                    <!-- "Essência" — palavra de destaque em gradiente itálico -->
+                    
                     <span class="hero-word title-gradient block tracking-tighter translate-y-full opacity-0"
                         style="font-size: clamp(3.2rem, 8vw, 7rem); line-height: 1.0;">
                         Essência
                     </span>
                 </h1>
 
-                <!-- Linha gradiente que cresce -->
+                
                 <div class="hero-line w-0 h-[2px] bg-gradient-to-r from-primary to-secondary mt-6 mb-8 transition-all duration-[1.5s] ease-out"
                     style="max-width: 120px;"></div>
 
-                <!-- Subtítulo -->
+                
                 <p class="hero-fade opacity-0 translate-y-8 font-body font-light text-white/65 text-lg md:text-xl leading-relaxed mb-5 max-w-lg"
                     style="font-style: italic;">
                     Histórias que viram resultados, com
@@ -256,7 +250,7 @@
                     <strong class="text-white/90 not-italic">estratégia</strong>.
                 </p>
 
-                <!-- Corpo -->
+                
                 <p
                     class="hero-fade opacity-0 translate-y-8 font-body text-white/50 text-base md:text-lg leading-relaxed mb-10 max-w-md">
                     Há mais de <strong class="text-white/75 font-semibold">15 anos</strong>, unimos marcas,
@@ -264,7 +258,7 @@
                     que deixam marca.
                 </p>
 
-                <!-- CTA -->
+                
                 <div
                     class="hero-fade opacity-0 translate-y-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
                     <a href="/contato"
@@ -288,10 +282,10 @@
                 </div>
             </div>
 
-            <!-- ── COLUNA DOS STATS (desktop) ── -->
+            
             <div class="lg:col-span-5 xl:col-span-6 flex flex-col gap-6 items-center lg:items-end">
 
-                <!-- Stats grid 2x2 -->
+                
                 <div class="hero-fade opacity-0 translate-y-8 grid grid-cols-2 gap-4 w-full max-w-sm lg:max-w-md">
 
                     <div class="stat-card">
@@ -315,7 +309,7 @@
                     </div>
                 </div>
 
-                <!-- Quote decorativa -->
+                
                 <div class="hero-fade opacity-0 translate-y-8 w-full max-w-sm lg:max-w-md mt-2">
                     <blockquote
                         class="border-l-2 border-secondary/50 pl-5 font-body text-sm text-white/80 italic leading-relaxed">
@@ -332,7 +326,7 @@
         </div>
     </div>
 
-    <!-- ── Scroll indicator ── -->
+    
     <div
         class="absolute bottom-36 md:bottom-20 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 pointer-events-none">
         <span class="font-body text-[10px] text-white/30 uppercase tracking-[0.3em]">Rolar</span>
@@ -341,7 +335,7 @@
         </div>
     </div>
 
-    <!-- ── Transição inferior diagonal (para a próxima seção) ── -->
+    
     <div class="absolute bottom-0 left-0 w-full z-20 h-20 md:h-32 pointer-events-none">
         <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
             <line x1="0" y1="100" x2="100" y2="20" stroke="#333" stroke-width="0.5" opacity="0.3" />
@@ -351,9 +345,7 @@
 
 </section>
 
-<!-- ─────────────────────────────────────────────────────────────
-     SCRIPT: Animações de entrada da Hero
-     ───────────────────────────────────────────────────────────── -->
+
 <script>
     (function () {
         'use strict';
@@ -392,22 +384,20 @@
     }());
 </script>
 
-<!-- ─────────────────────────────────────────────────────────────
-     SEÇÃO 2: SOBRE NÓS — Narrativa editorial split
-     ───────────────────────────────────────────────────────────── -->
+
 <section id="nossa-historia" class="relative bg-[#F9F4E9] overflow-hidden">
 
-    <!-- Linha de acento vertical esquerda -->
+    
     <div class="absolute top-0 left-0 w-[3px] h-full hidden lg:block pointer-events-none"
          style="background: linear-gradient(to bottom, #1877F2 0%, #E406B8 50%, transparent 100%); opacity: 0.25;"></div>
 
-    <!-- Ruído de textura sutil -->
+    
     <div class="absolute inset-0 pointer-events-none opacity-[0.025]"
          style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22/%3E%3C/svg%3E');"></div>
 
     <div class="max-w-7xl mx-auto px-6 md:px-12 py-24 md:py-36">
 
-        <!-- ── Cabeçalho da seção ── -->
+        
         <div class="flex flex-col items-center text-center mb-20 md:mb-28 scroll-reveal">
             <div class="flex items-center gap-3 mb-5">
                 <span class="block w-10 h-px" style="background: #1877F2; opacity: 0.5;"></span>
@@ -421,22 +411,22 @@
             </h2>
         </div>
 
-        <!-- ── BLOCO 1: Casa de Palestras (2008) ── -->
+        
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start mb-20 md:mb-28 scroll-reveal">
 
-            <!-- Marcador de ano — desktop -->
+            
             <div class="hidden lg:flex lg:col-span-2 flex-col items-center pt-2">
                 <span class="font-title font-bold text-[5rem] leading-none select-none"
                       style="color: rgba(24,119,242,0.12);">2008</span>
                 <div class="w-px flex-1 mt-4" style="background: linear-gradient(to bottom, rgba(24,119,242,0.3), transparent);"></div>
             </div>
 
-            <!-- Conteúdo textual -->
+            
             <div class="lg:col-span-6 flex flex-col gap-6">
-                <!-- Label mobile -->
+                
                 <span class="lg:hidden font-body text-[10px] font-bold tracking-[0.3em] uppercase text-primary">2008</span>
 
-                <!-- Chip "Casa de Palestras" -->
+                
                 <div class="inline-flex items-center gap-2 self-start px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5">
                     <span class="w-2 h-2 rounded-full bg-primary"></span>
                     <span class="font-body text-[11px] font-bold tracking-[0.2em] uppercase text-primary">Casa de Palestras</span>
@@ -455,11 +445,11 @@
                 </p>
             </div>
 
-            <!-- Card decorativo — testemunho do palco -->
+            
             <div class="lg:col-span-4 scroll-reveal" style="--delay: 0.15s;">
                 <div class="relative rounded-[2rem] overflow-hidden border border-[#161616]/8 shadow-[0_16px_60px_rgba(0,0,0,0.07)]"
                      style="background: #161616;">
-                    <!-- Halo -->
+                    
                     <div class="absolute inset-0 pointer-events-none"
                          style="background: radial-gradient(ellipse at 20% 80%, rgba(24,119,242,0.25) 0%, transparent 65%);"></div>
                     <div class="relative z-10 p-8 md:p-10">
@@ -478,7 +468,7 @@
             </div>
         </div>
 
-        <!-- ── Divisor decorativo ── -->
+        
         <div class="flex items-center gap-6 mb-20 md:mb-28 scroll-reveal">
             <div class="flex-1 h-px" style="background: linear-gradient(to right, rgba(228,6,184,0.2), transparent);"></div>
             <div class="flex gap-2">
@@ -488,15 +478,15 @@
             <div class="flex-1 h-px" style="background: linear-gradient(to left, rgba(24,119,242,0.2), transparent);"></div>
         </div>
 
-        <!-- ── BLOCO 2: Casa de Conteúdo (2017) ── -->
+        
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start mb-20 md:mb-28 scroll-reveal">
 
-            <!-- Conteúdo textual — ordem invertida no desktop (direita) -->
+            
             <div class="lg:col-span-6 lg:col-start-1 flex flex-col gap-6 order-2 lg:order-2">
-                <!-- Label mobile -->
+                
                 <span class="lg:hidden font-body text-[10px] font-bold tracking-[0.3em] uppercase text-secondary">2017</span>
 
-                <!-- Chip "Casa de Conteúdo" -->
+                
                 <div class="inline-flex items-center gap-2 self-start px-4 py-1.5 rounded-full border border-secondary/30 bg-secondary/5">
                     <span class="w-2 h-2 rounded-full bg-secondary"></span>
                     <span class="font-body text-[11px] font-bold tracking-[0.2em] uppercase text-secondary">Casa de Conteúdo</span>
@@ -515,7 +505,7 @@
                 </p>
             </div>
 
-            <!-- Card decorativo — testemunho do digital -->
+            
             <div class="lg:col-span-4 lg:col-start-8 scroll-reveal order-1 lg:order-1" style="--delay: 0.15s;">
                 <div class="relative rounded-[2rem] overflow-hidden border border-[#E406B8]/20 shadow-[0_16px_60px_rgba(228,6,184,0.08)]"
                      style="background: linear-gradient(135deg, #fdf0fb 0%, #f9f4e9 100%);">
@@ -536,7 +526,7 @@
                 </div>
             </div>
 
-            <!-- Marcador de ano — desktop (coluna 11-12) -->
+            
             <div class="hidden lg:flex lg:col-span-2 lg:col-start-11 flex-col items-center pt-2 order-3">
                 <span class="font-title font-bold text-[5rem] leading-none select-none text-right"
                       style="color: rgba(228,6,184,0.12);">2017</span>
@@ -544,24 +534,24 @@
             </div>
         </div>
 
-        <!-- ── BLOCO 3: Hoje — Propósito unificado ── -->
+        
         <div class="scroll-reveal">
             <div class="relative rounded-[2.5rem] overflow-hidden"
                  style="background: #161616;">
 
-                <!-- Halos internos -->
+                
                 <div class="absolute inset-0 pointer-events-none"
                      style="background: radial-gradient(ellipse at 15% 50%, rgba(24,119,242,0.20) 0%, transparent 55%);"></div>
                 <div class="absolute inset-0 pointer-events-none"
                      style="background: radial-gradient(ellipse at 85% 50%, rgba(228,6,184,0.18) 0%, transparent 55%);"></div>
 
-                <!-- Linha superior gradiente -->
+                
                 <div class="absolute top-0 left-0 right-0 h-[2px]"
                      style="background: linear-gradient(90deg, #1877F2 0%, #E406B8 100%);"></div>
 
                 <div class="relative z-10 px-8 md:px-16 py-14 md:py-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
-                    <!-- Texto esquerdo -->
+                    
                     <div class="lg:col-span-7 flex flex-col gap-6">
                         <div class="flex items-center gap-3">
                             <span class="block w-8 h-px opacity-60" style="background: #E406B8;"></span>
@@ -607,10 +597,10 @@
                         </div>
                     </div>
 
-                    <!-- Pilares direita -->
+                    
                     <div class="lg:col-span-5 grid grid-cols-1 gap-4">
 
-                        <!-- Pilar 1: Curadoria de Palestrantes -->
+                        
                         <div class="flex items-start gap-4 p-5 rounded-2xl border border-white/8 bg-white/4">
                             <div class="shrink-0 w-10 h-10 rounded-xl flex items-center justify-center"
                                  style="background: rgba(24,119,242,0.15);">
@@ -630,7 +620,7 @@
                             </div>
                         </div>
 
-                        <!-- Pilar 2: Eventos Corporativos -->
+                        
                         <div class="flex items-start gap-4 p-5 rounded-2xl border border-white/8 bg-white/4">
                             <div class="shrink-0 w-10 h-10 rounded-xl flex items-center justify-center"
                                  style="background: rgba(228,6,184,0.15);">
@@ -650,7 +640,7 @@
                             </div>
                         </div>
 
-                        <!-- Pilar 3: Estratégia Digital -->
+                        
                         <div class="flex items-start gap-4 p-5 rounded-2xl border border-white/8 bg-white/4">
                             <div class="shrink-0 w-10 h-10 rounded-xl flex items-center justify-center"
                                  style="background: rgba(56,182,255,0.12);">
@@ -681,7 +671,7 @@
 <section id="fundadores" class="relative py-28 md:py-36 overflow-hidden border-t border-white/5"
          style="background: linear-gradient(160deg, #0c0c14 0%, #0f0b1e 40%, #110d18 70%, #0a0a12 100%);">
 
-    <!-- Halos de fundo -->
+    
     <div class="absolute inset-0 pointer-events-none">
         <div class="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full"
              style="background: radial-gradient(circle, rgba(24,119,242,0.10) 0%, transparent 65%);"></div>
@@ -689,17 +679,17 @@
              style="background: radial-gradient(circle, rgba(228,6,184,0.10) 0%, transparent 65%);"></div>
     </div>
 
-    <!-- Grain texture -->
+    
     <div class="absolute inset-0 pointer-events-none opacity-[0.03]"
          style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22/%3E%3C/svg%3E');"></div>
 
-    <!-- Linha superior gradiente -->
+    
     <div class="absolute top-0 left-0 right-0 h-[1px]"
          style="background: linear-gradient(90deg, transparent 0%, rgba(24,119,242,0.4) 30%, rgba(228,6,184,0.4) 70%, transparent 100%);"></div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12">
 
-        <!-- ── Cabeçalho ── -->
+        
         <div class="text-center mb-16 md:mb-20 fundadores-title">
             <div class="flex items-center justify-center gap-3 mb-5">
                 <span class="block w-10 h-px" style="background: linear-gradient(to right, transparent, rgba(228,6,184,0.6));"></span>
@@ -717,45 +707,45 @@
             </p>
         </div>
 
-        <!-- ── Accordion Flex — mesmo padrão da seção Vozes ── -->
+        
         <div class="w-full h-[620px] md:h-[680px] flex flex-col md:flex-row gap-4 md:gap-6 fundadores-cards">
 
-            <!-- ──────── Card: Luana Veloso ──────── -->
+            
             <div class="group relative flex-1 md:hover:flex-[2.2] rounded-[2rem] overflow-hidden transition-all duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] cursor-pointer shadow-2xl">
 
-                <!-- Foto fullbleed -->
+                
                 <img src="/img/sobre/sobre-1.png"
                      alt="Luana Veloso — Cofundadora"
                      class="absolute inset-0 w-full h-full object-cover object-top filter grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-105">
 
-                <!-- Overlay gradiente base -->
+                
                 <div class="absolute inset-0"
                      style="background: linear-gradient(to top, rgba(10,8,20,0.95) 0%, rgba(10,8,20,0.55) 45%, transparent 100%);"></div>
 
-                <!-- Halo rosa no hover -->
+                
                 <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
                      style="background: radial-gradient(ellipse at 50% 100%, rgba(228,6,184,0.18) 0%, transparent 60%);"></div>
 
-                <!-- Linha superior colorida — aparece no hover -->
+                
                 <div class="absolute top-0 left-0 right-0 h-[3px] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                      style="background: linear-gradient(90deg, #E406B8, #38b6ff);"></div>
 
-                <!-- Conteúdo inferior -->
+                
                 <div class="absolute inset-0 flex flex-col justify-end p-8 md:p-12">
 
-                    <!-- Nome — sempre visível, sobe no hover -->
+                    
                     <h3 class="text-white font-title font-bold uppercase tracking-tight leading-none md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-500 whitespace-nowrap"
                         style="font-size: clamp(2rem, 3.5vw, 3.2rem);">
                         Luana Veloso
                     </h3>
 
-                    <!-- Cargo — aparece no hover -->
+                    
                     <p class="font-body font-bold text-sm tracking-[0.2em] mt-2 uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-[100ms]"
                        style="color: #E406B8;">
                         Cofundadora &amp; Head de Criação e Experiências
                     </p>
 
-                    <!-- Bio — aparece no hover, desliza de baixo -->
+                    
                     <div class="overflow-hidden max-h-0 group-hover:max-h-40 transition-all duration-500 delay-[150ms] ease-[cubic-bezier(0.25,1,0.5,1)]">
                         <p class="font-body text-white/70 text-sm leading-relaxed mt-4">
                             Criativa nata e apaixonada por transformar projetos em experiências memoráveis. Lidera a Casa com olhar estratégico, estética apurada e um talento especial para conectar marcas e pessoas.
@@ -767,42 +757,42 @@
                 </div>
             </div>
 
-            <!-- ──────── Card: Thiago Cassab ──────── -->
+            
             <div class="group relative flex-1 md:hover:flex-[2.2] rounded-[2rem] overflow-hidden transition-all duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] cursor-pointer shadow-2xl">
 
-                <!-- Foto fullbleed -->
+                
                 <img src="/img/sobre/sobre-2.png"
                      alt="Thiago Cassab — Cofundador"
                      class="absolute inset-0 w-full h-full object-cover object-top filter grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-105">
 
-                <!-- Overlay gradiente base -->
+                
                 <div class="absolute inset-0"
                      style="background: linear-gradient(to top, rgba(8,10,22,0.95) 0%, rgba(8,10,22,0.55) 45%, transparent 100%);"></div>
 
-                <!-- Halo azul no hover -->
+                
                 <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
                      style="background: radial-gradient(ellipse at 50% 100%, rgba(24,119,242,0.18) 0%, transparent 60%);"></div>
 
-                <!-- Linha superior colorida — aparece no hover -->
+                
                 <div class="absolute top-0 left-0 right-0 h-[3px] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                      style="background: linear-gradient(90deg, #1877F2, #E406B8);"></div>
 
-                <!-- Conteúdo inferior -->
+                
                 <div class="absolute inset-0 flex flex-col justify-end p-8 md:p-12">
 
-                    <!-- Nome -->
+                    
                     <h3 class="text-white font-title font-bold uppercase tracking-tight leading-none md:translate-y-4 md:group-hover:translate-y-0 transition-transform duration-500 whitespace-nowrap"
                         style="font-size: clamp(2rem, 3.5vw, 3.2rem);">
                         Thiago Cassab
                     </h3>
 
-                    <!-- Cargo -->
+                    
                     <p class="font-body font-bold text-sm tracking-[0.2em] mt-2 uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-[100ms]"
                        style="color: #38b6ff;">
                         Cofundador &amp; Head de Estratégia e Inovação
                     </p>
 
-                    <!-- Bio -->
+                    
                     <div class="overflow-hidden max-h-0 group-hover:max-h-40 transition-all duration-500 delay-[150ms] ease-[cubic-bezier(0.25,1,0.5,1)]">
                         <p class="font-body text-white/70 text-sm leading-relaxed mt-4">
                             Master em Comunicação Digital e estrategista de dados. Une criatividade e tecnologia para criar soluções que geram resultados reais e duradouros.
@@ -817,7 +807,7 @@
         </div>
     </div>
 
-    <!-- Linha inferior gradiente -->
+    
     <div class="absolute bottom-0 left-0 right-0 h-[1px]"
          style="background: linear-gradient(90deg, transparent 0%, rgba(24,119,242,0.3) 40%, rgba(228,6,184,0.3) 60%, transparent 100%);"></div>
 

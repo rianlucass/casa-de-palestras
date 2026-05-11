@@ -1,10 +1,8 @@
-<!-- ═══════════════════════════════════════════════════════════
-     HERO STORYTELLING — Scroll-Driven, Awwwards-Inspired
-     ═══════════════════════════════════════════════════════════ -->
+﻿
 
-<!-- TELA 1: Abertura Cinematográfica -->
+
 <section class="hero-panel relative h-screen flex flex-col items-center justify-center overflow-hidden bg-white" data-panel="intro">
-  <!-- Noise Grain Texture -->
+  
   <div class="absolute inset-0 opacity-[0.03] pointer-events-none z-10" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22/%3E%3C/svg%3E');"></div>
 
   <div class="absolute inset-0 z-0">
@@ -13,7 +11,7 @@
   </div>
 
   <div class="relative z-20 max-w-6xl mx-auto px-6 text-center">
-    <!-- Linha decorativa que cresce -->
+    
     <div class="hero-line mx-auto w-0 h-[2px] bg-gradient-to-r from-primary to-secondary mb-10 transition-all duration-[1.5s] ease-out"></div>
 
     <h1 class="font-title font-bold text-text-primary leading-[0.95] mb-6">
@@ -26,7 +24,7 @@
       Integramos curadoria de palestrantes e construção de conteúdo em um único ecossistema.
     </p>
 
-    <!-- Scroll indicator -->
+    
     <div class="hero-fade opacity-0 translate-y-8 flex flex-col items-center gap-3 mt-4">
       <span class="font-body text-xs text-text-muted uppercase tracking-[0.3em]">Descubra</span>
       <div class="w-[1px] h-12 relative overflow-hidden">
@@ -36,25 +34,25 @@
   </div>
 </section>
 
-<!-- TELA 2: Casa de Palestras — Full Immersive -->
+
 <section class="hero-panel relative min-h-screen flex items-center overflow-hidden" data-panel="palestras">
-  <!-- BG: Sólido escuro (mobile) / Split diagonal (desktop) -->
+  
   <div class="absolute inset-0 bg-text-primary z-0"></div>
-  <!-- Imagem só aparece em diagonal no desktop -->
+  
   <div class="absolute inset-0 z-0 hidden lg:block" style="clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);">
     <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="" class="w-full h-full object-cover opacity-40">
     <div class="absolute inset-0 bg-gradient-to-l from-transparent to-text-primary/90"></div>
   </div>
-  <!-- Mobile: imagem sutil ao fundo com overlay forte -->
+  
   <div class="absolute inset-0 z-0 lg:hidden">
     <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="" class="w-full h-full object-cover opacity-15">
   </div>
-  <!-- Accent line left -->
+  
   <div class="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-primary via-primary/50 to-transparent z-10"></div>
 
   <div class="relative z-20 max-w-7xl mx-auto px-6 md:px-12 w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center py-16 md:py-24">
     
-    <!-- Esquerda: Texto -->
+    
     <div class="max-w-xl">
       <div class="scroll-reveal">
         <span class="inline-block font-body text-primary text-xs font-bold uppercase tracking-[0.3em] mb-4 md:mb-6 border-b border-primary/30 pb-2">01 — Palco</span>
@@ -88,7 +86,7 @@
       </div>
     </div>
 
-    <!-- Direita: Stats flutuantes -->
+    
     <div class="hidden lg:flex flex-col items-end gap-8">
       <div class="scroll-reveal text-right" style="--delay: 0.3s">
         <span class="font-title font-bold text-7xl text-white/70 block leading-none">5000+</span>
@@ -102,7 +100,7 @@
   </div>
 </section>
 
-<!-- Transição Strip -->
+
 <div class="relative h-32 md:h-30 bg-text-primary overflow-hidden flex items-center justify-center">
   <div class="marquee-track flex whitespace-nowrap">
     <span class="marquee-content font-title text-[3rem] md:text-[5rem] font-bold text-white/[0.05] uppercase tracking-widest mx-8">Palestras · Conteúdo · Estratégia · Autoridade · Palestras · Conteúdo · Estratégia · Autoridade&nbsp;</span>
@@ -110,25 +108,25 @@
   </div>
 </div>
 
-<!-- TELA 3: Casa de Conteúdo — Full Immersive -->
+
 <section class="hero-panel relative min-h-screen flex items-center overflow-hidden" data-panel="conteudo">
-  <!-- BG: Sólido claro (fallback) -->
+  
   <div class="absolute inset-0 bg-white z-0"></div>
-  <!-- Imagem diagonal só no desktop -->
+  
   <div class="absolute inset-0 z-0 hidden lg:block" style="clip-path: polygon(0 0, 55% 0, 35% 100%, 0 100%);">
     <img src="/img/banners/19.png" alt="" class="w-full h-full object-cover ">
     <div class="absolute inset-0 bg-gradient-to-r from-transparent to-black/95"></div>
   </div>
-  <!-- Mobile: imagem sutil ao fundo com overlay -->
+  
   <div class="absolute inset-0 z-0 lg:hidden">
     <img src="/img/banners/19.png" alt="conteudo" class="w-full h-full object-cover opacity-10">
   </div>
-  <!-- Accent line right -->
+  
   <div class="absolute top-0 right-0 w-1 h-full bg-gradient-to-b from-secondary via-secondary/50 to-transparent z-10"></div>
 
   <div class="relative z-20 max-w-7xl mx-auto px-6 md:px-12 w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center py-16 md:py-24">
     
-    <!-- Esquerda: Visual decorativo (stats) -->
+    
     <div class="hidden lg:flex flex-col items-start gap-8">
       <div class="scroll-reveal" style="--delay: 0.3s">
         <span class="font-title font-bold text-7xl text-secondary-light/80 block leading-none">IA</span>
@@ -140,7 +138,7 @@
       </div>
     </div>
 
-    <!-- Direita: Texto -->
+    
     <div class="max-w-xl lg:ml-auto">
       <div class="scroll-reveal">
         <span class="inline-block font-body text-secondary text-xs font-bold uppercase tracking-[0.3em] mb-4 md:mb-6 border-b border-secondary/30 pb-2">02 — Digital</span>
@@ -176,11 +174,11 @@
   </div>
 </section>
 
-<!-- Seção: Sobre Nós -->
+
 <section id="sobre" class="bg-gradient-to-b from-white to-surface py-24 overflow-hidden">
   <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-    <!-- Coluna da Esquerda (Textos) -->
+    
     <div class="sobre-text-container">
 
       <h2 class="font-title font-bold text-4xl md:text-5xl text-text-primary leading-tight mb-8 sobre-item">
@@ -198,7 +196,7 @@
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 sobre-item mt-10">
-        <!-- Métrica 1 -->
+        
         <div class="relative p-6 rounded-2xl bg-white border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] group hover:border-primary/30 transition-colors duration-300">
           <div class="absolute -top-4 -right-4 w-12 h-12 bg-primary/10 rounded-full blur-xl group-hover:bg-primary/20 transition-colors"></div>
           <p class="font-title font-bold text-4xl text-primary mb-2">5.000<span class="text-2xl">+</span></p>
@@ -206,7 +204,7 @@
           <p class="font-body text-sm text-text-muted leading-relaxed">Conectando empresas a especialistas relevantes.</p>
         </div>
 
-        <!-- Métrica 2 -->
+        
         <div class="relative p-6 rounded-2xl bg-white border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] group hover:border-secondary/30 transition-colors duration-300">
           <div class="absolute -top-4 -right-4 w-12 h-12 bg-secondary/10 rounded-full blur-xl group-hover:bg-secondary/20 transition-colors"></div>
           <p class="font-title font-bold text-4xl text-secondary mb-2">1.000<span class="text-2xl">+</span></p>
@@ -216,18 +214,18 @@
       </div>
     </div>
 
-    <!-- Coluna da Direita (Visual Clean com Imagem Única Premium) -->
+    
     <div class="relative h-full min-h-[500px] w-full rounded-[2.5rem] overflow-hidden shadow-2xl sobre-visual-container group">
-      <!-- Imagem de Fundo Premium -->
+      
       <div class="absolute inset-0">
         <img src="/img/banners/16.jpg" alt="Palco de Palestra" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000 ease-out">
       </div>
       
-      <!-- Overlay Gradient -->
+      
       <div class="absolute inset-0 bg-gradient-to-t from-[#020617] via-[#0f172a]/80 to-transparent"></div>
       <div class="absolute inset-0 bg-gradient-to-tr from-white/30 to-black/20 mix-blend-overlay"></div>
 
-      <!-- Conteúdo Interno Direita -->
+      
       <div class="absolute bottom-0 w-full p-10 md:p-12 flex flex-col justify-end h-full">
         
         <h3 class="text-3xl md:text-5xl font-title font-bold text-white mb-4 leading-tight drop-shadow-lg">
@@ -239,9 +237,9 @@
   </div>
 </section>
 
-<!-- Seção: CTA com Marquee Typography -->
+
 <section class="relative bg-primary py-40 overflow-hidden flex items-center justify-center">
-  <!-- Fundo Marquee Text (CSS puro) -->
+  
   <div
     class="absolute top-1/2 left-0 -translate-y-1/2 w-max whitespace-nowrap flex opacity-20 pointer-events-none select-none overflow-hidden"
     style="animation: scroll-marquee 40s linear infinite;">
@@ -263,7 +261,7 @@
     }
   </style>
 
-  <!-- CTA Box Frente -->
+  
   <div class="relative z-10 max-w-4xl mx-auto px-6 w-full text-center cta-box">
     <div
       class="bg-white/10 backdrop-blur-xl border border-white/20 p-12 md:p-20 rounded-[3rem] shadow-2xl shadow-primary-dark/30">
@@ -280,10 +278,10 @@
   </div>
 </section>
 
-<!-- Scripts e Estilos Locais -->
+
 <script src="/js/hero-bg.js"></script>
 
-<!-- GSAP e ScrollTrigger via CDN -->
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
